@@ -65,3 +65,11 @@ Me encanta el deporte y las tardes frías de películas y chocolate caliente.
 Frase Inspiradora: ”No importa cómo se comienza, sino cómo se termina.”
 Bogotá D.C
 
+![](https://avatars.githubusercontent.com/u/90855728?s=400&u=d47a1731ce02f1f905b463288ccf998a132d383b&v=4)
+>Tania Cárdenas Rico.
+Tecnologa en Desarrollo gráfico de proyectos de arquitectura e ingeniería.
+Estudiante Desarrollo Web Full Stack.
+Me gusta disfrutar de un buen libro, la paz y tranquilidad que brinda la naturaleza y jugar fútbol.
+Frase Inspiradora:”No se trata de donde estes, sino donde quieres llegar.”
+Bogotá D.C
+
