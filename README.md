@@ -29,8 +29,8 @@ Precios más accesibles debido a la minimización de intermediarios.
 - Por las transiciones de los iconos de “cuenta”, “pedidos” y “carrito”.
 ---------
  `<Canastto>` : <https://canastto.com/onboarding?gclid=CjwKCAjwhuCKBhADEiwA1HegOfDVioc5-2EY1yOuVjLH83KgI3dWZLqtAu3WlYMiAEVV_xzc6m1gQxoCgKEQAvD_BwE>
-- Por su página inicial y la forma en que solicita indicar la ciudad en donde desea recibir el pedido.
-- Por la forma en que se muestran los supermercados para que el usuario pueda ingresar y realizar allí sus pedidos.
+- Por su página inicial y la forma en que solicita indicar la ciudad en donde se desea recibir el pedido.
+- Por la forma en la que se muestran los supermercados para que el usuario pueda ingresar y realizar allí sus pedidos.
 ------------
  `<Solofruver>` : <https://solofruver.com/>
 - Por los colores, el efecto de movimiento del precio y de la imagen cuando se pasa el cursor sobre el producto.
@@ -56,3 +56,12 @@ Estudiante Desarrollo Web Full Stack.
 Adoro la naturaleza, pokemon, el universo de harry potter y el studio ghibli. Tengo unas metas muy claras: Tener un colegio, ser residuo cero, luchar contra contaminación trabajando en energías renovables y ayudar a terminar el hambre de la región
 Frase Inspiradora:"La ingeniería es lo más cercano a la magia que existe en el mundo"
 Pasto, Nariño
+==================
+![] https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4
+> Javier Camilo Laiton Monroy.
+Ingeniero industrial.
+Estudiante Desarrollo Web Full Stack.
+Me encanta el deporte y las tardes frías de películas y chocolate caliente.
+Frase Inspiradora: ”No importa cómo se comienza, sino cómo se termina.”
+Bogotá D.C
+
