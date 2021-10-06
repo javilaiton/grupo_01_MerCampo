@@ -56,8 +56,8 @@ Estudiante Desarrollo Web Full Stack.
 Adoro la naturaleza, pokemon, el universo de harry potter y el studio ghibli. Tengo unas metas muy claras: Tener un colegio, ser residuo cero, luchar contra contaminación trabajando en energías renovables y ayudar a terminar el hambre de la región
 Frase Inspiradora:"La ingeniería es lo más cercano a la magia que existe en el mundo"
 Pasto, Nariño
-==================
-![] https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4
+
+![](https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4)
 > Javier Camilo Laiton Monroy.
 Ingeniero industrial.
 Estudiante Desarrollo Web Full Stack.
