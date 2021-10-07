@@ -61,6 +61,9 @@ Precios más accesibles debido a la minimización de intermediarios.
 
 ------------------------
 
+
+
+
 <img src="https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4" align="left" height="200" width="200">
 
 > Javier Camilo Laiton Monroy.
@@ -71,6 +74,10 @@ Precios más accesibles debido a la minimización de intermediarios.
 >Bogotá D.C
 
 ------------------
+
+
+
+
 
 <img src="https://avatars.githubusercontent.com/u/77870297?v=4" align="left" height="200" width="200">
 
