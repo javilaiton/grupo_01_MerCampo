@@ -49,7 +49,7 @@ Precios más accesibles debido a la minimización de intermediarios.
 -----------
 🏃Descripción de los integrantes del equipo👯
 ==================
-![](https://avatars.githubusercontent.com/u/77870297?v=4) 
+![](https://avatars.githubusercontent.com/u/77870297?v=4 =100x20) 
 > Fernanda Trujillo Navarro.
 Ingeniera Electrónica.
 Estudiante Desarrollo Web Full Stack.
