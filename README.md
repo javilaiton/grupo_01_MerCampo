@@ -49,7 +49,7 @@ Precios más accesibles debido a la minimización de intermediarios.
 -----------
 🏃Descripción de los integrantes del equipo👯
 ==================
-<img src="https://avatars.githubusercontent.com/u/77870297?v=4" align="left" height="48" width="48" >
+<img src="https://avatars.githubusercontent.com/u/77870297?v=4" align="left" height="200" width="200" >
 > Fernanda Trujillo Navarro.
 Ingeniera Electrónica.
 Estudiante Desarrollo Web Full Stack.
@@ -57,7 +57,7 @@ Adoro la naturaleza, pokemon, el universo de harry potter y el studio ghibli. Te
 Frase Inspiradora:"La ingeniería es lo más cercano a la magia que existe en el mundo"
 Pasto, Nariño
 
-![](https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4)
+<img src="https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4" align="left" height="200" width="200" >
 > Javier Camilo Laiton Monroy.
 Ingeniero industrial.
 Estudiante Desarrollo Web Full Stack.
@@ -65,7 +65,7 @@ Me encanta el deporte y las tardes frías de películas y chocolate caliente.
 Frase Inspiradora: ”No importa cómo se comienza, sino cómo se termina.”
 Bogotá D.C
 
-![](https://avatars.githubusercontent.com/u/90855728?s=400&u=d47a1731ce02f1f905b463288ccf998a132d383b&v=4)
+<img src="https://avatars.githubusercontent.com/u/90855728?s=400&u=d47a1731ce02f1f905b463288ccf998a132d383b&v=4" align="left" height="200" width="200" >
 >Tania Cárdenas Rico.
 Tecnologa en Desarrollo gráfico de proyectos de arquitectura e ingeniería.
 Estudiante Desarrollo Web Full Stack.
