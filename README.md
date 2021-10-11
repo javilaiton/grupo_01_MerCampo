@@ -50,7 +50,7 @@ Precios más accesibles debido a la minimización de intermediarios.
 🏃Descripción de los integrantes del equipo👯
 ==================
 
-<img src="https://avatars.githubusercontent.com/u/90855728?s=400&u=d47a1731ce02f1f905b463288ccf998a132d383b&v=4" align="left" height="200" width="200">
+![](https://avatars.githubusercontent.com/u/90855728?s=400&u=d47a1731ce02f1f905b463288ccf998a132d383b&v=4)
 
 >Tania Cárdenas Rico.
 >Tecnologa en Desarrollo gráfico de proyectos de arquitectura e ingeniería.
@@ -60,11 +60,8 @@ Precios más accesibles debido a la minimización de intermediarios.
 >Bogotá D.C
 
 ------------------------
-========================
 
-
-
-<img src="https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4" align="left" height="200" width="200">
+![](https://avatars.githubusercontent.com/u/75178137?s=400&u=b755616a1a8a6d8331b45ef52655ca7c70b47ba3&v=4)
 
 > Javier Camilo Laiton Monroy.
 >Ingeniero industrial.
@@ -75,11 +72,7 @@ Precios más accesibles debido a la minimización de intermediarios.
 
 ------------------
 
-
-
-
-
-<img src="https://avatars.githubusercontent.com/u/77870297?v=4" align="left" height="200" width="200">
+![](https://avatars.githubusercontent.com/u/77870297?v=4)
 
 > Fernanda Trujillo Navarro.
 >Ingeniera Electrónica.
@@ -89,4 +82,3 @@ Precios más accesibles debido a la minimización de intermediarios.
 >Pasto, Nariño
 
 ---------------------
-
