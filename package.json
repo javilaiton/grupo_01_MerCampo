@@ -1,0 +1,24 @@
+{
+  "name": "grupo_01_mercampo",
+  "version": "0.1.0",
+  "description": "🛒MerCampo🍓\r =============\r `<Repositorio>` : <https://github.com/javilaiton/grupo_01_MerCampo>\r =============\r > La idea de nuestro sitio web fue inspirado en la comunidad campesina del sector del Tambo-La Florida del departamento de Nariño, los cuales cultivan una gran cantidad de frutas y verduras entre las cuales se encuentra el tomate de invernadero, mora, aguacate, breva, granadilla y uchuva, pero se encuentran con la dura realidad de que sus productos no serán pagados a un precio justo por los intermediarios, quienes la gran mayoría de las veces se aprovecha de las condiciones ajustadas que tienen los campesinos por no poder vender su producto directamente a los consumidores. Nuestra idea es conectar, de manera sencilla, a todos los agricultores de zonas rurales cercanas a grandes urbes, con todos los posibles compradores a un click de distancia, ofreciendo variedad y precios justos para todos.\r ------------\r 🍒¿Qué productos o servicios brindará nuestro sitio?\r - Frutas y verduras cultivadas por comunidades campesinas cercanas a zonas urbanas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javilaiton/grupo_01_MerCampo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javilaiton/grupo_01_MerCampo/issues"
+  },
+  "homepage": "https://github.com/javilaiton/grupo_01_MerCampo#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
