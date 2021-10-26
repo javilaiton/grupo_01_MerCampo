@@ -1,3 +1,5 @@
+`<Tablero>` : <https://silky-bit-fcf.notion.site/Sprint-2-459d8f15146040e4a61bc300b10a330a>
+===========
 🛒MerCampo🍓
 =============
 `<Repositorio>` : <https://github.com/javilaiton/grupo_01_MerCampo>
