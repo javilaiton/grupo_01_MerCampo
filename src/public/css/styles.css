@@ -201,6 +201,32 @@ main.main .section2 .fruits-vegetables .products .items .space-add-button button
 }
 
 
+/*Product detail*/
+main.product-details{
+    text-align: center;
+    max-width: 100vw;
+    background-color: white;
+}
+main.product-details .img-product{
+    border: 1px solid black;
+}
+main.product-details .img-product img{
+    width: 80%;
+    border: 1px solid black;
+    text-align: center;
+}
+.section-1 {
+    text-align: start;
+    border: 1px solid black;
+}
+.section-2 {
+    text-align: start;
+    border: 1px solid black;
+}
+
+   
+
+
 
 /*footer*/
 .footer {
@@ -290,9 +316,7 @@ main.main .section2 .fruits-vegetables .products .items .space-add-button button
         width: 100%;
         height: 200px;
     }
-
-
-
+    
 
 }  
     
@@ -397,6 +421,35 @@ main.main .section2 .fruits-vegetables .products .items .space-add-button button
     main.main .section2 .fruits-vegetables .products .items:hover{
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
     }
+    /* Product details*/
+    main.product-details{
+        text-align: center;
+        max-width: 100vw;
+        background-color: white;
+        display: flex;
+    }
+    main.product-details .img-product{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        width: 40%;
+        border: 1px solid black;
+    }
+    main.product-details .img-product img{
+        width: 100%;
+        border: 1px solid black;
+    }
+    .section-1 {
+        display: flex;
+        width: 30%;
+        border: 1px solid black;
+    }
+    .section-2 {
+        display: flex;
+        width: 30%;
+        border: 1px solid black;
+    }
+
 
 
 
