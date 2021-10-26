@@ -16,13 +16,12 @@ app.get('/register',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/register.html'))
 })
 
-app.get('/login',(req,res)=>{
+app.get('/product_details',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/product_details.html'))
 })
-app.get('/login',(req,res)=>{
+app.get('/shopping_cart',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/shopping_cart.html'))
 })
-
 
 app.listen(port, () => console.log(`Server in port ${port}`));
 
