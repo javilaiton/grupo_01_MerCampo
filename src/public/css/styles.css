@@ -8,6 +8,9 @@
     --colorOrange: #ED9A04; 
 }
 
+
+
+
 body{
     background-color: #8DC63F;    
     font-size: 16px;
@@ -87,6 +90,118 @@ header .burger-menu .burger-bottom{
     max-height: 80px;
 }
 
+/* main*/
+main.main{
+    
+    text-align: center;
+    max-width: 100vw;
+    margin: auto;
+    background-color: white;
+
+}
+
+main.main .section1{
+    display: flex;
+    justify-content: flex-end;
+    background-color: #8DC63F;
+}
+
+main.main .section1 nav{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+main.main .section1 nav a button{
+    background-color: #D61E23;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+main.main .section2{
+    border-top: 2px black solid;
+    display: flex;
+    background-color: #ED9A04;
+}
+
+main.main .section2 h3{
+    text-align: center;
+    margin-top: 20px;
+}
+
+main.main .section2 {
+    text-align: left;
+}
+
+main.main .section2 .filtro{
+    display: none;
+}
+
+main.main .section2 .fruits-vegetables{
+    width: 100%;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+
+main.main .section2 .fruits-vegetables .fruits, .vegetables{
+    background-color: #BAE06C;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    border-radius: 5px;
+}
+
+main.main .section2 .fruits-vegetables .products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+main.main .section2 .fruits-vegetables .products .items{
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+main.main .section2 .fruits-vegetables .products .items img{
+    width: 100%;
+    height: 250px;
+}
+
+main.main .section2 .fruits-vegetables .products .items .description h5{
+    text-align: center;
+}
+
+main.main .section2 .fruits-vegetables .products .items .description p{
+    margin: 10px 0px;
+}
+
+main.main .section2 .fruits-vegetables .products .items .description a{
+    text-decoration: none;
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+main.main .section2 .fruits-vegetables .products .items .space-add-button {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+main.main .section2 .fruits-vegetables .products .items .space-add-button button{
+    width: 100%;
+    display:block; 
+    background-color: #D61E23;
+    color: white;
+    border-radius: 5px;
+}
+
+
+
 /*footer*/
 .footer {
     margin-top: .3rem;
@@ -162,6 +277,20 @@ header .burger-menu .burger-bottom{
         max-height: 140px;
     }
 
+    main.main .section2 .fruits-vegetables .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    
+    main.main .section2 .fruits-vegetables .products .items{
+        width: 45%;
+    }
+    main.main .section2 .fruits-vegetables .products .items img{
+        width: 100%;
+        height: 200px;
+    }
+
 
 
 
@@ -205,6 +334,72 @@ header .burger-menu .burger-bottom{
         width: 100%;
         max-height: 230px;
     }
+
+
+
+    main.main .section1 nav{
+        width: 85%;
+    }
+    main.main .section2 .filtro{
+        width: 15%;
+        display: block;
+        background-color: #BAE06C;
+    }
+    main.main .section2 .filtro .content-form{
+        padding: 10px;
+        /*position: fixed;*/
+        /*width: 15%;*/
+        border: white 1px solid;
+        background-color: #D61E23;
+        color: white;
+        border-radius: 5px;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+    main.main .section2 .filtro .content-form .control-formulario{
+        margin: 10px 0px;
+    }
+    main.main .section2 .filtro .content-form .control-formulario label{
+        font-style: italic;
+    }
+    main.main .section2 .filtro .content-form .control-formulario .select{
+        text-align: left;
+        padding: 10px;
+        font-size: 12px;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+        display: none;
+    }
+    main.main .section2 .filtro .content-form .content-buttons{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    main.main .section2 .filtro .content-form:hover .control-formulario .select{
+        display: block;
+    }
+    main.main .section2 .filtro .content-form:hover .control-formulario .select div{
+        display: flex;
+        margin-bottom: 5px;
+    }
+    main.main .section2 .fruits-vegetables{
+        width: 85%;
+    }
+    main.main .section2 .fruits-vegetables .products{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    main.main .section2 .fruits-vegetables .products .items{
+        width: 25%;
+        transition: 0.5s all;
+    }
+    main.main .section2 .fruits-vegetables .products .items:hover{
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+
+
+
     .footer .footer-content {
         display: flex;
     }
