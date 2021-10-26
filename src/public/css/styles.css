@@ -1,13 +1,18 @@
+/*root*/
 *{
     margin:0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: 'merienda', 'josefin';
+    --colorGreen:#8DC63F;
+    --colorOrange: #ED9A04; 
 }
 
 body{
-    background-color: #ebebeb  ;
+    background-color: #8DC63F;    
+    font-size: 16px;
 }
+/*/root/*/
 /* header*/
 header{
     background-color:#8DC63F;
@@ -71,8 +76,9 @@ header .burger-menu .burger-bottom{
     font-size: 13px; 
     /*border: 1px solid red;*/
 }
+/*/header/*/
 /*texto*/
- h5{
+.inf-text h5{
     display: none;
 }
 /*banner*/
@@ -81,6 +87,39 @@ header .burger-menu .burger-bottom{
     width: 100%;
     max-height: 80px;
 }
+
+/*footer*/
+.footer {
+    margin-top: .3rem;
+    width: 90vw;
+    padding: 2rem;
+    background-color: var(--colorOrange);
+    margin: auto;
+    text-align: center;
+    border-radius: 5%;
+}
+
+.footer .content{
+    margin: 1.5rem 0.3rem;
+}
+  
+.footer .content__title, .content__copyright {
+    font-size: 1.2rem;
+    margin-bottom: .3rem;
+    font-family: 'merienda';
+    font-weight: bold;
+}
+
+.footer .content__description {
+    font-size: 1rem;
+    font-family: 'josefin';
+}
+  
+.footer .content__copyright{
+    margin-top: 1.5rem;
+}
+/*/footer/*/
+
 
 @media (min-width: 481px){
     header .burger-menu{
@@ -132,7 +171,7 @@ header .burger-menu .burger-bottom{
 
 @media (min-width:769px){
 
-    h5{
+    .inf-text h5{
     display: block;
     padding: 8px;;
     text-align: center;
@@ -167,9 +206,11 @@ header .burger-menu .burger-bottom{
         width: 100%;
         max-height: 230px;
     }
-
-    
-   
-
-    
+    .footer .footer-content {
+        display: flex;
+    }
+    .footer .content{
+        margin: auto;
+        max-width: 30rem;
+    }    
 }
