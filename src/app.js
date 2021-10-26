@@ -19,7 +19,7 @@ app.get('/register',(req,res)=>{
 app.get('/login',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/product_details.html'))
 })
-app.get('/login',(req,res)=>{
+app.get('/shopping-cart',(req,res)=>{
     res.sendFile(path.resolve(__dirname,'./views/shopping_cart.html'))
 })
 
