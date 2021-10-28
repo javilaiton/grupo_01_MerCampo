@@ -16,84 +16,100 @@
 </head>
 
 <body>
+
     <header>
+
         <div class="top-header">
-            <img id="logo" src="/img/logo_d.png" alt="">
+            <a href="/"><img id="logo" src="/img/logo_d.png" alt=""></a>
             <div class="bar-search">
-                <input id="Buscar" type="search" name="Buscar" placeholder="Buscar productos,marcas y más"><button><i
-                        class="fas fa-search"></i></button>
+                <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
+                <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
             </div>
             <nav class="top-header-navbar">
                 <ul class="text-navbar">
-                    <li class="text-navbar_item"><a href="#">Registrarme</a></li>
+                    <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
                 </ul>
             </nav>
             <nav class="top-header-navbar">
                 <ul class="icons-navbar">
                     <li class="icons-navbar_item"><a href="#"><i class="fas fa-truck"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-user-circle"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                 </ul>
             </nav>
             <div class="burger-menu">
                 <a href="a" class="burger-bottom"><i class="fas fa-bars"></i></a>
             </div>
         </div>
+
     </header>
+
+    <nav class="barra-navbar">
+        <ul class="barra-text-navbar">
+            <li class="barra-text-navbar_item"><a href="/">Inicio</a></li>
+            <li id="central" class="barra-text-navbar_item"><a href="/#farmers">Agricultores</a></li>
+            <li class="barra-text-navbar_item"><a href="/#products">Cosecha</a></li>
+        </ul>
+    </nav>
+
     <section class="inf">
         <div class="inf-text">
             <h5>Si realizaste el pedido después de las 12:00 pm, tu pedido se despachara el día siguiente y los pedidos realizados el sábado después de las 12 pm y el domingo se despacharan el día Lunes</h5>
         </div>
     </section>
-    <section class="banner-img">
-        <img src="/img/banner.png" alt="banner" class="banner">
-    </section>
-
     
     <main class="main-main">
         
         <section class="main-content">
             <h3>Carrito de Compras</h3>
+
             <section class="content_section">
-                                 
+
                 <div class="products">
                     <article class="items">
-                        <img src="/img/mora.jpg" alt="">
-                        <div class="description">
-                            <h5>Mora</h5>
-                            <p>Vendedor: XXXX</p>
-                            <p>Cantidad: XXX Kg</p>
-                            <p>Precio:   $$$$$</p>
-                        </div>
-                        <div class="space-add-button">
-                            <button><i class="far fa-heart"></i>Agregar a Favoritos </button>
-                            <button><i class="far fa-times-circle"></i>Eliminar Producto</button>
-                        </div>
+                        <h6 class="items__title">IMAGEN</h6>
+                        <h6 class="items__title">NOMBRE</h6>
+                        <h6 class="items__title">PRECIO</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">TOTAL</h6>
                     </article>
+                </div>
+
+                <div class="products">
                     <article class="items">
-                        <img src="/img/granadilla.jpg" alt="">
-                        <div class="description">
-                            <h5>Granadilla</h5>
-                            <p>Vendedor: XXXX</p>
-                            <p>Cantidad: XXX Kg</p>
-                            <p>Precio:   $$$$$</p>
-                        </div>
-                        <div class="space-add-button">
+                        <img class="items__title" src="/img/mora.jpg" alt="">
+                        <h6 class="items__title">MORA</h6>
+                        <h6 class="items__title">$ 567</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">$ 567</h6>
+                    </article>
+                </div>
+
+                <div class="products">
+                    <article class="items">
+                        <img class="items__title"src="/img/granadilla.jpg" alt="">
+                        <h6 class="items__title">GRANADILLA</h6>
+                        <h6 class="items__title">$ 6000</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">$ 7000</h6>
+                    </article>
+                </div>
+        
+                        <!--<div class="space-add-button">
                             <button><i class="far fa-heart"></i>Agregar a Favoritos </button>
                             <button><i class="far fa-times-circle"></i>Eliminar Producto</button>
-                        </div>
-                    </article>
-                        
-                </div>
-            </section>
+                        </div>-->
+            </section>    
+            <h3>Total Carrito</h3>
             <section class="content_section">
-                <div>
-                    <p>Subtotal:   $$$$$</p>
-                    <p>Total:      $$$$$</p>
+                <div class="items-nav">
+                    <div class="items-nav__price"><h6 class="items_price">Subtotal:</h6><p class="items_price">$$$$$</p></div>   
+                    <div class="items-nav__price"><h6 class="items_price">Envio:</h6><p class="items_price">$$$$$</p>   </div>                        
+                    <div class="items-nav__price"><h6 class="items_price">Total:</h6><p class="items_price">$$$$$</p>   </div>
                 </div>
-                <nav>
-                    <a href="#fruits"><button>Pagar</button></a>
-                    <a href="#vegetables"><button>Continuar Comprando</button></a>
+                <nav class="items-nav content-buttoms">
+                    <div class="buttoms_cart"><a href="/register"><button>Pagar</button></a>
+                        <a href="/"><button>Continuar Comprando</button></a></div>
                 </nav>
             </section>
         </section>
@@ -106,16 +122,18 @@
 
             <div class="content">
                 <h5 class="content__title">Acerca de Nosotros</h5>
-                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis suscipit at</p>
+                <p class="content__description">Conectamos, de manera sencilla, a todos los agricultores de zonas rurales cercanas a grandes urbes.</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Contacto</h5>
-                <p class="content__description">Linea de servicio al cliente: +773 7373 737</p>
+                <p class="content__description">Servicio al cliente: 316 222 9999</p>
+                <p class="content__description">Email: mercadeo@mercampo.com</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Pagos</h5>
-                <p class="content__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
-                    quae cumque aliquid?</p>
+                <p class="content__description">Aceptamos todas las tarjetas</p>
+                <p class="content__description">NEQUI</p>
+                <p class="content__description">DAVIPLATA</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Redes</h5>
@@ -139,7 +157,7 @@
 
         </div>
 
-        <div class="content">
+        <div class="contentA">
             <h5 class="content__copyright">Copyright © 2021 MerCampo</h5>
         </div>
 
