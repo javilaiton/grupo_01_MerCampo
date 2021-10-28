@@ -18,21 +18,21 @@
 <body>
     <header>
         <div class="top-header">
-            <img id="logo" src="/img/logo_d.png" alt="">
+            <a href="/"><img id="logo" src="/img/logo_d.png" alt=""></a>
             <div class="bar-search">
-                <input id="Buscar" type="search" name="Buscar" placeholder="Buscar productos,marcas y más"><button><i
-                        class="fas fa-search"></i></button>
+                <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
+                <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
             </div>
             <nav class="top-header-navbar">
                 <ul class="text-navbar">
-                    <li class="text-navbar_item"><a href="#">Registrarme</a></li>
+                    <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
                 </ul>
             </nav>
             <nav class="top-header-navbar">
                 <ul class="icons-navbar">
                     <li class="icons-navbar_item"><a href="#"><i class="fas fa-truck"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-user-circle"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                 </ul>
             </nav>
             <div class="burger-menu">
@@ -40,6 +40,13 @@
             </div>
         </div>
     </header>
+    <nav class="barra-navbar">
+        <ul class="barra-text-navbar">
+            <li class="barra-text-navbar_item"><a href="/">Inicio</a></li>
+            <li id="central" class="barra-text-navbar_item"><a href="#fruits">Agricultores</a></li>
+            <li class="barra-text-navbar_item"><a href="#vegetables">Productos</a></li>
+        </ul>
+    </nav>
     <section class="inf">
         <div class="inf-text">
             <h5>Si realizaste el pedido después de las 12:00 pm, tu pedido se despachara el día siguiente y los
@@ -48,10 +55,10 @@
         </div>
     </section>
     <section class="banner-img">
-        <img src="/img/banner.png" alt="banner" class="banner">
+        <img src="/img/banner_1.jpg" alt="banner" class="banner">
     </section>
 
-    
+
     <main class="main">
         <section class="section1">
             <nav>
@@ -68,11 +75,14 @@
                         <div class="control-formulario">
                             <label for="categorias">Filtrar por Proveedor:</label>
                             <div class="select">
-                                <div class="union"><input type="checkbox" name="categorias" id="categorias1" class="select" value="proveedor1">
+                                <div class="union"><input type="checkbox" name="categorias" id="categorias1"
+                                        class="select" value="proveedor1">
                                     Proveedor A</div>
-                                <div class="union"><input type="checkbox" name="categorias" id="categorias2" class="select" value="proveedor2">
+                                <div class="union"><input type="checkbox" name="categorias" id="categorias2"
+                                        class="select" value="proveedor2">
                                     Proveedor B</div>
-                                <div class="union"><input type="checkbox" name="categorias" id="categorias3" class="select" value="proveedor3">
+                                <div class="union"><input type="checkbox" name="categorias" id="categorias3"
+                                        class="select" value="proveedor3">
                                     Proveedor C</div>
                             </div>
                         </div>
@@ -80,9 +90,11 @@
                         <div class="control-formulario">
                             <label for="categorias">Filtrar por tipo de producto:</label>
                             <div class="select">
-                                <div class="union"><input type="checkbox" name="categorias" id="categorias1" class="select" value="fruits">
+                                <div class="union"><input type="checkbox" name="categorias" id="categorias1"
+                                        class="select" value="fruits">
                                     Frutas</div>
-                                <div class="union"><input type="checkbox" name="categorias" id="categorias2" class="select" value="vegetables">
+                                <div class="union"><input type="checkbox" name="categorias" id="categorias2"
+                                        class="select" value="vegetables">
                                     Verduras</div>
                             </div>
                         </div>
@@ -91,7 +103,7 @@
                         </div>
                     </form>
                 </div>
-                
+
             </section>
             <section class="fruits-vegetables">
                 <section class="fruits" id="fruits">
@@ -189,19 +201,29 @@
         </section>
     </main>
 
-    
+
     <footer class="footer">
 
         <div class="footer-content">
 
             <div class="content">
                 <h5 class="content__title">Acerca de Nosotros</h5>
+<<<<<<< HEAD
                 <p class="content__description">Conectamos, de manera sencilla, a todos los agricultores de zonas rurales cercanas a grandes urbes.</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Contacto</h5>
                 <p class="content__description">Servicio al cliente: 316 222 9999</p>
                 <p class="content__description">Email: mercadeo@mercampo.com</p>
+=======
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
+            </div>
+            <div class="content">
+                <h5 class="content__title">Contacto</h5>
+                <p class="content__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quae
+                    cumque aliquid?</p>
+>>>>>>> c4d320b178b7b9278dd321b5da3e69895e29ca64
             </div>
             <div class="content">
                 <h5 class="content__title">Pagos</h5>
@@ -211,6 +233,7 @@
             </div>
             <div class="content">
                 <h5 class="content__title">Redes</h5>
+<<<<<<< HEAD
                 <div class="content-icon">
                     <div class="icon-media">
                         <i class="fab fa-facebook-f"></i>
@@ -227,6 +250,15 @@
             <div class="content">
                 <h5 class="content__title">Ubicación</h5>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31909.55904383426!2d-77.40183163590893!3d1.3597096393272392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1635285716524!5m2!1ses-419!2sus" style="border:0;" allowfullscreen="" loading="lazy" class="content__map"></iframe>
+=======
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
+            </div>
+            <div class="content">
+                <h5 class="content__title">Ubicación</h5>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
+>>>>>>> c4d320b178b7b9278dd321b5da3e69895e29ca64
             </div>
 
         </div>
