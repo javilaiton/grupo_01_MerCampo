@@ -65,46 +65,54 @@
         
         <section class="main-content">
             <h3>Carrito de Compras</h3>
+
             <section class="content_section">
-                                 
+
                 <div class="products">
                     <article class="items">
-                        <img src="/img/mora.jpg" alt="">
-                        <div class="description">
-                            <h5>Mora</h5>
-                            <p>Vendedor: XXXX</p>
-                            <p>Cantidad: XXX Kg</p>
-                            <p>Precio:   $$$$$</p>
-                        </div>
-                        <div class="space-add-button">
-                            <button><i class="far fa-heart"></i>Agregar a Favoritos </button>
-                            <button><i class="far fa-times-circle"></i>Eliminar Producto</button>
-                        </div>
+                        <h6 class="items__title">IMAGEN</h6>
+                        <h6 class="items__title">NOMBRE</h6>
+                        <h6 class="items__title">PRECIO</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">TOTAL</h6>
                     </article>
+                </div>
+
+                <div class="products">
                     <article class="items">
-                        <img src="/img/granadilla.jpg" alt="">
-                        <div class="description">
-                            <h5>Granadilla</h5>
-                            <p>Vendedor: XXXX</p>
-                            <p>Cantidad: XXX Kg</p>
-                            <p>Precio:   $$$$$</p>
-                        </div>
-                        <div class="space-add-button">
+                        <img class="items__title" src="/img/mora.jpg" alt="">
+                        <h6 class="items__title">MORA</h6>
+                        <h6 class="items__title">$ 567</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">$ 567</h6>
+                    </article>
+                </div>
+
+                <div class="products">
+                    <article class="items">
+                        <img class="items__title"src="/img/granadilla.jpg" alt="">
+                        <h6 class="items__title">GRANADILLA</h6>
+                        <h6 class="items__title">$ 6000</h6>
+                        <h6 class="items__title">CANTIDAD</h6>                        
+                        <h6 class="items__title">$ 7000</h6>
+                    </article>
+                </div>
+        
+                        <!--<div class="space-add-button">
                             <button><i class="far fa-heart"></i>Agregar a Favoritos </button>
                             <button><i class="far fa-times-circle"></i>Eliminar Producto</button>
-                        </div>
-                    </article>
-                        
-                </div>
-            </section>
+                        </div>-->
+            </section>    
+            <h3>Total Carrito</h3>
             <section class="content_section">
-                <div>
-                    <p>Subtotal:   $$$$$</p>
-                    <p>Total:      $$$$$</p>
+                <div class="items-nav">
+                    <h6 class="items_price">Subtotal:   $$$$$</h6>
+                    <h6 class="items_price">Envio:   $$$$$</h6>                        
+                    <h6 class="items_price">Total:      $$$$$</h6>
                 </div>
-                <nav>
-                    <a href="#fruits"><button>Pagar</button></a>
-                    <a href="#vegetables"><button>Continuar Comprando</button></a>
+                <nav class="items-nav">
+                    <a href="/register"><button>Pagar</button></a>
+                    <a href="/"><button>Continuar Comprando</button></a>
                 </nav>
             </section>
         </section>
