@@ -4,14 +4,14 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'merienda', 'josefin';
-    --colorGreen:#8DC63F;
+}
+:root {
+    --colorGreen:#BAE06C;
     --colorOrange: #ED9A04; 
     --colorWhite: rgb(255, 255, 255);
+    --colorDarkGray: #666;
+    --colorDarkGreen: #2b4008;
 }
-
-
-
-
 body{
     background-color: #8DC63F;    
     font-size: 16px;
@@ -230,7 +230,7 @@ main.product-details .img-product img{
 
 .main-main{
     background-color: var(--colorWhite);
-    margin: 0.5rem;
+    /*margin: 0.5rem;*/
 }
 .main-main .main-content{
     width: 80vw;
@@ -254,14 +254,12 @@ main.product-details .img-product img{
 
 /*footer*/
 .footer {
-    margin-top: .3rem;
     width: 100vw;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: var(--colorWhite);
     margin: auto;
     text-align: center;
     border-top: 0.2rem solid var(--colorOrange);
-    /*box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );*/
 }
 
 .footer .content{
@@ -269,15 +267,17 @@ main.product-details .img-product img{
 }
   
 .footer .content__title, .content__copyright {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     margin-bottom: .3rem;
     font-family: 'merienda';
     font-weight: bold;
+    color: var(--colorDarkGreen);
 }
 
 .footer .content__description {
     font-size: 1rem;
     font-family: 'josefin';
+    color: var(--colorDarkGray);
 }
   
 .footer .content__copyright{
@@ -292,14 +292,22 @@ main.product-details .img-product img{
     display: flex;
     align-items: center;
     flex-direction: row;
+    justify-content: center;
 }
 
 .footer-content .icon-media .fab{
-    color: black;
     border-radius: 50%;
-    border: 2px solid black;
+    border: 2px solid var(--colorDarkGreen);
     padding: .4rem;
-    margin: 0.1rem;
+    margin: 0.3rem;
+    color: var(--colorDarkGreen);
+}
+.content__title:hover, .content__copyright:hover{
+    color: var(--colorOrange);
+}
+.footer-content .icon-media .fab:hover{
+    color: var(--colorOrange);
+    border: 2px solid var(--colorOrange);
 }
 /*/footer/*/
 
@@ -498,9 +506,13 @@ main.product-details .img-product img{
 
     .footer .footer-content {
         display: flex;
+        flex-wrap : wrap;
+        
     }
+  
     .footer .content{
         margin: auto;
         max-width: 30rem;
+        flex-basis: 18%;
     }    
 }
