@@ -17,10 +17,10 @@
 <body>
     <header>
         <div class="top-header">
-            <img id="logo" src="/img/logo_d.png" alt="">
+            <a href="/"><img id="logo" src="/img/logo_d.png" alt=""></a>
             <div class="bar-search">
-                <input id="Buscar" type="search" name="Buscar" placeholder="Buscar productos,marcas y más"><button><i
-                        class="fas fa-search"></i></button>
+                <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
+                <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
             </div>
             <nav class="top-header-navbar">
                 <ul class="text-navbar">
@@ -30,15 +30,22 @@
             <nav class="top-header-navbar">
                 <ul class="icons-navbar">
                     <li class="icons-navbar_item"><a href="#"><i class="fas fa-truck"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-user-circle"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                 </ul>
             </nav>
             <div class="burger-menu">
-                <a href="a" class="burger-bottom"><i class="fas fa-bars"></i></a>
+                <a href="/" class="burger-bottom"><i class="fas fa-bars"></i></a>
             </div>
         </div>
     </header>
+    <nav class="barra-navbar">
+        <ul class="barra-text-navbar">
+            <li class="barra-text-navbar_item"><a href="/">Inicio</a></li>
+            <li id="central" class="barra-text-navbar_item"><a href="#farmers">Agricultores</a></li>
+            <li class="barra-text-navbar_item"><a href="#products">Cosecha</a></li>
+        </ul>
+    </nav>
     <section class="inf">
         <div class="inf-text">
             <h5>Si realizaste el pedido después de las 12:00 pm, tu pedido se despachara el día siguiente y los
@@ -47,29 +54,29 @@
         </div>
     </section>
     <section class="banner-img">
-        <img src="/img/banner.png" alt="banner" class="banner">
+        <img src="/img/banner_1.jpg" alt="banner" class="banner">
     </section>
 
-    
+
     <main class="main">
         <section class="content-farmers">
-            <section class="farmers">
-                <h2>Tus agricultores</h2>
+            <section id="farmers" class="farmers">
+                <h2>Agricultores</h2>
                 <section class="sectionA">
                     <article class="farmer">
                         <img src="/img/agricultor.jpg" alt="">
                         <div class="description">
-                            <p>Título</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quam atque enim possimus magni sint dolorem facere tenetur nemo quo voluptates modi magnam eaque provident accusantium autem, officiis cupiditate voluptatum?</p> 
-                            <a href="/product_details.html"><button>Visita mi cosecha</button></a>
+                            <p class="title">Villa Cristina</p>
+                            <p>Hola! somos agricultores de la zona del Tambo-La Florida del departamento de Nariño, cultivamos gran cantidad de frutas y verduras como la mora, la granadilla, la fresa, la uchuva, la breva, el bananito, la lechuga, el tomate y el aguacate. Te inviatamos a que visites nuestra cosecha y no olvides que <strong>¡SIEMPRE A LA ORDEN!</strong></p> 
+                            <a href="/"><button>Visita nuestra cosecha</button></a>
                         </div>
                     </article>
                     <article class="farmer">
                         <img src="/img/agricultor.jpg" alt="">
                         <div class="description">
-                            <p>Título</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quam atque enim possimus magni sint dolorem facere tenetur nemo quo voluptates modi magnam eaque provident accusantium autem, officiis cupiditate voluptatum?</p> 
-                            <a href="/product_details.html"><button>Visita mi cosecha</button></a>
+                            <p class="title">Cultivos Amelia</p>
+                            <p>Hola! somos agricultores de la zona del Tambo-La Florida del departamento de Nariño, cultivamos gran cantidad de frutas y verduras como la mora, la granadilla, la fresa, la uchuva, la breva, el bananito, la lechuga, el tomate y el aguacate. Te inviatamos a que visites nuestra cosecha y no olvides que <strong>¡SIEMPRE A LA ORDEN!</strong></p> 
+                            <a href="/"><button>Visita nuestra cosecha</button></a>
                         </div>
                     </article>
                 </section>
@@ -77,26 +84,26 @@
                     <article class="farmer">
                         <img src="/img/agricultor.jpg" alt="">
                         <div class="description">
-                            <p>Título</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quam atque enim possimus magni sint dolorem facere tenetur nemo quo voluptates modi magnam eaque provident accusantium autem, officiis cupiditate voluptatum?</p> 
-                            <a href="/product_details.html"><button>Visita mi cosecha</button></a>
+                            <p class="title">Bella Vista</p>
+                            <p>Hola! somos agricultores de la zona del Tambo-La Florida del departamento de Nariño, cultivamos gran cantidad de frutas y verduras como la mora, la granadilla, la fresa, la uchuva, la breva, el bananito, la lechuga, el tomate y el aguacate. Te inviatamos a que visites nuestra cosecha y no olvides que <strong>¡SIEMPRE A LA ORDEN!</strong></p> 
+                            <a href="/"><button>Visita nuestra cosecha</button></a>
                         </div>
                     </article>
                     <article class="farmer">
                         <img src="/img/agricultor.jpg" alt="">
                         <div class="description">
-                            <p>Título</p>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto quam atque enim possimus magni sint dolorem facere tenetur nemo quo voluptates modi magnam eaque provident accusantium autem, officiis cupiditate voluptatum?</p> 
-                            <a href="/product_details.html"><button>Visita mi cosecha</button></a>
+                            <p class="title">El Huerto</p>
+                            <p>Hola! somos agricultores de la zona del Tambo-La Florida del departamento de Nariño, cultivamos gran cantidad de frutas y verduras como la mora, la granadilla, la fresa, la uchuva, la breva, el bananito, la lechuga, el tomate y el aguacate. Te inviatamos a que visites nuestra cosecha y no olvides que <strong>¡SIEMPRE A LA ORDEN!</strong></p> 
+                            <a href="/"><button>Visita nuestra cosecha</button></a>
                         </div>
                     </article>
                 </section>
             </section>
         </section>
         <section class="content-products">
-            <section class="section1">
+            <section id="products" class="section1">
                 <nav>
-                    <h2>Productos</h2>
+                    <h2>Cosecha</h2>
                     <a href="#fruits"><button>Frutas</button></a>
                     <a href="#vegetables"><button>Verduras</button></a>
                 </nav>
@@ -111,14 +118,14 @@
                                 <label for="categorias">Filtrar por Proveedor:</label>
                                 <div class="select">
                                     <div class="union"><input type="checkbox" name="categorias" id="categorias1"
-                                            class="select" value="proveedor1">
-                                        Proveedor A</div>
+                                            class="select" value="agricultor1">
+                                        Agricultor A</div>
                                     <div class="union"><input type="checkbox" name="categorias" id="categorias2"
-                                            class="select" value="proveedor2">
-                                        Proveedor B</div>
+                                            class="select" value="agricultor2">
+                                            Agricultor B</div>
                                     <div class="union"><input type="checkbox" name="categorias" id="categorias3"
-                                            class="select" value="proveedor3">
-                                        Proveedor C</div>
+                                            class="select" value="agricultor3">
+                                            Agricultor C</div>
                                 </div>
                             </div>
     
@@ -145,66 +152,66 @@
                         <h3>Frutas</h3>
                         <div class="products">
                             <article class="items">
-                                <img src="/img/moras.jpeg" alt="">
+                                <img src="/img/mora.jpg" alt="moras">
                                 <div class="description">
                                     <h5>Mora</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details"> <p>Ver detalle de producto</p> </a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/granadillas.jpeg" alt="">
+                                <img src="/img/granadilla.jpg" alt="granadillas">
                                 <div class="description">
                                     <h5>Granadilla</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/fresas.jpeg" alt="">
+                                <img src="/img/fresas.jpeg" alt="fresas">
                                 <div class="description">
                                     <h5>Fresa</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/uchuvas.jpeg" alt="">
+                                <img src="/img/uchuvas.jpeg" alt="uchuvas">
                                 <div class="description">
                                     <h5>Uchuva</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/brevas.jpeg" alt="">
+                                <img src="/img/brevas.jpeg" alt="brevas">
                                 <div class="description">
                                     <h5>Breva</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/bananitos.jpeg" alt="">
+                                <img src="/img/bananitos.jpeg" alt="bananitos">
                                 <div class="description">
                                     <h5>Bananito</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
@@ -219,33 +226,33 @@
                         <h3>Verduras</h3>
                         <div class="products">
                             <article class="items">
-                                <img src="/img/lechugas.jpeg" alt="">
+                                <img src="/img/lechuga.jpg" alt="lechugas">
                                 <div class="description">
                                     <h5>Lechuga</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/tomates.jpeg" alt="">
+                                <img src="/img/tomates.jpeg" alt="tomates">
                                 <div class="description">
                                     <h5>Tomate</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
                                 </div>
                             </article>
                             <article class="items">
-                                <img src="/img/aguacate.jpeg" alt="">
+                                <img src="/img/aguacates.jpg" alt="Aguacates">
                                 <div class="description">
                                     <h5>Aguacate</h5>
-                                    <p>$$$$</p>
-                                    <a href="/product_details.html">Ver detalle de producto</a>
+                                    <p>$1.500 x 500g</p>
+                                    <a href="/product_details">Ver detalle de producto</a>
                                 </div>
                                 <div class="space-add-button">
                                     <button>Agregar al carrito <i class="fas fa-cart-plus"></i></button>
@@ -259,18 +266,20 @@
         </section>
     </main>
 
-    
+
     <footer class="footer">
 
         <div class="footer-content">
 
             <div class="content">
                 <h5 class="content__title">Acerca de Nosotros</h5>
-                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis suscipit at</p>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Contacto</h5>
-                <p class="content__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quae cumque aliquid?</p>
+                <p class="content__description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam quae
+                    cumque aliquid?</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Pagos</h5>
@@ -279,11 +288,13 @@
             </div>
             <div class="content">
                 <h5 class="content__title">Redes</h5>
-                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis suscipit at</p>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
             </div>
             <div class="content">
                 <h5 class="content__title">Ubicación</h5>
-                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis suscipit at</p>
+                <p class="content__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nobis
+                    suscipit at</p>
             </div>
 
         </div>
