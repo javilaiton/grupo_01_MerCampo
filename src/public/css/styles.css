@@ -18,40 +18,49 @@ body{
 /*/root/*/
 /* header*/
 header{
-    background-color:#8DC63F;
+    background-color:#A5DB5B;
     font-family: 'merienda', 'josefin';
     width: 100vw;
-    padding: 5px;
+    padding: 5px 0px; 
+    /*opacity: 0.9;*/
 }
 header .top-header{
-     /*border: 1px solid black; */  
     display: flex;
     justify-content: space-evenly;
     max-width: 100vw;
     align-items: center;
 }
-
-header .top-header img#logo{
+header .top-header a {
+    width: 15%;
+    min-height:40px; 
+}
+header .top-header a img#logo{
     /*border: 1px solid black;*/
-    width: 30%;
-    padding: 5px;
-    min-height:40px;  
-    
+    width: 100%;     
 }
 header .top-header .bar-search{
     /*border: 1px solid black;*/
-    width: 50%;
-    min-height: 30px;
+    width: 55%;
+    min-height: 25px;
     padding: 5px;
-    display: flex;
-    margin-left: 5px;   
+    display: flex; 
 }
 header .bar-search #Buscar{
     width:100%;
     text-align: center;
     border-radius: 6px;
+    border: none;
     font-size: 10px;
+    padding-left: 5px;
 }
+header .top-header .bar-search .icon-search{
+    padding: 10px;
+    background-color: white;
+    border-radius: 6px;
+    border:none;
+    font-size: 15px;
+}
+
 header .top-header .top-header-navbar .text-navbar{
     display: none;
 }
@@ -62,22 +71,28 @@ header .top-header .top-header-navbar .icons-navbar{
 header .top-header-navbar .text-navbar li, a{
     list-style: none;
     text-decoration: none;
-    color:black;
+    color:rgb(255, 255, 255);
 }
 header .top-header-navbar .icons-navbar li{
     list-style: none;
-    color:black ;
+    color:rgb(255, 255, 255) ;
+}
+header .burger-menu{
+    display: flex;
+    align-items: center;
 }
 header .burger-menu .burger-bottom{
-    display: block;
-    margin: auto;
-    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
     max-width: 50px;
-    padding: 7px;
-    border-radius: 7px;
-    font-size: 13px; 
-    /*border: 1px solid red;*/
+    margin: 10px;
+    font-size: 19px;
+}
+/* barra-navbar*/
+.barra-navbar{
+    display:none
 }
 /*texto*/
 .inf-text h5{
@@ -87,7 +102,7 @@ header .burger-menu .burger-bottom{
 .banner-img .banner{
     display: block;
     width: 100%;
-    max-height: 80px;
+    display: none;
 }
 
 /* main*/
@@ -201,30 +216,8 @@ main.main .section2 .fruits-vegetables .products .items .space-add-button button
 }
 
 
-/*Product detail*/
-main.product-details{
-    text-align: center;
-    max-width: 100vw;
-    background-color: white;
-}
-main.product-details .img-product{
-    border: 1px solid black;
-}
-main.product-details .img-product img{
-    width: 80%;
-    border: 1px solid black;
-    text-align: center;
-}
-.section-1 {
-    text-align: start;
-    border: 1px solid black;
-}
-.section-2 {
-    text-align: start;
-    border: 1px solid black;
-}
 
-   
+
 
 
 .main-main{
@@ -249,6 +242,72 @@ main.product-details .img-product img{
     margin: auto;
     border-radius: 1rem;
     margin-top: 1rem;
+}
+
+/* Product details*/
+main.product-details{
+    background-color: white;
+    width: 100vw;
+    padding: 20px;
+    
+}
+main.product-details .container-product{
+    border-radius: 20px;
+    border:none;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+
+}
+main.product-details .img-product{
+    text-align: center;
+    border-radius: 20px;
+    padding: 20px;
+}
+main.product-details .img-product img{
+    width: 90%;
+    border-radius: 10px;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+main.product-details .section-1{
+    padding: 10px;
+}
+.item-product .inf-product h2{
+    text-align: center;
+    font-size: 28px;
+}
+.item-product .inf-product p{
+    text-align: justify;
+    padding: 10px;
+    font-style: italic;
+    width: 100%;
+}
+.item-product .inf-product .bold{
+    font-weight: bold ;
+    font-size: 22px;
+    padding-top: 10px;
+}
+.item-product .content-buttoms {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.item-product .content-buttoms a{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.item-product .content-buttoms button{
+    padding: 5px;
+    text-align: center;
+    background-color:#E0C05A;
+    border-radius: 5px;
+    border:none;
+    width: 50%;
+    
+}
+main.product-details .section-2{
+    display: none;
 }
 
 /*footer*/
@@ -302,10 +361,14 @@ main.product-details .img-product img{
     display: flex; 
     font-size: 15px;
     }
-    header .top-header img#logo{
+    header .top-header a {
+        min-width: 15%;
+        min-height:40px; 
+    }
+    header .top-header a img#logo{
         /*border: 1px solid black;*/
-        width: 20%;
-        padding: 10px;
+        width: 100%;   
+        padding: 5px;  
     }
     header .top-header .top-header-navbar .text-navbar{
         /*border: 1px solid black;*/
@@ -315,16 +378,52 @@ main.product-details .img-product img{
         /*border: 1px solid black;*/
         display: flex;
     }
+    header  .top-header-navbar .icons-navbar .icons-navbar_item{
+        font-size: 19px;
+        border-left: 1px solid white;
+        padding: 15px;
+    }
+    header .top-header-navbar .text-navbar .text-navbar_item{
+        font-size: 17px;
+        border-left: 0.5px solid white;
+        
+    }
     header .top-header .top-header-navbar .icons-navbar li{
         margin: 10px;
+        padding: 1px 10px;
     }
     header .top-header .top-header-navbar .text-navbar li{
-        margin: 5px;
+        margin: 4px;
+        padding: 1px 10px;
     }
+    .barra-navbar{
+        display:flex;
+        background-color:#668F2E;  
+        justify-content: space-around;
+    }
+    .barra-navbar .barra-text-navbar{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%; 
+    }
+    .barra-navbar .barra-text-navbar .barra-text-navbar_item{
+        display: flex;
+        justify-content: center;
+        width: 30%;
+        padding: 10px;  
+    }
+    .barra-navbar .barra-text-navbar #central.barra-text-navbar_item{
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+    }
+
+    
+    
     .banner-img .banner{
         display: block;
         width: 100%;
-        max-height: 140px;
+        max-height: 130px;
     }
 
     main.main .section2 .fruits-vegetables .products{
@@ -341,17 +440,82 @@ main.product-details .img-product img{
         height: 200px;
     }
     
+    /*Product details*/
+    main.product-details .container-product { 
+        display: flex;
+        justify-content: space-around;
+    }
+    main.product-details .container-product .img-product{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 50%;
+        box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    }
+    main.product-details .container-product .section-1{
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+    }
+    .container-product .section-1 .item-product{
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px 20px 5px;
+    }
+    .item-product .inf-product h2{
+        text-align: center;
+        font-size: 20px;
+    }
+    .item-product .inf-product p{
+        text-align: justify;
+        padding: 10px;
+        font-style: italic;
+        width: 100%;
+    }
+    .item-product .inf-product .bold{
+        font-weight: bold ;
+        font-size: 15px;
+        padding-top: 5px;
+    }
+    .item-product .content-buttoms {
+        display: flex;
+        /*flex-wrap: wrap;*/
+        margin-top: 10px;
+    }
+    .item-product .content-buttoms a{
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    .item-product .content-buttoms button{
+        padding: 5px;
+        text-align: center;
+        background-color:#E0C05A;
+        border:none
+    }
+
+
+
+
+
 
 }  
     
 
 @media (min-width:769px){
+    header .top-header{
+        padding: 0px 15px;
+    }
 
     .inf-text h5{
     display: block;
-    padding: 8px;;
+    padding: 8px;
     text-align: center;
-    background-color: #ED9A04;
+    background-color: #E0C05A;
+    font: size 15px;
+    color:black;
     }
     header .top-header .bar-search{
         /*border: 1px solid black;*/
@@ -362,27 +526,24 @@ main.product-details .img-product img{
     }
     header .bar-search #Buscar {
         text-align: center;
-        border-radius: 6px;
-        font-size: 18px;  
+        /*border-radius: 6px;*/
+        font-size: 15px;  
     }
-    header .top-header img#logo{
-        /*border: 1px solid black;*/
-        width: 25%;
-        padding: 10px;
+    header  .top-header-navbar .icons-navbar .icons-navbar_item{
+        font-size: 22px;
     }
-
-    header .icons-navbar .icons-navbar_item{
-        font-size: 30px;
+    header .top-header-navbar .text-navbar .text-navbar_item{
+        font-size: 20px;
     }
-    header .text-navbar .text-navbar_item{
-        font-size: 30px;
+    header  .top-header-navbar .icons-navbar .icons-navbar_item a i:hover{
+        color: black;
+        cursor:pointer;
     }
     .banner-img .banner{
         display: block;
         width: 100%;
-        max-height: 230px;
+        max-height: 180px;
     }
-
 
 
     main.main .section1 nav{
@@ -446,33 +607,28 @@ main.product-details .img-product img{
         box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
     }
     /* Product details*/
-    main.product-details{
-        text-align: center;
-        max-width: 100vw;
-        background-color: white;
+    main.product-details .container-product { 
         display: flex;
+        align-items: center;
     }
-    main.product-details .img-product{
+    main.product-details .container-product .img-product{
+        justify-content: center;
+    }
+    main.product-details .container-product .section-1 .item-product .inf-product{
         display: flex;
         flex-wrap: wrap;
-        margin: 20px;
-        width: 40%;
-        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
     }
-    main.product-details .img-product img{
-        width: 100%;
-        border: 1px solid black;
+    .item-product .content-buttoms button:hover{
+        background-color: #A5DB5B;
+        cursor:pointer;
     }
-    .section-1 {
-        display: flex;
-        width: 30%;
-        border: 1px solid black;
-    }
-    .section-2 {
-        display: flex;
-        width: 30%;
-        border: 1px solid black;
-    }
+    
+
+
+
+
 
 
 

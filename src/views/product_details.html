@@ -18,21 +18,21 @@
 <body>
     <header>
         <div class="top-header">
-            <img id="logo" src="/img/logo_d.png" alt="">
+            <a href="/"><img id="logo" src="/img/logo_d.png" alt=""></a>
             <div class="bar-search">
-                <input id="Buscar" type="search" name="Buscar" placeholder="Buscar productos,marcas y más"><button><i
-                        class="fas fa-search"></i></button>
+                <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
+                <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
             </div>
             <nav class="top-header-navbar">
                 <ul class="text-navbar">
-                    <li class="text-navbar_item"><a href="#">Registrarme</a></li>
+                    <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
                 </ul>
             </nav>
             <nav class="top-header-navbar">
                 <ul class="icons-navbar">
                     <li class="icons-navbar_item"><a href="#"><i class="fas fa-truck"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-user-circle"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                 </ul>
             </nav>
             <div class="burger-menu">
@@ -41,35 +41,56 @@
         </div>
     </header>
     <main class="product-details">
-        <div class="img-product">
-            <img src="/img/mora.jpg" alt="">
-            <div class="qualification">
-                <i class="fas fa-star"></i>
+        <div class="container-product">
+            <div class="img-product">
+                <img src="/img/fresa_details.jpg" alt="">
             </div>
+            <section class="section-1">
+                <article class="item-product">
+                    <div class="inf-product">
+                        <h2>FRESA 250 gr </h2>
+                        <p>La fresa es un fruto silvestre de color rojo y con forma de corazón, su sabor es dulce con un
+                            leve toque ácido y su cosecha se da principalmente en la época de verano.
+                        </p>
+                        <p class="bold">$ 3.360</p>
+                        <p class="bold">
+                            <label for="numero">Cantidad:</label>
+                            <input type="number" name="numero" id="numero" max="100" min="0">
+                        </p>
+                    </div>
+                    <nav class="content-buttoms">
+                        <a href="/sopping_cart"><button>Comprar Ahora</button></a>
+                        <a href="/sopping_cart"><button>Agregar <i class="fas fa-cart-plus"></i></button></a>
+                        <a href="#favorito"><button><i class="fas fa-heart"></i> Agregar a favoritos</button></a>
+                    </nav>
+                </article>
         </div>
-        <section class="section-1">
-            <article class="item-product">
-                <div class="inf-product">
-                    <h2>Mora</h2>
-                    <h4>Descripción del producto:</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora exercitationem molestias,
-                        blanditiis, iste, laudantium debitis porro veniam nostrum quisquam quia deleniti reprehenderit
-                        veritatis! Saepe quam labore nulla perspiciatis iure dicta.</p>
-                    <p>$$$$</p>
-                    <p>
-                        <label for="numero">Cantidad:</label>
-                        <input type="number" name="numero" id="numero" max="100" min="1">
-                    </p>
-                </div>
-                <nav class="content-buttoms">
-                    <a href="#"><button>Comprar Ahora</button></a>
-                    <a href="/sopping_cart"><button>Agregar <i class="fas fa-cart-plus"></i></button></a>
-                    <a href="#favorito"><button><i class="fas fa-heart"></i> Agregar a favoritos</button></a>
-                </nav>
-            </article>
         </section>
         <section class="section-2">
-            <h4>Lista de provedores</h4>
+            <h4>Lista de Agricultores</h4>
+            <div class="name-agri">
+                <article class="person">
+                    <img src="" alt="">
+                    <div class="person-descrip">
+                        <h3>pepito perez</h3>
+                        <p>visita mi cosecha</p>
+                    </div>
+                </article>
+                <article class="person">
+                    <img src="" alt="">
+                    <div class="person-descrip">
+                        <h3>pepito perez</h3>
+                        <p>visita mi cosecha</p>
+                    </div>
+                </article>
+                <article class="person">
+                    <img src="" alt="">
+                    <div class="person-descrip">
+                        <h3>pepito perez</h3>
+                        <p>visita mi cosecha</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
 
