@@ -243,23 +243,42 @@ main.main .section2 .fruits-vegetables .products .items .space-add-button button
     width: 60vw;
     margin: auto;
 }
+
 .main-main .main-content .products .items{
     display: flex;   
     flex-wrap : wrap; 
 }
  
 .products .items .items__title{
-    margin: 0rem .3rem;
-    flex-basis: 18%;       
+    margin: 0rem 0rem 0rem 0.3rem;     
 }
 
 .main-main .main-content img{
     border-radius: 1rem;
     width: 15vw;
 }
+.items-nav .buttoms_cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items-nav .items-nav__price{
+    border-bottom: .1rem solid var(--colorDarkGreen);
+    display: flex;
+    justify-content: space-between;
+}
 
 .items-nav .items_price {
-    border-bottom: .1rem solid var(--colorDarkGreen);
+    border-bottom: 0rem solid var(--colorDarkGreen);
+    font-size: 0.8rem;
+}
+
+.content-buttoms button{
+    padding: 0.2rem;
+    text-align: center;
+    background-color:#E0C05A;
+    border-radius: 0.3rem;
+    border:none;    
 }
 
 
@@ -344,7 +363,7 @@ main.product-details .section-2{
 }
   
 .footer .content__title, .content__copyright {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-bottom: .3rem;
     font-family: 'merienda';
     font-weight: bold;
@@ -541,7 +560,9 @@ main.product-details .section-2{
         border:none
     }
 
-
+    .products .items .items__title{
+        flex-basis: 18%;       
+    }
 
 
 
@@ -675,9 +696,9 @@ main.product-details .section-2{
 
 
 
-
-
-
+    .products .items .items__title{
+        margin: 0rem .3rem;      
+    }
     .footer .footer-content {
         display: flex;
         flex-wrap : wrap;
