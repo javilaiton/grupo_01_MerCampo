@@ -4,16 +4,16 @@ const controller = {
         res.render("home")
     },
     login:(req,res)=>{
-        res.render("login")
+        res.render("users/login")
     },
     register:(req,res)=>{
-        res.render("register")
+        res.render("users/register")
     },
     product_details:(req,res)=>{
-        res.render("product_details")
+        res.render("products/product_details")
     },
     shopping_cart:(req,res)=>{
-        res.render("shopping_cart")
+        res.render("products/shopping_cart")
     },
 
 
