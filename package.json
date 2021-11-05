@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/javilaiton/grupo_01_MerCampo#readme",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   }
 }
