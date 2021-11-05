@@ -2,57 +2,21 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100;300&family=Merienda:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <%- include("./partials/head") %> 
     <title>MerCampo</title>
 </head>
 
 <body>
-    <header>
-        <div class="top-header">
-            <a href="/"><img id="logo" src="/img/logo_d.png" alt=""></a>
-            <div class="bar-search">
-                <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
-                <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
-            </div>
-            <nav class="top-header-navbar">
-                <ul class="text-navbar">
-                    <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
-                </ul>
-            </nav>
-            <nav class="top-header-navbar">
-                <ul class="icons-navbar">
-                    <li class="icons-navbar_item"><a href="#"><i class="fas fa-truck"></i></a></li>
-                    <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
-                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
-                </ul>
-            </nav>
-            <div class="burger-menu">
-                <a href="/" class="burger-bottom"><i class="fas fa-bars"></i></a>
-            </div>
-        </div>
-    </header>
-    <nav class="barra-navbar">
-        <ul class="barra-text-navbar">
-            <li class="barra-text-navbar_item"><a href="/">Inicio</a></li>
-            <li id="central" class="barra-text-navbar_item"><a href="#farmers">Agricultores</a></li>
-            <li class="barra-text-navbar_item"><a href="#products">Cosecha</a></li>
-        </ul>
-    </nav>
-    <section class="inf">
-        <div class="inf-text">
-            <h5>Si realizaste el pedido después de las 12:00 pm, tu pedido se despachara el día siguiente y los
-                pedidos
-                realizados el sábado después de las 12 pm y el domingo se despacharan el día Lunes</h5>
-        </div>
-    </section>
+    <!--Header-->
+    <%- include("./partials/header") %> 
+    <!--Header-->
+    <!--navbar-->
+    <%- include("./partials/navbar") %>
+    <!--navbar-->
+    <!--infobar-->
+    <%- include("./partials/infobar") %>
+    <!--infobar-->
+    
     <section class="banner-img">
         <img src="/img/banner_1.jpg" alt="banner" class="banner">
     </section>
@@ -266,52 +230,10 @@
         </section>
     </main>
 
-    <footer class="footer">
+    <!--footer-->
+    <%- include("./partials/footer") %>
+    <!--footer-->
 
-        <div class="footer-content">
-
-            <div class="content">
-                <h5 class="content__title">Acerca de Nosotros</h5>
-                <p class="content__description">Conectamos, de manera sencilla, a todos los agricultores de zonas rurales cercanas a grandes urbes.</p>
-            </div>
-            <div class="content">
-                <h5 class="content__title">Contacto</h5>
-                <p class="content__description">Servicio al cliente: 316 222 9999</p>
-                <p class="content__description">Email: mercadeo@mercampo.com</p>
-            </div>
-            <div class="content">
-                <h5 class="content__title">Pagos</h5>
-                <p class="content__description">Aceptamos todas las tarjetas</p>
-                <p class="content__description">NEQUI</p>
-                <p class="content__description">DAVIPLATA</p>
-            </div>
-            <div class="content">
-                <h5 class="content__title">Redes</h5>
-                <div class="content-icon">
-                    <div class="icon-media">
-                        <i class="fab fa-facebook-f"></i>
-                    </div>
-                    <div class="icon-media">
-                        <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="icon-media">
-                        <i class="fab fa-twitter"></i>
-                    </div> 
-                </div>
-                
-            </div>
-            <div class="content">
-                <h5 class="content__title">Ubicación</h5>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31909.55904383426!2d-77.40183163590893!3d1.3597096393272392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sus!4v1635285716524!5m2!1ses-419!2sus" style="border:0;" allowfullscreen="" loading="lazy" class="content__map"></iframe>
-            </div>
-
-        </div>
-
-        <div class="contentA">
-            <h5 class="content__copyright">Copyright © 2021 MerCampo</h5>
-        </div>
-
-    </footer>
 
 </body>
 
