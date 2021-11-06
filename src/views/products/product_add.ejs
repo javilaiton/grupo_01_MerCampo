@@ -17,58 +17,44 @@
     <%- include("../partials/infobar") %>
     <!--infobar-->
     <main class="product-details">
-        <div class="container-product">
-            <div class="img-product">
-                <img src="/img/fresa_details.jpg" alt="">
+        <form action="/" class="form-product_new">
+            <div class="container-product">
+                <div class="img-product">
+                    <label for="imagen">¿Cual es su imagen?</label>
+                    <input type="file" name="product_new"/>
+                    <!--<img src="/img/fresa_details.jpg" alt="">-->
+                </div>
+                <section class="section-1">
+                    <article class="item-product">
+                        <div class="inf-product">
+                            <label for="name-product"><h2>Nombre del Producto:</h2></label>
+                            <input type="text" name="name-product" id="name-product" class="barra" placeholder="Ingrese el nombre del producto" required>
+                            <label class="control-info">Categoria del Producto:</label>
+                            <select name="profile" class="control" required>
+                                <option value="buyer">Verdura</option>
+                                <option value="seller">Fruta</option>
+                            </select>
+                            <p>
+                                <label for="description">¿Cual es su descripción?</label>
+                                <input type="text" name="description" id="numero">
+                            </p>
+                            <p class="bold">
+                                <label for="numero">¿Qué precio?</label>
+                                <input type="number" name="numero" id="numero">
+                            </p>
+                            <p class="bold">
+                                <label for="numero">¿Cuantos?</label>
+                                <input type="number" name="numero" id="numero">
+                            </p>
+                        </div>
+                        <nav class="content-buttoms">
+                            <a href="/shopping_cart"></a><button type="reset" class="button-form__reset">Borrar</button></a>
+                            <a href="/shopping_cart"></a><button type="submit" class="button-form__submit">Guardar</button></a>
+                        </nav>
+                    </article>
+                </section>
             </div>
-            <section class="section-1">
-                <article class="item-product">
-                    <div class="inf-product">
-                        <h1>Detalle de producto</h1>
-                        <h2>FRESA 250 gr </h2>
-                        <p>La fresa es un fruto silvestre de color rojo y con forma de corazón, su sabor es dulce con un
-                            leve toque ácido y su cosecha se da principalmente en la época de verano.
-                        </p>
-                        <p class="bold">$ 3.360</p>
-                        <p class="bold">
-                            <label for="numero">Cantidad:</label>
-                            <input type="number" name="numero" id="numero" max="100" min="0">
-                        </p>
-                    </div>
-                    <nav class="content-buttoms">
-                        <a href="/shopping_cart"><button>Comprar Ahora</button></a>
-                        <a href="/shopping_cart"><button>Agregar <i class="fas fa-cart-plus"></i></button></a>
-                        <a href="#favorito"><button><i class="fas fa-heart"></i> Agregar a favoritos</button></a>
-                    </nav>
-                </article>
-        </div>
-        </section>
-        <section class="section-2">
-            <h4>Lista de Agricultores</h4>
-            <div class="name-agri">
-                <article class="person">
-                    <img src="" alt="">
-                    <div class="person-descrip">
-                        <h3>pepito perez</h3>
-                        <p>visita mi cosecha</p>
-                    </div>
-                </article>
-                <article class="person">
-                    <img src="" alt="">
-                    <div class="person-descrip">
-                        <h3>pepito perez</h3>
-                        <p>visita mi cosecha</p>
-                    </div>
-                </article>
-                <article class="person">
-                    <img src="" alt="">
-                    <div class="person-descrip">
-                        <h3>pepito perez</h3>
-                        <p>visita mi cosecha</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+        </form>
     </main>
 
     <!--footer-->
