@@ -539,6 +539,10 @@ main.product-details .section-1{
 main.product-details .section-2{
     display: none;
 }
+/*adm_products*/
+main.adm .adm_content .table_products td a{
+   color: black;
+}
 
 /*footer*/
 .footer {

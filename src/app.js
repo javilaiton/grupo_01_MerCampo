@@ -15,6 +15,7 @@ app.use("/login",rutas)
 app.use("/register",rutas)
 app.use("/product_details",rutas)
 app.use("/shopping_cart",rutas)
+app.use("/adm_products",rutas)
 
 
 /*

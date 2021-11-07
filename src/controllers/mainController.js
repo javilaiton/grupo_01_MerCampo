@@ -15,7 +15,9 @@ const controller = {
     shopping_cart:(req,res)=>{
         res.render("products/shopping_cart")
     },
-
+    adm_products:(req,res)=>{
+        res.render("products/adm_products")
+    },
 
 }
 

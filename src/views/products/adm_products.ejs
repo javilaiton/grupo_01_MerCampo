@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head") %>
+        <title>administrator products </title>
+</head>
+
+<body>
+    <!--Header-->
+    <%- include("../partials/header") %>
+        <!--Header-->
+        <!--navbar-->
+        <%- include("../partials/navbar") %>
+            <!--navbar-->
+            <main class="adm">
+                <div class="adm_content" >
+                    <h1></i>Administrador </h1>
+                    <div class="table_products">
+                        <table border= "5" >
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>Producto</th>
+                                    <th>Categoria</th>
+                                    <th>Ver</th>
+                                    <th>Editar</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> 001</td>
+                                    <td> Mora </td>
+                                    <td> Fruta</td>
+                                    <td><a href="/shopping_cart"><i class="fas fa-eye"></i></a></td>
+                                    <td><a href="/shopping_cart"><i class="fas fa-edit"></i></a></td>
+                                    <td><i class="fas fa-trash-alt"></i></td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td>002</td>
+                                    <td>Aguacate</td>
+                                    <td>Verdura</td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                    <td><i class="fas fa-edit"></i></td>
+                                    <td><i class="fas fa-trash-alt"></i></td>
+
+                                </tr>
+                                <tr>
+                                    <td>003 </td>
+                                    <td>Granadilla </td>
+                                    <td>Fruta </td>
+                                    <td><i class="fas fa-eye"></i></td>
+                                    <td><i class="fas fa-edit"></i></td>
+                                    <td><i class="fas fa-trash-alt"></i></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class="content-buttoms">
+                        <a href="/shopping_cart"><button>Agregar<i class="fas fa-plus-circle"></i></button></a>
+                    </nav>
+                </div>
+            </main>
+
+            <!--footer-->
+            <%- include("../partials/footer") %>
+                <!--footer-->
+
+</body>
+
+</html>
