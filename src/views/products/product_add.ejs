@@ -3,7 +3,7 @@
 
 <head>
     <%- include("../partials/head") %>
-    <title>Product details</title>
+    <title>Nuevo Producto</title>
 </head>
 
 <body>
@@ -16,13 +16,61 @@
     <!--infobar-->
     <%- include("../partials/infobar") %>
     <!--infobar-->
-    <main class="product-details">
+    <main class="product-new">
+        <h1>Agregar nuevo producto</h1>
+        <div class="container-product">
+            <form action="/" class="form-register">
+                <div class="img-product">
+                    <div class="control-formulario">
+                        <label for="foto">Agregar foto del producto:</label>
+                        <div>
+                            <input type="file" name="foto" id="foto" class="barra" accept=".jpg , .png , .jpeg">
+                        </div>
+                    </div>
+                </div>
+                <section class="section-1">
+                    <article class="item-product">
+                        <div class="inf-product">
+                            <h2>Información del producto</h2>
+                            <div class="control-formulario">
+                                <label for="title">Nuevo nombre del producto:</label>
+                                <div>
+                                    <input type="text" name="title" id="title" class="barra" placeholder="Nuevo Producto"
+                                        minlength="2">
+                                </div>
+                            </div>
+    
+                            <div class="control-formulario">
+                                <label for="description">Añadir descripción del producto:</label>
+                                <textarea id="description" class="barra" name="description" rows="3" cols="20">Nueva descripción</textarea>
+                            </div>
+                            <div class="control-formulario">
+                                <label for="price"> Añadir precio del producto:</label>
+                                <div>
+                                    <input type="text" name="price" id="price" class="barra" placeholder="$$$$$"
+                                        minlength="3">
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="content-buttons">
+                            <input type="reset" id="reset" class="buttons" value="Descartar cambios">
+                            <input type="submit" id="submit" class="buttons" value="Guardar y enviar">
+                        </div>
+    
+                    </article>
+                </section>
+            </form>
+        </div>
+    </main>
+    <!--<main class="product-details product-new">
+        <h1>Agregar nuevo producto</h1>
         <form action="/" class="form-product_new">
             <div class="container-product">
                 <div class="img-product">
                     <label for="imagen">¿Cual es su imagen?</label>
                     <input type="file" name="product_new"/>
-                    <!--<img src="/img/fresa_details.jpg" alt="">-->
+                    <img src="/img/fresa_details.jpg" alt="">
                 </div>
                 <section class="section-1">
                     <article class="item-product">
@@ -58,7 +106,7 @@
                 </section>
             </div>
         </form>
-    </main>
+    </main>-->
 
     <!--footer-->
     <%- include("../partials/footer") %>

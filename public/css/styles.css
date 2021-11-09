@@ -292,7 +292,7 @@ main.main .content-products .section2 .fruits-vegetables .products .items .space
 
 /* main register*/
 
-main.register, main.login, main.edition{
+main.register, main.login, main.edition, main.product-new{
     background-color: white;
     text-align: center;
     padding-top: 20px;
@@ -498,7 +498,7 @@ main.product-details{
     padding: 20px; 
 
 }
-main.product-details .container-product, main.edition .container-product{
+main.product-details .container-product, main.edition .container-product, main.product-new .container-product{
     background-color: #FADEC5;
     padding: 20px;
     border-radius: 20px;
@@ -575,6 +575,7 @@ main.edition h1{
     margin: 0px;
     margin-bottom: 20px;
     padding: 5px;
+    font-size: 24px;
 }
 
 main.edition .section-1 h2{
@@ -725,14 +726,99 @@ main.adm .adm_content .content-buttoms button{
 main.adm .adm_content .content-buttoms button i{
     padding-left: 10px;
 }
+/* main new_product*/
 
+main.product-new h1{
+    background-color: #FADEC5;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 24px;
+}
 
+main.product-new .section-1 h2{
+    margin: 10px;
+    font-size: 28px;
+}
 
+main.product-new .form-register .img-product{    
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    height: 20%;
+    margin: auto;
+}
 
+main.product-new .form-register .img-product:hover{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    border: none;
+    background-color: #E0C05A;
+}
 
+main.product-new .form-register .img-product img{
+    border-radius: 10px;
+    background-color: white;
+}
 
+main.product-new .form-register .control-formulario{
+    margin: 10px;
+}
 
+main.product-new .form-register .control-formulario label{
+    font-weight: bold;
+    font-size: 1.1rem;
+}
 
+main.product-new .form-register .img-product img, .control-formulario .barra{
+    width: 100% ;
+}
+
+main.product-new .form-register .control-formulario input.barra{
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+}
+
+main.product-new .form-register .control-formulario textarea.barra{
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+    width: 100%;
+}
+main.product-new .form-register .section-1 .item-product .inf-product{
+    text-align: center;
+}
+main.product-new .form-register .section-1 .item-product .content-buttons{
+    text-align: center;
+}
+main.product-new .form-register .section-1 .item-product .content-buttons .buttons {
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #E0C05A;
+    border: none;
+    width: 80%;
+}
+
+main.product-new .form-register .section-1 .item-product .content-buttons #submit.buttons:hover {
+    background-color: #668F2E;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+main.product-new .form-register .section-1 .item-product .content-buttons #reset.buttons:hover {
+    /*background-color: #FAC196;*/
+    background-color: #E0756F;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
 
 /*footer*/
 .footer {
@@ -866,10 +952,7 @@ main.adm .adm_content .content-buttoms button i{
     .barra-navbar .barra-text-navbar #central.barra-text-navbar_item{
         border-left: 1px solid white;
         border-right: 1px solid white;
-    }
-
-    
-    
+    }       
     .banner-img .banner{
         display: block;
         width: 100%;
@@ -986,7 +1069,6 @@ main.adm .adm_content .content-buttoms button i{
     header .top-header{
         padding: 0px 15px;
     }
-
     .inf-text h5{
     display: block;
     padding: 8px;
@@ -1126,13 +1208,8 @@ main.adm .adm_content .content-buttoms button i{
         width: 25%;
         box-shadow : none;
         transition: 0.5s all;
-    }
-    
-
-
-
-
-/* main register*/
+    } 
+    /* main register*/
     main.register .form-register{
         display: flex;
         padding: 30px;
@@ -1380,50 +1457,48 @@ main.adm .adm_content .content-buttoms button i{
         margin-bottom: 50px;
     }
 
+    /* main. product-new*/
+    
+    main.product-new .container-product .form-register{
+        display:flex;
+        justify-content: space-around;
 
+    }
+    main.product-new .container-product .form-register .img-product img{
+        align-items: center;
+        height: 500px;
+        opacity: 0.8;
+        
+    }
+    main.product-new .container-product .form-register .img-product:hover img{
+        opacity: 1;
+    }
+    main.product-new .container-product .form-register .img-product{
+        align-items: center;
+        width: 45%;
+    }
 
+    main.product-new .container-product .form-register .section-1{
+        display:flex;
+        align-items: center;
+    }
 
+    main.product-new .container-product .form-register .section-1 .item-product .inf-product h2{
+        margin-bottom: 4rem;
+    }
 
-
-
+    main.product-new .container-product .form-register .section-1 .item-product .inf-product .control-formulario{
+        margin-bottom: 3rem;
+    }
 
 
     main.main .content-products .section2 .fruits-vegetables .products .items .space-add-button button:hover{
         font-weight: bold;
         font-size: 20px;
     }
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
-
     .main-main .main-content {
         max-width: 1500px;
     }
-
-
 
     .products .items .items__title{
         margin: 0rem .3rem;
