@@ -310,12 +310,14 @@ main.register .form-register, main.login .form-login{
 
 main.register h2{
     background-color: #FADEC5;
+    margin-bottom:20px ;
+    padding: 5px;
     box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
 main.register .form-register .columns {
     background-color: #FADEC5;
-    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    border-radius: 10px;
 }
 
 main.register .form-register .columns .control-formulario, .contraseñas .control-formulario, .content-buttons .control-formulario{
@@ -341,11 +343,26 @@ main.register .form-register .columns .content-buttons {
     text-align: center;
 }
 main.register .form-register .columns .content-buttons .buttons {
-    
-    padding: 5px;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 10px;
     margin: 10px;
     text-align: center;
     background-color: #E0C05A;
+    border: none;
+}
+main.register .form-register .columns .content-buttons #submit.buttons:hover {
+    background-color: #668F2E;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+main.register .form-register .columns .content-buttons #reset.buttons:hover{
+    background-color: #E0756F;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
 }
 
 /* main login*/
@@ -353,11 +370,11 @@ main.register .form-register .columns .content-buttons .buttons {
 main.login h2{
     background-color: #FADEC5;
     box-shadow: 0px 0px 10px rgb(100 100 100);
+    padding: 5px;
 }
 
 main.login .form-login{
     background-color: #FADEC5;
-    box-shadow: 0px 0px 10px rgb(100 100 100);
 }
 
 main.login .form-login .control-formulario{
@@ -381,10 +398,19 @@ main.login .form-login .content-buttons{
     text-align: center;
 }
 main.login .form-login .content-buttons .buttons{
-    padding: 5px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
     margin: 10px;
     background-color: #E0C05A;
     text-align: center;
+}
+main.login .form-login .content-buttons .buttons:hover{
+    background-color: #668F2E;
+    color: white;
+    font-weight: bold;
+    cursor:pointer;
 }
 main.login .form-login .control-formulario .login-options{
     display: flex;
@@ -528,7 +554,8 @@ main.product-details .section-1{
 }
 
 .item-product .content-buttoms button{
-    padding: 5px;
+    padding: 10px;
+    font-size: 20px;
     text-align: center;
     background-color:#E0C05A;
     border-radius: 5px;
@@ -547,7 +574,7 @@ main.edition h1{
     box-shadow: 0px 0px 10px rgb(100 100 100);
     margin: 0px;
     margin-bottom: 20px;
-    padding: 10px;
+    padding: 5px;
 }
 
 main.edition .section-1 h2{
@@ -558,7 +585,7 @@ main.edition .section-1 h2{
 
 main.edition .form-register .img-product{
     
-    
+    background-color: white;
     border-radius: 10px;
     padding: 10px;
 }
@@ -566,6 +593,7 @@ main.edition .form-register .img-product{
 main.edition .form-register .img-product:hover{
     box-shadow: 0px 0px 10px rgb(100 100 100);
     border: none;
+    background-color: #E0C05A;
 }
 main.edition .form-register .img-product img{
     border-radius: 10px;
@@ -590,30 +618,114 @@ main.edition .form-register .control-formulario input.barra{
     height: 40px;
     text-align: center;
     margin-top: 5px;
+    width: 100%;
 }
 
 main.edition .form-register .control-formulario textarea.barra{
     padding: 10px;
     text-align: center;
     margin-top: 5px;
+    width: 100%;
 }
-
+main.edition .form-register .section-1 .item-product .inf-product{
+    text-align: center;
+}
+main.edition .form-register .section-1 .item-product .content-buttons{
+    text-align: center;
+}
 main.edition .form-register .section-1 .item-product .content-buttons .buttons {
-    padding: 5px;
+    padding: 10px;
     font-size: 20px;
     margin: 10px;
+    border-radius: 5px;
     text-align: center;
     background-color: #E0C05A;
+    border: none;
+    width: 80%;
 }
 main.edition .form-register .section-1 .item-product .content-buttons #submit.buttons:hover {
-    background-color: #A5DB5B;
+    background-color: #668F2E;
+    color: white;
     font-weight: bold;
+    cursor:pointer;
 }
 
 main.edition .form-register .section-1 .item-product .content-buttons #reset.buttons:hover {
-    background-color: var(--colorRed);
+    /*background-color: #FAC196;*/
+    background-color: #E0756F;
+    color: white;
     font-weight: bold;
+    cursor:pointer;
 }
+/*adm_products*/
+
+main.adm{
+    background-color: white;
+    text-align: center;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+}
+main.adm .adm_content{
+    padding: 35px;
+}
+
+.adm_content h2{
+    background-color: #FADEC5;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+/*.content_table .table_mobile{
+    border: 1px solid black;
+    
+}*/
+.table_mobile .mobile_items{
+    background-color:#FADEC5;
+    /*border: 1px solid black;*/
+    border-radius: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+.table_mobile .table_inf{
+    display: flex;
+    justify-content: space-between;
+}
+.table_mobile .table_inf  p a{
+    color: black;
+ }
+ .table_mobile img{
+     width: 100%;
+     height: 210px;
+     border-radius: 15px;
+ }
+
+ main.adm .adm_content .content_table{
+    width: 100%;
+}
+.table_mobile .mobile_items .table_inf h3{
+    font-size: 15px;
+    padding-top: 10px;
+}
+.table_mobile .mobile_items .table_inf p{
+    font-size: 15px;
+    padding-top: 10px;
+}
+
+table{
+    display: none;  
+}
+
+main.adm .adm_content .content-buttoms button{
+    width: 100%;
+    padding: 8px;
+    font-size: 20px;
+}
+main.adm .adm_content .content-buttoms button i{
+    padding-left: 10px;
+}
+
 
 
 
@@ -859,6 +971,12 @@ main.edition .form-register .section-1 .item-product .content-buttons #reset.but
         font-size: 60px;
         margin: 20px;
     }
+
+    /*adm_products*/
+    .table_mobile img{  
+        height: 290px;   
+    }
+
     
 
 }  
@@ -1062,6 +1180,7 @@ main.edition .form-register .section-1 .item-product .content-buttons #reset.but
     main.login .form-login{
         width: 70%;
         align-items: center;
+        box-shadow: 0px 0px 10px rgb(100 100 100);
     }
 
 
@@ -1124,10 +1243,6 @@ main.edition .form-register .section-1 .item-product .content-buttons #reset.but
 
 
 
-
-
-
-
     /* Product details*/
     main.product-details{
         display: flex;
@@ -1141,11 +1256,17 @@ main.edition .form-register .section-1 .item-product .content-buttons #reset.but
         max-width: 900px;
         width: 100%;
     }
+    
     main.product-details .container-product .img-product{
         width: 50%;
+        min-height: 550px;
         justify-content: center;
-        
     }
+
+    main.product-details .img-product img{
+        width: 100%;
+    }
+    
     main.product-details .container-product .section-1 .item-product{
         display: flex;
         flex-wrap: wrap;
@@ -1158,11 +1279,72 @@ main.edition .form-register .section-1 .item-product .content-buttons #reset.but
         justify-content: center;
         align-items: center;
     }
+    main.product-details .container-product .section-1 .item-product .inf-product h1{
+        margin-bottom: 50px;
+        font-size: 40px;
+    }
+    main.product-details .container-product .section-1 .item-product .inf-product h2{
+        width: 50%;
+        padding: 30px;
+        font-size: 30px;
+    }
+    .item-product .inf-product p{
+        width: 80%;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+    .item-product .inf-product .bold{
+        font-size: 25px;
+    }
+
     .item-product .content-buttoms button:hover{
-        background-color: white;
+        background-color: #668F2E;
+        color: white;
+        font-weight: bold;
         cursor:pointer;
     }
     
+    /* adm_products*/
+    .adm_content .content_table .table_mobile{
+        display: none;
+    }
+    table{
+    background-color: #FADEC5;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin-top: 40px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+    display: revert;
+    }
+    th{
+        text-transform: uppercase;
+        background-color: #FAC196;
+    }
+    th, td{
+    border: 1px solid white;
+    padding: 8px 8px;
+    }
+    main.adm .adm_content .content_table td img{
+    width: 50%;
+    height: 80px;
+    }
+    main.adm .adm_content .content_table td a{
+    color: black;
+    }
+    main.adm .adm_content .content_table td a:hover{
+        color: #668F2E;
+    }
+    main.adm .adm_content .content-buttoms button{
+        margin-top: 20px;
+    }
+    main.adm .adm_content .content-buttoms button:hover{
+        /*background-color:#A5DB5B;*/
+        background-color: #668F2E;
+        color: white;
+        font-weight: bold;
+        cursor:pointer;
+    }    
 
     /* main.edition*/
     

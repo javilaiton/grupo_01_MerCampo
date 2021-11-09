@@ -14,8 +14,11 @@ app.use("/",rutas)
 app.use("/login",rutas)
 app.use("/register",rutas)
 app.use("/product_details",rutas)
+app.use("/product_add",rutas)
 app.use("/shopping_cart",rutas)
 app.use("/edition_product",rutas)
+app.use("/adm_products",rutas)
+
 
 /*
 app.get('/',(req,res)=>{

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include("../partials/head") %>
+    <title>Product details</title>
+</head>
+
+<body>
+    <!--Header-->
+    <%- include("../partials/header") %> 
+    <!--Header-->
+    <!--navbar-->
+    <%- include("../partials/navbar") %>
+    <!--navbar-->
+    <!--infobar-->
+    <%- include("../partials/infobar") %>
+    <!--infobar-->
+    <main class="product-details">
+        <form action="/" class="form-product_new">
+            <div class="container-product">
+                <div class="img-product">
+                    <label for="imagen">¿Cual es su imagen?</label>
+                    <input type="file" name="product_new"/>
+                    <!--<img src="/img/fresa_details.jpg" alt="">-->
+                </div>
+                <section class="section-1">
+                    <article class="item-product">
+                        <div class="inf-product">
+                            <label for="name-product"><h2>Nombre del Producto:</h2></label>
+                            <input type="text" name="name-product" id="name-product" class="barra" placeholder="Ingrese el nombre del producto" required>
+                            <label class="control-info">Categoria del Producto:</label>
+                            <select name="profile" class="control" required>
+                                <option value="buyer">Verdura</option>
+                                <option value="seller">Fruta</option>
+                            </select>
+                            <p>
+                                <label for="description">¿Cual es su descripción?</label>
+                                <input type="text" name="description" id="numero">
+                            </p>
+                            <p class="bold">
+                                <label for="numero">¿Qué precio?</label>
+                                <input type="number" name="numero" id="numero">
+                            </p>
+                            <p class="bold">
+                                <label for="numero">¿Cuantos?</label>
+                                <input type="number" name="numero" id="numero">
+                            </p>
+                        </div>
+                        <nav class="content-buttoms">
+                            <a href="/shopping_cart"></a><button type="reset" class="button-form__reset">Borrar</button></a>
+                            <a href="/shopping_cart"></a><button type="submit" class="button-form__submit">Guardar</button></a>
+                        </nav>
+                    </article>
+                </section>
+            </div>
+        </form>
+    </main>
+
+    <!--footer-->
+    <%- include("../partials/footer") %>
+    <!--footer-->
+
+</body>
+
+</html>
