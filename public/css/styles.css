@@ -292,7 +292,7 @@ main.main .content-products .section2 .fruits-vegetables .products .items .space
 
 /* main register*/
 
-main.register, main.login{
+main.register, main.login, main.edition{
     background-color: white;
     text-align: center;
     padding-top: 20px;
@@ -469,10 +469,10 @@ main.product-details{
     text-align: center;
     background-color: white;
     width: 100vw;
-    padding: 20px;
-    
+    padding: 20px; 
+
 }
-main.product-details .container-product{
+main.product-details .container-product, main.edition .container-product{
     background-color: #FADEC5;
     padding: 20px;
     border-radius: 20px;
@@ -539,6 +539,88 @@ main.product-details .section-1{
 main.product-details .section-2{
     display: none;
 }
+
+/* main edition_product*/
+
+main.edition h1{
+    background-color: #FADEC5;
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+main.edition .section-1 h2{
+    margin: 10px;
+    font-size: 30px;
+}
+
+
+main.edition .form-register .img-product{
+    
+    
+    border-radius: 10px;
+    padding: 10px;
+}
+
+main.edition .form-register .img-product:hover{
+    box-shadow: 0px 0px 10px rgb(100 100 100);
+    border: none;
+}
+main.edition .form-register .img-product img{
+    border-radius: 10px;
+    background-color: white;
+}
+
+main.edition .form-register .control-formulario{
+    margin: 10px;
+}
+
+main.edition .form-register .control-formulario label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+main.edition .form-register .img-product img, .control-formulario .barra{
+    width: 100% ;
+}
+
+main.edition .form-register .control-formulario input.barra{
+    padding: 10px;
+    height: 40px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+main.edition .form-register .control-formulario textarea.barra{
+    padding: 10px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+main.edition .form-register .section-1 .item-product .content-buttons .buttons {
+    padding: 5px;
+    font-size: 20px;
+    margin: 10px;
+    text-align: center;
+    background-color: #E0C05A;
+}
+main.edition .form-register .section-1 .item-product .content-buttons #submit.buttons:hover {
+    background-color: #A5DB5B;
+    font-weight: bold;
+}
+
+main.edition .form-register .section-1 .item-product .content-buttons #reset.buttons:hover {
+    background-color: var(--colorRed);
+    font-weight: bold;
+}
+
+
+
+
+
+
+
 
 /*footer*/
 .footer {
@@ -730,7 +812,7 @@ main.product-details .section-2{
         flex-wrap: wrap;
         width: 100%;
     }
-    .container-product .section-1 .item-product{
+    main.product-details .container-product .section-1 .item-product{
         justify-content: center;
         align-items: center;
         padding: 20px 20px 20px 5px;
@@ -1052,7 +1134,7 @@ main.product-details .section-2{
         justify-content: center;
         align-items: center;
     }
-    main.product-details .container-product { 
+    main.product-details .container-product{ 
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1081,6 +1163,43 @@ main.product-details .section-2{
         cursor:pointer;
     }
     
+
+    /* main.edition*/
+    
+    main.edition .container-product .form-register{
+        display:flex;
+        justify-content: space-around;
+
+    }
+    main.edition .container-product .form-register .img-product img{
+        align-items: center;
+        height: 500px;
+        opacity: 0.8;
+        
+    }
+    main.edition .container-product .form-register .img-product:hover img{
+        opacity: 1;
+    }
+    main.edition .container-product .form-register .img-product{
+        align-items: center;
+        width: 45%;
+    }
+
+    main.edition .container-product .form-register .section-1{
+        display:flex;
+        align-items: center;
+    }
+
+    main.edition .container-product .form-register .section-1 .item-product .inf-product h2{
+        margin-bottom: 100px;
+    }
+
+    main.edition .container-product .form-register .section-1 .item-product .inf-product .control-formulario{
+        margin-bottom: 50px;
+    }
+
+
+
 
 
 
