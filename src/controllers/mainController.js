@@ -18,6 +18,9 @@ const controller = {
     shopping_cart:(req,res)=>{
         res.render("products/shopping_cart")
     },
+    edition_product:(req,res)=>{
+        res.render("products/edition_product")
+    },
     adm_products:(req,res)=>{
         res.render("products/adm_products")
     },
