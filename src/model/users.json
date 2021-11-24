@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "Adrian",
+        "lastname": "Betancurt",
+        "email": "adrianbetancurt@gmail.com",
+        "city": "Tumaco",
+        "password": "bOQ9xxU@D3x5"
+    },
+    {
+        "id": 2,
+        "name": "Camila",
+        "lastname": "Paez",
+        "email": "camilapaez@gmail.com",
+        "city": "Ricaurte",
+        "password": "V9qohiQYN#E&"
+    },
+    {
+        "id": 3,
+        "name": "Jaime",
+        "lastname": "Tovar",
+        "email": "jaimetovar@gmail.com",
+        "city": "Cumbal",
+        "password": "Qng@OG^PX4kU"
+    }
+]
