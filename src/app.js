@@ -3,12 +3,21 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
 const rutas = require("./routes/main.routes")
+// Pasar poder usar los métodos PUT y DELETE
+const methodOverride =  require('method-override'); 
+
+
 
 app.use(express.static(path.resolve(__dirname,'../public')));
 
 app.set("view engine","ejs")
 
 app.set('views', path.resolve(__dirname, './views'));
+//capturar información 
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
+// Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
+app.use(methodOverride('_method')); 
 
 app.use("/",rutas)
 app.use("/login",rutas)
