@@ -15,13 +15,13 @@
     <main class="edition">
         <h1>Edición de producto</h1>
         <div class="container-product">
-            <form action="/" class="form-register">
+            <form action="/:id/edit" class="form-register">
                 <div class="img-product">
                     <img src="/img/fresa_details.jpg" alt="">
                     <div class="control-formulario">
-                        <label for="foto">Cambiar Foto de Producto:</label>
+                        <label for="image">Cambiar Foto de Producto:</label>
                         <div>
-                            <input type="file" name="foto" id="foto" class="barra" accept=".jpg , .png , .jpeg">
+                            <input type="file" name="image" id="foto" class="barra" accept=".jpg , .png , .jpeg">
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,9 @@
                         <div class="inf-product">
                             <h2>Detalle de producto</h2>
                             <div class="control-formulario">
-                                <label for="title"> Editar nombre del producto:</label>
+                                <label for="name"> Editar nombre del producto:</label>
                                 <div>
-                                    <input type="text" name="title" id="title" class="barra" placeholder="FRESA 250 gr"
+                                    <input type="text" name="name" id="title" class="barra" placeholder="FRESA 250 gr"
                                         minlength="2">
                                 </div>
                             </div>

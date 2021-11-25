@@ -1,81 +1,106 @@
 [
     {
         "id": 1,
+        "image": "mora.jpg",
         "name": "Mora",
-        "category": "Fruta",
         "description": "Es un tipo de baya de color morado oscuro, verde o roja. Su sabor es dulce aunque con un toque de ácidez.",
-        "price": 1500,
-        "image": "mora.jpg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 2,
+        "image": "granadilla.jpg",
         "name": "Granadilla",
-        "category": "Fruta",
         "description": "La granadilla es una fruta con cáscara gruesa y lisa con color naranja. En su interior se encuentra su pulpa gelatinosa, la cual está compuesta por unas pequeñas y comestibles semillas negras.",
-        "price": 1500,
-        "image": "granadilla.jpg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 3,
+        "image": "fresas.jpeg",
         "name": "Fresa",
-        "category": "Fruta",
         "description": "La fresa es un fruto silvestre de color rojo y con forma de corazón, su sabor es dulce con un leve toque ácido y su cosecha se da principalmente en la época de verano.",
-        "price": 1500,
-        "image": "fresas.jpeg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 4,
+        "image": "uchuvas.jpeg",
         "name": "Uchuva",
-        "category": "Fruta",
         "description": "Es una fruta pequeña de color anaranjado de sabor dulce. Se puede preparar en salsas, postres y ensaladas.",
-        "price": 1500,
-        "image": "uchuvas.jpeg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 5,
+        "image": "brevas.jpeg",
         "name": "Breva",
-        "category": "Fruta",
         "description": "La breva es el fruto de la primera cosecha de la higuera, árbol rústico y típico de países mediterráneos. El tamaño de las brevas es superior al de los higos.",
-        "price": 1500,
-        "image": "brevas.jpeg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 6,
+        "image": "bananitos.jpeg",
         "name": "Bananito",
-        "category": "Fruta",
         "description": "Es un tipo de banano pequeño y de sabor más dulce, es originario de Colombia y se exporta a países como Suiza, Francia e Italia.",
-        "price": 1500,
-        "image": "bananitos.jpeg"
+        "category": "Fruta",
+        "price": 1500
     },
     {
         "id": 7,
+        "image": "lechuga.jpg",
         "name": "Lechuga",
-        "category": "Verdura",
         "description": "Esta planta de color verde tiene su origen en la India, su sabor es suave y fresco.",
-        "price": 1500,
-        "image": "lechuga.jpg"
+        "category": "Verdura",
+        "price": 1500
     },
     {
         "id": 8,
+        "image": "tomates.jpeg",
         "name": "Tomate",
-        "category": "Verdura",
         "description": "Es una hortaliza circular de color rojo y agradable aroma. Este alimento es uno de los más apetecidos en la cocina por sus múltiples usos, ya que se puedes realizar ensaladas, pastas, salsa y como acompañamiento.",
-        "price": 1500,
-        "image": "tomates.jpeg"
+        "category": "Verdura",
+        "price": 1500
     },
     {
         "id": 9,
+        "image": "aguacates.jpg",
         "name": "Aguacate",
-        "category": "Verdura",
         "description": "El aguacate o palta como se le conoce en algunos países tiene forma ovalada con una cáscara verde que puede ser lisa o rugosa. Su pulpa es cremosa de color amarillo o verde, la cual además alberga en su interior una semilla oscura y redonda. Su cultivo se da generalmente más provechoso en climas tropicales y mediterráneos.",
-        "price": 1500,
-        "image": "aguacates.jpg"
+        "category": "Verdura",
+        "price": 1500
     },
     {
         "id": 10,
+        "image": "",
         "name": "papaya",
+        "description": "Nueva descripciónaaaaaaa",
         "category": "Fruta",
-        "description": "bla bla vla",
-        "image": "aguacates.jpg"
+        "price": "aaaaa"
+    },
+    {
+        "id": 11,
+        "image": "",
+        "name": "zanahoria",
+        "description": "Nueva desaaaaaacripción",
+        "category": "Fruta",
+        "price": "aaa"
+    },
+    {
+        "id": 12,
+        "image": "",
+        "name": "dddd",
+        "description": "Nueva descripcióndddd",
+        "category": "Verdura",
+        "price": "dddd"
+    },
+    {
+        "id": 13,
+        "image": "",
+        "name": "naranja",
+        "description": "swff",
+        "category": "Verdura",
+        "price": "sssss"
     }
 ]

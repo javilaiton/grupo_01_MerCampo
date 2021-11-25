@@ -19,12 +19,12 @@
     <main class="product-new">
         <h1>Agregar nuevo producto</h1>
         <div class="container-product">
-            <form action="/" class="form-register">
+            <form action="/product_add" class="form-register" method="POST">
                 <div class="img-product">
                     <div class="control-formulario">
-                        <label for="foto">Agregar foto del producto:</label>
+                        <label for="image">Agregar foto del producto:</label>
                         <div>
-                            <input type="file" name="foto" id="foto" class="barra" accept=".jpg , .png , .jpeg">
+                            <input type="file" name="image" id="foto" class="barra" accept=".jpg , .png , .jpeg">
                         </div>
                     </div>
                 </div>
@@ -33,9 +33,9 @@
                         <div class="inf-product">
                             <h2>Información del producto</h2>
                             <div class="control-formulario">
-                                <label for="title">Nuevo nombre del producto:</label>
+                                <label for="name">Nuevo nombre del producto:</label>
                                 <div>
-                                    <input type="text" name="title" id="title" class="barra" placeholder="Nuevo Producto"
+                                    <input type="text" name="name" id="title" class="barra" placeholder="Nuevo Producto"
                                         minlength="2">
                                 </div>
                             </div>

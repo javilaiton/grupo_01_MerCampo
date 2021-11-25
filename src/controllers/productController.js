@@ -6,7 +6,18 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const controller = {
+//Para que me agregue el id segun el ultimo de mi j.som
+const id = () =>{
+	let ultimoId=0
+	products.forEach(product => {
+		if(product.id > ultimoId){
+			ultimoId= product.id
+		} 
+	});
+	return ultimoId +1
+}
+
+const productController = {
 	// Root - Show all products
 	index: (req, res) => {
 		// Do the magic
@@ -19,27 +30,41 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		// Do the magic
+		res.render("products/product_add")
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 		// Do the magic
+
+		let product ={
+			id: id(),
+			image:"agricultor.jpg",
+			...req.body
+			
+		}
+		/*console.log(product)
+		res.send(product)*/
+		//guardar
+		products.push(product)
+
+		let dbJson= JSON.stringify(products, null,4)
+		fs.writeFileSync(productsFilePath, dbJson)
+
+		res.redirect('/')
 	},
 
 	// Update - Form to edit
-	edit: (req, res) => {
-		// Do the magic
+	edit: (req,res)=>{
+        let products = products
+        const idIngr = req.params.id;
+        let productEditar = products.find(product=> product.id == idIngr);
+        res.render(path.resolve(__dirname,'../views/edition_product'), {productEditar});
 	},
 	// Update - Method to update
-	update: (req, res) => {
-		// Do the magic
-	},
+	
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		// Do the magic
-	}
 };
 
-module.exports = controller;
+module.exports = productController ;
