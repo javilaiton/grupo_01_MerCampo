@@ -27,9 +27,9 @@ app.use("/adm_products",mainRutas)
 app.use("/shopping_cart",mainRutas)
 
 
-app.use("/product_details",productRutas)
-app.use("/product_add",productRutas)
-app.use("/edition_product",productRutas)
+app.use("/product_details",mainRutas)
+app.use("/product_add",mainRutas)
+app.use("/edition_product",mainRutas)
 
 
 
@@ -54,8 +54,6 @@ app.get('/shopping_cart',(req,res)=>{
 */
 
 app.listen(port, () => console.log(`Server in port ${port}`));
-
-
 
 
 

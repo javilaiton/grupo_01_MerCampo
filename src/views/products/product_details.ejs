@@ -19,20 +19,20 @@
     <main class="product-details">
         <div class="container-product">
             <div class="img-product">
-                <img src="/img/fresa_details.jpg" alt="">
+                <img src="/img/<%=view.image%>" alt="">
             </div>
             <section class="section-1">
                 <article class="item-product">
                     <div class="inf-product">
                         <h1>Detalle de producto</h1>
-                        <h2>FRESA 250 gr </h2>
-                        <p>La fresa es un fruto silvestre de color rojo y con forma de corazón, su sabor es dulce con un
-                            leve toque ácido y su cosecha se da principalmente en la época de verano.
+                        <h2> <%=view.name%> 250 gr </h2>
+                        <p>
+                            <%=view.description%>
                         </p>
                         <p class="bold">
-                            Categoría: Fruta
+                            Categoría: <%=view.category%>
                         </p>
-                        <p class="bold">$ 3.360</p>
+                        <p class="bold">$<%=view.price%></p>
                         <p class="bold">
                             <label for="numero">Cantidad:</label>
                             <input type="number" name="numero" id="numero" max="100" min="0">

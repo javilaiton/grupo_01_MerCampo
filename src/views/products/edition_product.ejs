@@ -15,9 +15,10 @@
     <main class="edition">
         <h1>Edición de producto</h1>
         <div class="container-product">
-            <form action="/:id/edit" class="form-register">
+            <form action="/productos/edit/<%=productEditar.id%>?_method=PUT
+            " method="POST" enctype="multipart/form-data" class="form-register" >
                 <div class="img-product">
-                    <img src="/img/fresa_details.jpg" alt="">
+                    <img src="/img/<%=productEditar.image%>" alt="">
                     <div class="control-formulario">
                         <label for="image">Cambiar Foto de Producto:</label>
                         <div>
@@ -32,14 +33,14 @@
                             <div class="control-formulario">
                                 <label for="name"> Editar nombre del producto:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="FRESA 250 gr"
+                                    <input type="text" name="name" id="title" class="barra" placeholder="<%=productEditar.name%>"
                                         minlength="2">
                                 </div>
                             </div>
     
                             <div class="control-formulario">
                                 <label for="description">Editar descripción del producto:</label>
-                                <textarea id="description" class="barra" name="description" rows="3" cols="20">La fresa es un fruto silvestre de color rojo y con forma de corazón, su sabor es dulce con un leve toque ácido y su cosecha se da principalmente en la época de verano.</textarea>
+                                <textarea id="description" class="barra" name="description" rows="3" cols="20" placeholder="<%=productEditar.description%>"></textarea>
                             </div>
                             <div class="control-formulario">
                                 <label for="category">Editar categoría del producto:</label>
@@ -51,7 +52,7 @@
                             <div class="control-formulario">
                                 <label for="price"> Editar precio del producto:</label>
                                 <div>
-                                    <input type="text" name="price" id="price" class="barra" placeholder="$ 3.360"
+                                    <input type="text" name="price" id="price" class="barra" placeholder="$ <%=productEditar.price%>"
                                         minlength="3">
                                 </div>
                             </div>
