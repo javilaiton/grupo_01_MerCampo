@@ -19,14 +19,10 @@ const id = () =>{
 
 const productController = {
 	// Root - Show all products
-	index: (req, res) => {
-		// Do the magic
-	},
-
-	// Detail - Detail from one product
-	detail: (req, res) => {
-		// Do the magic
-	},
+	list: (req,res) =>{
+        let productos = arrayProducts
+        res.render("products/adm_products", {productos})
+    },
 
 	// Create - Form to create
 	create: (req, res) => {
@@ -34,37 +30,35 @@ const productController = {
 	},
 	
 	// Create -  Method to store
-	store: (req, res) => {
-		// Do the magic
-
+	save: (req, res) => {
+        let imagen = req.file? req.file.filename : "agricultor.jpg"
 		let product ={
 			id: id(),
-			image:"agricultor.jpg",
+			image: imagen ,
 			...req.body
 			
 		}
-		/*console.log(product)
-		res.send(product)*/
 		//guardar
-		products.push(product)
+		arrayProducts.push(product)
 
-		let dbJson= JSON.stringify(products, null,4)
+		let dbJson= JSON.stringify(arrayProducts, null,4)
 		fs.writeFileSync(productsFilePath, dbJson)
-
-		res.redirect('/')
+		res.redirect('/productos')
 	},
 
-	// Update - Form to edit
-	edit: (req,res)=>{
-        let products = products
-        const idIngr = req.params.id;
-        let productEditar = products.find(product=> product.id == idIngr);
-        res.render(path.resolve(__dirname,'../views/edition_product'), {productEditar});
-	},
-	// Update - Method to update
+	// Detail - Detail from one product
 	
-
-	// Delete - Delete one product from DB
+	details: (req,res) =>{
+        let productos = arrayProducts
+        let view;
+        productos.forEach(elem => {
+            if(elem.id == req.params.id){
+                view = elem;
+            }
+        });
+        res.render("products/product_details", {view})
+	
+	},
 };
 
 module.exports = productController ;
