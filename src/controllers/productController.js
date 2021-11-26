@@ -4,12 +4,18 @@ const path = require('path');
 const productsFilePath = path.resolve(__dirname, '../model/products.json');
 const arrayProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
+
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
+
+const getListProducts= function () {
+    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    return dbjson
+}
 //Para que me agregue el id segun el ultimo de mi j.som
 const id = () =>{
 	let ultimoId=0
-	arrayProducts.forEach(product => {
+	getListProducts().forEach(product => {
 		if(product.id > ultimoId){
 			ultimoId= product.id
 		} 
@@ -26,10 +32,12 @@ const updateProduct = function (productEdited) {
     return "Actualizado con éxito";
 }
 
+
+
 const productController = {
 	// Root - Show all products
 	list: (req,res) =>{
-        let productos = arrayProducts
+        let productos = getListProducts()
         res.render("products/adm_products", {productos})
     },
 
@@ -91,11 +99,10 @@ const productController = {
 	// Delete - Delete one product from DB
     delete: (req,res) =>{
         const idProductToDelete = req.params.id;
-         
-    
-        let dbJson= JSON.stringify(arrayProducts.filter(elem => elem.id != idProductToDelete), null,4)
+        let dbJson= JSON.stringify(getListProducts().filter(elem => elem.id != idProductToDelete), null,4)
 	    fs.writeFileSync(productsFilePath, dbJson)
         res.redirect("/productos");
+
     }
 };
 
