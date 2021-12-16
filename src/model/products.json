@@ -70,21 +70,5 @@
         "description": "El aguacate o palta como se le conoce en algunos países tiene forma ovalada con una cáscara verde que puede ser lisa o rugosa. Su pulpa es cremosa de color amarillo o verde, la cual además alberga en su interior una semilla oscura y redonda. Su cultivo se da generalmente más provechoso en climas tropicales y mediterráneos.",
         "category": "Verdura",
         "price": 1500
-    },
-    {
-        "id": 10,
-        "image": "agricultor.jpg",
-        "name": "manzana",
-        "description": "Nueva descripción",
-        "category": "Fruta",
-        "price": "123"
-    },
-    {
-        "id": 11,
-        "image": "agricultor.jpg",
-        "name": "mango",
-        "description": "sfasdfasdadas",
-        "category": "Fruta",
-        "price": "951"
     }
 ]
