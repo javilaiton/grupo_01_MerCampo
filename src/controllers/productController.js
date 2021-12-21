@@ -2,27 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.resolve(__dirname, '../model/products.json');
-const arrayProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
-
-//Para que me agregue el id segun el ultimo de mi j.som
-const id = () =>{
-	let ultimoId=0
-	arrayProducts.forEach(product => {
-		if(product.id > ultimoId){
-			ultimoId= product.id
-		} 
-	});
-	return ultimoId +1
+const getListProducts= function () {
+    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    return dbjson
 }
+
 const updateProduct = function (productEdited) {
-    const ProductIndex = arrayProducts.findIndex((elem) => elem.id == productEdited.id);
+    const ProductIndex = getListProducts().findIndex((elem) => elem.id == productEdited.id);
     if (ProductIndex < 0) return "No existe este producto en la base de datos";
-    let newList = arrayProducts;
+    let newList = getListProducts();
     newList[ProductIndex] = productEdited;
     let dbJson= JSON.stringify(newList, null,4)
 	fs.writeFileSync(productsFilePath, dbJson)
@@ -48,17 +39,20 @@ const productController = {
 	
 	// Create -  Method to store
 	save: (req, res) => {
+        let products=getListProducts()
+        let lastproduct= products.pop()
+        products.push(lastproduct)
         let imagen = req.file? req.file.filename : "agricultor.jpg"
 		let product ={
-			id: id(),
+			id: lastproduct.id+1,
 			image: imagen ,
 			...req.body
 			
 		}
 		//guardar
-		arrayProducts.push(product)
+		products.push(product)
 
-		let dbJson= JSON.stringify(arrayProducts, null,4)
+		let dbJson= JSON.stringify(products, null,4)
 		fs.writeFileSync(productsFilePath, dbJson)
 		res.redirect('/productos')
 	},
@@ -66,7 +60,7 @@ const productController = {
 	// Detail - Detail from one product
 	
 	details: (req,res) =>{
-        let productos = arrayProducts
+        let productos = getListProducts()
         let view;
         productos.forEach(elem => {
             if(elem.id == req.params.id){
@@ -78,7 +72,7 @@ const productController = {
 	},
     // Update - Method to update
 	edit: (req,res)=>{
-        let productos = arrayProducts
+        let productos =getListProducts()
         const verId = req.params.id;
         let productEditar = productos.find(elem=> elem.id == verId);
         res.render("products/edition_product" , {productEditar});
@@ -86,7 +80,7 @@ const productController = {
 	update: (req,res) =>{
         let id=req.params.id
         
-        let productDb=arrayProducts.find(elem=> elem.id == id)
+        let productDb=getListProducts().find(elem=> elem.id == id)
         let imagen = req.file? req.file.filename : productDb.image
         const productEdited={
             id: productDb.id,

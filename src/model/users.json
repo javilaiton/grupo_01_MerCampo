@@ -5,6 +5,7 @@
         "lastname": "Betancurt",
         "email": "adrianbetancurt@gmail.com",
         "city": "Tumaco",
+        "image": "imagen_por_defec.png",
         "password": "bOQ9xxU@D3x5"
     },
     {
@@ -13,6 +14,7 @@
         "lastname": "Paez",
         "email": "camilapaez@gmail.com",
         "city": "Ricaurte",
+        "image": "imagen_por_defec.png",
         "password": "V9qohiQYN#E&"
     },
     {
@@ -21,6 +23,43 @@
         "lastname": "Tovar",
         "email": "jaimetovar@gmail.com",
         "city": "Cumbal",
+        "image": "imagen_por_defec.png",
         "password": "Qng@OG^PX4kU"
+    },
+    {
+        "id": 4,
+        "name": "david",
+        "lastname": "mora",
+        "email": "david@gmail.com",
+        "city": "bogota",
+        "image": "imagen_por_defec.png",
+        "password": "$2a$10$Ax9yn3n3C/.duBPqZtM5teLm5AXtXeC41604XvAxyUNkQ.W/ZTGoS"
+    },
+    {
+        "id": 5,
+        "name": "davidp",
+        "lastname": "mora",
+        "email": "david@gmail.com",
+        "city": "bogota",
+        "image": "imagen_por_defec.png",
+        "password": "$2a$10$5nSIjISfN5oyGaFYszhgb.l5GNgU0F28l6/fswg5klmVxBB.rFg3W"
+    },
+    {
+        "id": 6,
+        "name": "maria",
+        "lastname": "lopez",
+        "email": "maria@gmail.com",
+        "city": "bogota",
+        "image": "product-1640057022915.jpg",
+        "password": "$2a$10$ueCsLc..GiDKLPhAnTKufuFWLWsVFU7fDJRef/L4uv8QlB0HzYeXe"
+    },
+    {
+        "id": 7,
+        "name": "david",
+        "lastname": "lopez",
+        "email": "david@gmail.com",
+        "city": "bogota",
+        "image": "product-1640057568337.jpg",
+        "password": "$2a$10$9.J.HJW0AvSzERiwhEE6BeS.LsTk.KBDjPO6cd2MezAqBXkurmlqW"
     }
 ]
