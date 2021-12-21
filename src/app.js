@@ -6,6 +6,8 @@ const mainRutas = require("./routes/main.routes")
 const productRutas= require("./routes/products.routes")
 // Pasar poder usar los métodos PUT y DELETE
 const methodOverride =  require('method-override'); 
+//sesiones 
+const session=require('express-session');
 
 
 
@@ -25,6 +27,8 @@ app.use("/login",mainRutas)
 app.use("/register",mainRutas)
 app.use("/adm_products",mainRutas)
 app.use("/shopping_cart",mainRutas)
+
+//app.use(session({secret: "Shhhh... Fran and Mati don't have to know it...", resave: false, saveUninitialized: false}));
 
 
 app.use("/product_details",mainRutas)
