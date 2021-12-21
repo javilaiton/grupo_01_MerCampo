@@ -71,7 +71,7 @@ const validationsRegister = [
 ]
 //users  
 router.post('/register', upload.single('image'),validationsRegister, controllersUser.create);
-
-
+//login
+router.post('/login', controllersUser.loginProcess);
 
 module.exports = router

@@ -15,6 +15,29 @@ const controllersUser = {
     login: function(req,res){
         res.render(path.resolve(__dirname, '../views/users/login'));
     },
+    loginProcess: (req, res) => {
+        let UsersList = getListUsers();
+        let UserLoged = UsersList.find(usuario => usuario.email === req.body.email);
+        
+        if(UserLoged){
+            let validationPassword = bcrypt.compareSync(req.body.password, UserLoged.password);
+			if (validationPassword) {
+				return res.redirect('/');
+			}
+            return res.render('users/login', {
+                errors: {
+                    email: {
+                        msg: 'Las credenciales son inválidas'
+                    }
+                }})
+        }
+        return res.render('users/login', {
+            errors: {
+                email: {
+                    msg: 'Las credenciales son inválidas'
+                }
+            }})
+	},
     register: function(req,res){
         res.render(path.resolve(__dirname, '../views/users/register'));
     },
