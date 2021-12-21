@@ -15,15 +15,25 @@
     <main class="login">
         <h2>Login de Usuario</h2>
         <i class="fas fa-user-circle"></i>
-        <form action="/" class="form-login">
+        <form action="/login" class="form-login" method="POST">
             <div class="control-formulario">
-                <label for="usuario">Correo electronico:</label>
-                <input type="text" name="usuario" id="usuario" class="barra" placeholder="Ingrese su email" required>
+                <label for="email">Correo electronico:</label>
+                <input type="text" name="email" id="email" class="barra" placeholder="Ingrese su email">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger barra">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div >
     
             <div class="control-formulario">
                 <label for="password">Contraseña:</label>
-                <input id="password" class="barra" type="password" name="password" placeholder="Ingrese su Contraseña" required>
+                <input id="password" class="barra" type="password" name="password" placeholder="Ingrese su Contraseña">
+                <% if (locals.errors && errors.email) { %>
+                    <div class="text-danger barra">
+                        <%= errors.email.msg %>
+                    </div>
+                <% } %>
             </div>
             <div class="control-formulario">
                 <div class="login-options">

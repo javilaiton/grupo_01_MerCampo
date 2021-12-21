@@ -61,5 +61,14 @@
         "city": "bogota",
         "image": "product-1640057568337.jpg",
         "password": "$2a$10$9.J.HJW0AvSzERiwhEE6BeS.LsTk.KBDjPO6cd2MezAqBXkurmlqW"
+    },
+    {
+        "id": 8,
+        "name": "Fernanda",
+        "lastname": "Trujillo",
+        "email": "fer.tn@udenar.edu.co",
+        "city": "Pasto",
+        "image": "product-1640108737111.jpg",
+        "password": "$2a$10$v46rNE3DhB9UNdLLi8QUtORoykthdR6VyhHwrub5UPyQuoxX1AxxG"
     }
 ]
