@@ -5,18 +5,22 @@
             <input id="Buscar" type="search" name="Buscar" placeholder="Busca tu cosecha favorita">
             <aspan class="icon-search"><i class="fas fa-search"></i></aspan>
         </div>
-        <nav class="top-header-navbar">
-            <ul class="text-navbar">
-                <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
-            </ul>
-        </nav>
-        <nav class="top-header-navbar">
-            <ul class="icons-navbar">
-                <li class="icons-navbar_item"><a href="/productos"><i class="fas fa-user-cog"></i></a></li>
-                <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
-                <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
-            </ul>
-        </nav>
+        <% if (!locals.logged) { %>
+            <nav class="top-header-navbar">
+                <ul class="text-navbar">
+                    <li class="text-navbar_item"><a href="/register">Registrarme</a></li>
+                    <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
+                </ul>
+            </nav>
+            <% } else{%>
+                <nav class="top-header-navbar">
+                    <ul class="icons-navbar">
+                        <li class="icons-navbar_item"><a href="/productos"><i class="fas fa-user-cog"></i></a></li>
+                        <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="icons-navbar_item"><a href="/logout"><i class="fas fa-arrow-circle-right"></i></a></li>
+                    </ul>
+                </nav>
+            <%}%>
         <div class="burger-menu">
             <a href="/" class="burger-bottom"><i class="fas fa-bars"></i></a>
         </div>

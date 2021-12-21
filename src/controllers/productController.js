@@ -20,10 +20,6 @@ const updateProduct = function (productEdited) {
     return "Actualizado con éxito";
 }
 
-const getListProducts= function () {
-    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    return dbjson
-}
 
 const productController = {
 	// Root - Show all products

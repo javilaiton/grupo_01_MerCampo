@@ -1098,6 +1098,11 @@ main.product-new .form-register .section-1 .item-product .content-buttons #reset
     header .top-header-navbar .text-navbar .text-navbar_item{
         font-size: 20px;
     }
+    header .top-header-navbar .text-navbar .icons-navbar_item{
+        color: black;
+        cursor:pointer;
+        font-size: 20px;
+    }
     header  .top-header-navbar .icons-navbar .icons-navbar_item a i:hover{
         color: black;
         cursor:pointer;

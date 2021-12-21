@@ -4,13 +4,17 @@ const app = express()
 const port = process.env.PORT || 3000
 const mainRutas = require("./routes/main.routes")
 const productRutas= require("./routes/products.routes")
+const loggedMiddleware=require("../src/middlewares/loggedMiddleware")
+
 // Pasar poder usar los métodos PUT y DELETE
 const methodOverride =  require('method-override'); 
 //sesiones 
-const session=require('express-session');
+const session = require('express-session');
 
 
 
+app.use(session({secret: "top-secret", resave: false, saveUninitialized: false}));
+app.use(loggedMiddleware)
 app.use(express.static(path.resolve(__dirname,'../public')));
 
 app.set("view engine","ejs")
@@ -28,7 +32,7 @@ app.use("/register",mainRutas)
 app.use("/adm_products",mainRutas)
 app.use("/shopping_cart",mainRutas)
 
-//app.use(session({secret: "Shhhh... Fran and Mati don't have to know it...", resave: false, saveUninitialized: false}));
+
 
 
 app.use("/product_details",mainRutas)

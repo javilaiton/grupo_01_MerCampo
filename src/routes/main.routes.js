@@ -6,6 +6,7 @@ const productsController = require("../controllers/productController")
 const controllersUser = require("../controllers/usersController")
 const path = require('path');
 const multer = require('multer');
+const loggedMiddleware= require("../middlewares/loggedMiddleware")
 
 //Requiero el paquete expres-validator
 const { body } = require('express-validator')
@@ -22,8 +23,10 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 router.get("/", controller.home)
-router.get("/login", controller.login)
-router.get("/register", controller.register)
+router.get("/logout",controllersUser.logout)
+router.get("/login", controllersUser.login)
+
+router.get("/register",  controllersUser.register)
 router.get("/product_details", controller.product_details)
 router.get("/product_add", controller.product_add)
 router.get("/shopping_cart", controller.shopping_cart)
