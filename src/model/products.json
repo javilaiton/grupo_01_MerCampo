@@ -75,16 +75,24 @@
         "id": 10,
         "image": "agricultor.jpg",
         "name": "manzana",
-        "description": "Nueva descripción",
+        "description": "soy manzana",
         "category": "Fruta",
-        "price": "123"
+        "price": "12345"
     },
     {
         "id": 11,
         "image": "agricultor.jpg",
         "name": "mango",
-        "description": "sfasdfasdadas",
+        "description": "soy mango",
         "category": "Fruta",
-        "price": "951"
+        "price": "500"
+    },
+    {
+        "id": 12,
+        "image": "agricultor.jpg",
+        "name": "cereza",
+        "description": "soy cereza",
+        "category": "Fruta",
+        "price": "123"
     }
 ]

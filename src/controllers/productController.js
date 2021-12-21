@@ -8,14 +8,11 @@ const arrayProducts = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
 
-const getListProducts= function () {
-    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    return dbjson
-}
+
 //Para que me agregue el id segun el ultimo de mi j.som
 const id = () =>{
 	let ultimoId=0
-	getListProducts().forEach(product => {
+	arrayProducts.forEach(product => {
 		if(product.id > ultimoId){
 			ultimoId= product.id
 		} 
@@ -32,7 +29,10 @@ const updateProduct = function (productEdited) {
     return "Actualizado con éxito";
 }
 
-
+const getListProducts= function () {
+    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+    return dbjson
+}
 
 const productController = {
 	// Root - Show all products
@@ -99,7 +99,7 @@ const productController = {
 	// Delete - Delete one product from DB
     delete: (req,res) =>{
         const idProductToDelete = req.params.id;
-        let dbJson= JSON.stringify(getListProducts().filter(elem => elem.id != idProductToDelete), null,4)
+        let dbJson= JSON.stringify(arrayProducts.filter(elem => elem.id != idProductToDelete), null,4)
 	    fs.writeFileSync(productsFilePath, dbJson)
         res.redirect("/productos");
 
