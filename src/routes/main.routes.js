@@ -7,7 +7,7 @@ const controllersUser = require("../controllers/usersController")
 const path = require('path');
 const multer = require('multer');
 const loggedMiddleware= require("../middlewares/loggedMiddleware")
-
+const validaciones=require("../middlewares/validacionesURL")
 //Requiero el paquete expres-validator
 const { body } = require('express-validator')
 
@@ -28,20 +28,20 @@ router.get("/login", controllersUser.login)
 
 router.get("/register",  controllersUser.register)
 router.get("/product_details", controller.product_details)
-router.get("/product_add", controller.product_add)
-router.get("/shopping_cart", controller.shopping_cart)
-router.get("/edition_product", controller.edition_product)
-router.get("/adm_products", controller.adm_products)
+router.get("/product_add", validaciones ,controller.product_add)
+router.get("/shopping_cart", validaciones,controller.shopping_cart)
+router.get("/edition_product", validaciones,controller.edition_product)
+router.get("/adm_products", validaciones,controller.adm_products)
 
 /* GET ALL PRODUCTS */
-router.get("/productos", productsController.list)
+router.get("/productos", validaciones ,productsController.list)
 /* CREATE ONE PRODUCT */
-router.get('/productos/create', productsController.create);
+router.get('/productos/create', validaciones ,productsController.create);
 router.post('/productos/create', upload.single('image'), productsController.save);
 /* GET ONE PRODUCT */
 router.get('/productos/detail/:id', productsController.details);
 /* EDIT ONE PRODUCT */
-router.get('/productos/edit/:id', productsController.edit);
+router.get('/productos/edit/:id', validaciones , productsController.edit);
 router.put('/productos/edit/:id', upload.single('image'), productsController.update);
 
 /* DELETE ONE PRODUCT***/

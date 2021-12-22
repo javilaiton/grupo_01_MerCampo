@@ -70,5 +70,14 @@
         "city": "Pasto",
         "image": "product-1640108737111.jpg",
         "password": "$2a$10$v46rNE3DhB9UNdLLi8QUtORoykthdR6VyhHwrub5UPyQuoxX1AxxG"
+    },
+    {
+        "id": 9,
+        "name": "camilo",
+        "lastname": "laiton",
+        "email": "habia@un.com",
+        "city": "bogota",
+        "image": "product-1640129819665.jpg",
+        "password": "$2a$10$dZJKKRFrObZ.inGLiSajzOyygeKuTrB.hmxn1JyGJ4eMI4RqO9x8C"
     }
 ]
