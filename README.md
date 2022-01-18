@@ -1,3 +1,5 @@
+`<Tablero Sprint 6>` : <https://silky-bit-fcf.notion.site/Sprint-6-6d915ceda6a245a7843e36dad8aa533a>
+===========
 `<Tablero Sprint 5>` : <https://silky-bit-fcf.notion.site/Sprint-5-dc19b918d32a4957b4335144c3bbf2b7>
 ===========
 `<Tablero Sprint 4>` : <https://silky-bit-fcf.notion.site/Sprint-4-ab262ae906a5431097ebdb0f480770cf>
