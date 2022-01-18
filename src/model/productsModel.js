@@ -30,10 +30,28 @@ const productModel = {
             console.log(error)
         }
     },
+    detailProduct: async function(id){
+        try{
+            let oneProduct = await db.Product.findByPk(id)
+            return oneProduct
+        }catch(error){
+            console.log(error)
+        }
 
-   
-    
-
+    },
+    editProduct: async function (product,id) {
+        try{
+            await db.Product.update({
+                ...product
+            },{
+                where: {
+                    idproducts: id
+                }
+            })
+        }catch(error){
+            console.log(error)
+        }
+    },    
 }
 
 
