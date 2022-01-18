@@ -1,4 +1,4 @@
-#🗓️Estrella de Mar SRPINT 5🗂️
+# 🗓️Estrella de Mar SRPINT 5🗂️
 
 ### Comenzar a hacer🌷
 
@@ -33,7 +33,7 @@
 - Complicarnos por cosas sin importancia.
 - Push muy grandes.
 
-#🗓️Estrella de Mar SRPINT 4🗂️
+# 🗓️Estrella de Mar SRPINT 4🗂️
 
 ### Comenzar a hacer🌷
 
@@ -70,7 +70,7 @@
 - Push muy grandes.
 - Dejar tareas incompletas.
 
-#🗓️Estrella de Mar SRPINT 3🗂️
+# 🗓️Estrella de Mar SRPINT 3🗂️
 
 ### Comenzar a hacer🌷
 
