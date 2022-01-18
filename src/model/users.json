@@ -79,5 +79,24 @@
         "city": "bogota",
         "image": "product-1640129819665.jpg",
         "password": "$2a$10$dZJKKRFrObZ.inGLiSajzOyygeKuTrB.hmxn1JyGJ4eMI4RqO9x8C"
+    },
+    {
+        "id": 10,
+        "name": "ariana",
+        "lastname": "mora",
+        "email": "arianamora@gamil.com",
+        "city": "bogota",
+        "image": "product-1642014855867.jpg",
+        "password": "$2a$10$wjlPBztg14kzUCx7PxLwOeqAp2YcKUEsFWZC5fvLMMwV9cCiucyFS"
+    },
+    {
+        "id": 11,
+        "name": "andrea",
+        "lastname": "perez",
+        "email": "andreaperez@gmail.com",
+        "city": "bogota",
+        "rol": "admi ",
+        "image": "product-1642203437333.jpg",
+        "password": "$2a$10$KiUytYgUKffdvZGWWrU1BOKfVHhNp6tgFDxiLySadlsvp8euGMjLi"
     }
 ]

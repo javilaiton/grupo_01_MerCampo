@@ -4,32 +4,18 @@ const path = require('path');
 const dataProducts = require('../model/products.json');
 const db = require("../database/models")
 
-const productModel = {
+const productsModel = {
 
     getList:async function(){
         try{
-            let products = await db.Category.findAll()
-            //return products
-            console.log(products)
+            let products = await db.Product.findAll()
+            return products
 
         }catch(error){
             console.log(error)
         }
     },
 
-    list: function () {
-        //return console.log( JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products.json"),{encoding: "utf8"})));
-        return console.log( dataProducts);
-    },
-    createProduct: async function (product) {
-        try{
-            await db.Product.create({
-                ...product
-            })
-        }catch(error){
-            console.log(error)
-        }
-    },
     detailProduct: async function(id){
         try{
             let oneProduct = await db.Product.findByPk(id)
@@ -39,6 +25,17 @@ const productModel = {
         }
 
     },
+
+    createProduct: async function (product) {
+        try{
+            await db.Product.create({
+                ...product
+            })
+        }catch(error){
+            console.log(error)
+        }
+    }, 
+
     editProduct: async function (product,id) {
         try{
             await db.Product.update({
@@ -51,9 +48,12 @@ const productModel = {
         }catch(error){
             console.log(error)
         }
-    },    
+    },
+
+    list: function () {
+        //return console.log( JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products.json"),{encoding: "utf8"})));
+        return console.log( dataProducts);
+    },
 }
-
-
 
 module.exports = productsModel

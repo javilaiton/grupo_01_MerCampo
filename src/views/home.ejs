@@ -119,8 +119,8 @@
                                 <% productos.forEach(producto => { %>
                                     <img src="/img/<%= producto.image %> " alt="moras">
                                 <div class="description">
-                                    <h5>Mora</h5>
-                                    <p>$1.500 x 500g</p>
+                                    <h5><%= producto.name %></h5>
+                                    <p>$<%= producto.price %></p>
                                     <a href="/login"> <p>Ver detalle de producto</p> </a>
                                 </div>
                                 <div class="space-add-button">

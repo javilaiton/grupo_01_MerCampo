@@ -3,7 +3,7 @@ const router = express.Router()
 const path = require('path')
 const userController = require('../controllers/userController')
 const validationsRegister = require('../middlewares/validationsRegister');
-const  validationsLogin = require('../middlewares/validationsLogin');
+const validationsLogin = require('../middlewares/validationsLogin');
 
 const bcrypt = require("bcryptjs");
 const fs = require("fs");

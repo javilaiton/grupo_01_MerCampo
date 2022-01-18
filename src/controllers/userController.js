@@ -11,7 +11,7 @@ const getListUsers= function () {
     return dbjson
 }
 
-const controllersUser = {
+const userController = {
     login: function(req,res){
         if(req.session.userlogged){
             res.redirect("/")
@@ -94,4 +94,4 @@ const controllersUser = {
     
 }
 
-module.exports = controllersUser
+module.exports = userController;

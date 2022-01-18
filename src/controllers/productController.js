@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 const productsModel = require("../model/productsModel");
+const categoryModel = require("../model/categoryModel");
 
 const productsFilePath = path.resolve(__dirname, "../model/products.json");
 const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -68,7 +69,9 @@ const productController = {
       console.log(error);
     }
   },
+
   // Detail - Detail from one product
+
   details: async (req, res) => {
     try {
       let view = await productsModel.detailProduct(req.params.id);
@@ -77,23 +80,23 @@ const productController = {
       console.log(error);
     }
     /*let productos = getListProducts()
-            let view;
-            productos.forEach(elem => {
-                if(elem.id == req.params.id){
-                    view = elem;
-                }
-            });
-            res.render("products/product_details", {view})*/
+        let view;
+        productos.forEach(elem => {
+            if(elem.id == req.params.id){
+                view = elem;
+            }
+        });
+        res.render("products/product_details", {view})*/
   },
   // Update - Method to update
-  edit: async (req, res) => {
-    try {
-      let productEditar = await productsModel.detailProduct(req.params.id);
-      let categorias = await categoryModel.AllCategory();
-      res.render("products/edition_product", { productEditar, categorias });
-    } catch (error) {
-      console.log(error);
-    }
+  edit: async(req, res) => {
+      try{
+          let productEditar = await productsModel.detailProduct(req.params.id)  
+          let categorias = await categoryModel.AllCategory()
+          res.render("products/edition_product", { productEditar, categorias });
+      }catch(error){
+        console.log(error)
+      }
   },
   update: async (req, res) => {
     try {
@@ -102,7 +105,7 @@ const productController = {
         image: imagen,
         ...req.body,
       };
-      await productsModel.editProduct(productEdited, req.params.id);
+      await productsModel.editProduct(productEdited,req.params.id)
       res.redirect("/productos");
     } catch (error) {
       console.log(error);

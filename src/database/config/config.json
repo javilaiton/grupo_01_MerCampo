@@ -1,11 +1,11 @@
 {
   "development": {
     "username": "root",
-    "password": "1003",
+    "password": "Fernan2131",
     "database": "mercampo_db",
     "host": "localhost",
     "dialect": "mysql",
-    "port": "3306"
+    "port": "3307"
   },
   "test": {
     "username": "root",
