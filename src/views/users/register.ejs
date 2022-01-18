@@ -77,6 +77,23 @@
                             </div>
                         </div>
                         <div class="control-formulario">
+                            <label for="rol">Rol:</label>
+                            <div>
+                                <select name="rol" id="rol"
+                                    class="barra <%= locals.errors && errors.rol ? 'is-invalid' : null %>">
+                                    <option value="usuario <%= locals.oldData && oldData.rol == "usuario" ? 'selected' : null %>"name="rol" >Usuario</option>
+                                    <option value="admin <%= locals.oldData && oldData.rol== "admin" ? 'selected' : null %>"name="rol" >Administrador</option>
+                                </select>
+                                <% if (locals.errors && errors.rol) { %>
+                                    <div class="text-danger">
+                                        <%= errors.rol.msg %>
+                                    </div>
+                                <% } %>
+                            </div>
+
+                        </div>
+
+                        <div class="control-formulario">
                             <label for="image">Imagen de perfil:</label>
                             <div>
                                 <input type="file" name="image" id="foto"

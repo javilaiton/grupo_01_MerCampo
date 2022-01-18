@@ -1,17 +1,13 @@
 const express = require ('express')
 const router = express.Router()
 const path = require('path')
-const controllersUser = require('../controllers/controllersUser');
+const userController = require('../controllers/userController')
+const validationsRegister = require('../middlewares/validationsRegister');
+const  validationsLogin = require('../middlewares/validationsLogin');
 
 const bcrypt = require("bcryptjs");
 const fs = require("fs");
 const multer = require("multer");
-const { body } = require("express-validator");
-
-//Requiero el paquete expres-validator
-const { body } = require('express-validator')
-
-
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -25,9 +21,17 @@ const storage = multer.diskStorage({
 const upload = multer({ storage })
 
 
+//users  
+router.get("/register",  userController.register)
+router.post('/register', upload.single('image'),validationsRegister, userController.create);
+//login
+router.get("/login", userController.login)
+router.post('/login',validationsLogin, userController.loginProcess);
+router.get("/logout",userController.logout)
 
 
-//validaciones del registro
+
+
 
 
 
