@@ -110,13 +110,14 @@
                         </form>
                     </div>
     
-                </section>
+                </section> 
                 <section class="fruits-vegetables">
                     <section class="fruits" id="fruits">
                         <h3>Frutas</h3>
                         <div class="products">
                             <article class="items">
-                                <img src="/img/mora.jpg" alt="moras">
+                                <% productos.forEach(producto => { %>
+                                    <img src="/img/<%= producto.image %> " alt="moras">
                                 <div class="description">
                                     <h5>Mora</h5>
                                     <p>$1.500 x 500g</p>
@@ -124,7 +125,10 @@
                                 </div>
                                 <div class="space-add-button">
                                     <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
+                                    <a href="/productos/detail/<%= producto.idproducts %> "><button>Detalle del Producto <i class="fas fa-cart-plus"></i></button></a>
                                 </div>
+                                <% }) %>
+                                
                             </article>
                             <article class="items">
                                 <img src="/img/granadilla.jpg" alt="granadillas">

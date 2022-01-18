@@ -15,7 +15,7 @@
     <main class="edition">
         <h1>Edición de producto</h1>
         <div class="container-product">
-            <form action="/productos/edit/<%=productEditar.id%>?_method=PUT
+            <form action="/productos/edit/<%=productEditar.idproducts%>?_method=PUT
             " method="POST" enctype="multipart/form-data" class="form-register" >
                 <div class="img-product">
                     <img src="/img/<%=productEditar.image%>" alt="">
@@ -43,20 +43,20 @@
                                 <textarea id="description" class="barra" name="description" rows="3" cols="20" placeholder="<%=productEditar.description%>"></textarea>
                             </div>
                             <div class="control-formulario">
-                                <label for="category">Editar categoría del producto:</label>
-                                <select name="category" id="">
-                                    <option name="category" value="Fruta">Fruta</option>
-                                    <option name="category" value="Verdura">Verdura</option>
-                                </select>
-                            </div>
-                            <div class="control-formulario">
                                 <label for="price"> Editar precio del producto:</label>
                                 <div>
                                     <input type="text" name="price" id="price" class="barra" placeholder="$ <%=productEditar.price%>"
                                         minlength="3">
                                 </div>
                             </div>
-    
+                            <div class="control-formulario">
+                                <label for="category">Editar categoría del producto:</label>
+                                <select name="categories_idcategories" id="">
+                                    <% categorias.forEach(categoria => { %>
+                                        <option value="<%= categoria.idcategories %>"><%= categoria.name %> </option>
+                                    <% }) %>
+                                </select>
+                            </div>   
                         </div>
                         <div class="content-buttons">
                             <input type="reset" id="reset" class="buttons" value="Descartar cambios">
