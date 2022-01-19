@@ -3,26 +3,6 @@ const path = require("path");
 const productsModel = require("../model/productsModel");
 const categoryModel = require("../model/categoryModel");
 
-const productsFilePath = path.resolve(__dirname, "../model/products.json");
-const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-
-const getListProducts = function () {
-  let dbjson = JSON.parse(fs.readFileSync(productsFilePath, "utf-8"));
-  return dbjson;
-};
-
-const updateProduct = function (productEdited) {
-  const ProductIndex = getListProducts().findIndex(
-    (elem) => elem.id == productEdited.id
-  );
-  if (ProductIndex < 0) return "No existe este producto en la base de datos";
-  let newList = getListProducts();
-  newList[ProductIndex] = productEdited;
-  let dbJson = JSON.stringify(newList, null, 4);
-  fs.writeFileSync(productsFilePath, dbJson);
-  return "Actualizado con éxito";
-};
-
 const productController = {
   adm_products: (req, res) => {
     res.render("products/adm_products");
@@ -37,6 +17,7 @@ const productController = {
   list: async (req, res) => {
     try {
       let productos = await productsModel.getList();
+      //console.log(productos)
       res.render("products/adm_products", { productos });
     } catch (error) {
       console.log(error);
@@ -112,16 +93,17 @@ const productController = {
     }
   },
   // Delete - Delete one product from DB
-  delete: (req, res) => {
-    const idProductToDelete = req.params.id;
-    let dbJson = JSON.stringify(
-      arrayProducts.filter((elem) => elem.id != idProductToDelete),
-      null,
-      4
-    );
-    fs.writeFileSync(productsFilePath, dbJson);
-    res.redirect("/productos");
-  },
-};
+  delete: async (req, res) => {
+    try{
+      await productsModel.destroyProduct(req.params.id)
+      res.redirect("/productos");
+
+    }catch (error) {
+      console.log(error);
+    }
+    
+  }
+}
 
 module.exports = productController;
+

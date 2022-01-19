@@ -54,6 +54,28 @@ const productsModel = {
         //return console.log( JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products.json"),{encoding: "utf8"})));
         return console.log( dataProducts);
     },
+    
+
+    destroyProduct: async function(id){
+        try{
+            let oneProduct = await db.Product.findByPk(id)
+            //console.log(oneProduct)
+
+            await oneProduct.destroy({
+                where :{
+                    idproducts: id
+                }
+            })
+            this.deleteImage( oneProduct.image)
+
+        }catch(error){
+            console.log(error)
+        }
+    },
+
+    deleteImage: function ( fileName) {
+        fs.unlinkSync(path.resolve(__dirname, '..', '..', 'public', 'img', fileName));
+    },
 }
 
 module.exports = productsModel
