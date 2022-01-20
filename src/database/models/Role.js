@@ -1,7 +1,7 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category';
+    let alias = 'Role';
     let cols = {
-        idcategories: {
+        idroles: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
@@ -9,21 +9,19 @@ module.exports = (sequelize, dataTypes) => {
         name: {
             type: dataTypes.STRING(45),
             allowNull: false,
-        },
-        
-        
+        },  
     }
     let config = { 
         timestamps: false
     }
 
-    const Category = sequelize.define(alias,cols,config)
-        /*Category.associate = function (models){
-        Category.hasMany(models.Product, {
+    const Role = sequelize.define(alias,cols,config)
+    /*Category.associate = function (models){
+        Category.belongsTo(models.Product, {
             as: 'product',
             foreingKey: 'categories_idcategories'
         }) 
     }*/
 
-    return Category;
+    return Role;
 }

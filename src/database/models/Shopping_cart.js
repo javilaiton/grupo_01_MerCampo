@@ -1,13 +1,13 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Category';
+    let alias = 'Shopping_cart';
     let cols = {
-        idcategories: {
+        idshopping_carts: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
         },
-        name: {
-            type: dataTypes.STRING(45),
+        users_idusers: {
+            type: dataTypes.INTEGER,
             allowNull: false,
         },
         
@@ -17,13 +17,13 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Category = sequelize.define(alias,cols,config)
-        /*Category.associate = function (models){
-        Category.hasMany(models.Product, {
+    const Shopping_cart = sequelize.define(alias,cols,config)
+    /*Category.associate = function (models){
+        Category.belongsTo(models.Product, {
             as: 'product',
             foreingKey: 'categories_idcategories'
         }) 
     }*/
 
-    return Category;
+    return Shopping_cart;
 }
