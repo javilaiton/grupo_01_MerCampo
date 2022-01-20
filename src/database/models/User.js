@@ -1,28 +1,36 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Product';
+    let alias = 'User';
     let cols = {
-        idproducts: {
+        idusers: {
             type: dataTypes.INTEGER,
             primaryKey: true,
             autoIncrement: true
-        },
-        image: {
-            type: dataTypes.STRING(45),
-            allowNull: false,
         },
         name: {
             type: dataTypes.STRING(45),
             allowNull: false,
         },
-        description: {
-            type: dataTypes.STRING(100),
+        lastname: {
+            type: dataTypes.STRING(45),
             allowNull: false,
         },
-        price: {
-            type: dataTypes.INTEGER,
+        email: {
+            type: dataTypes.STRING(45),
             allowNull: false,
         },
-        categories_idcategories: {
+        city: {
+            type: dataTypes.STRING(45),
+            allowNull: false,
+        },
+        image:{
+            type: dataTypes.STRING(45),
+            allowNull: false,
+        },
+        password: {
+            type: dataTypes.STRING(45),
+            allowNull: false,
+        },
+        roles_idroles: {
             type: dataTypes.INTEGER,
             allowNull: false,
         },
@@ -32,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
         timestamps: false
     }
 
-    const Product = sequelize.define(alias,cols,config)
+    const User = sequelize.define(alias,cols,config)
         /*Product.associate = function (models){
         Product.hasMany(models.Category, {
             as: 'categories',
@@ -40,7 +48,7 @@ module.exports = (sequelize, dataTypes) => {
         }) 
     }*/
 
-    return Product;
+    return User;
 
 
 }
