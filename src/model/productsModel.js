@@ -8,7 +8,7 @@ const productsModel = {
 
     getList:async function(){
         try{
-            let products = await db.Product.findAll()
+            let products = await db.products.findAll()
             return products
 
         }catch(error){
@@ -18,7 +18,7 @@ const productsModel = {
 
     detailProduct: async function(id){
         try{
-            let oneProduct = await db.Product.findByPk(id)
+            let oneProduct = await db.products.findByPk(id)
             return oneProduct
         }catch(error){
             console.log(error)
@@ -28,7 +28,7 @@ const productsModel = {
 
     createProduct: async function (product) {
         try{
-            await db.Product.create({
+            await db.products.create({
                 ...product
             })
         }catch(error){
@@ -38,7 +38,7 @@ const productsModel = {
 
     editProduct: async function (product,id) {
         try{
-            await db.Product.update({
+            await db.products.update({
                 ...product
             },{
                 where: {
@@ -58,7 +58,7 @@ const productsModel = {
 
     destroyProduct: async function(id){
         try{
-            let oneProduct = await db.Product.findByPk(id)
+            let oneProduct = await db.products.findByPk(id)
             //console.log(oneProduct)
 
             await oneProduct.destroy({
@@ -79,3 +79,4 @@ const productsModel = {
 }
 
 module.exports = productsModel
+
