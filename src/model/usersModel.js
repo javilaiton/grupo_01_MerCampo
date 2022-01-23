@@ -45,10 +45,35 @@ const usersModel = {
             console.log(error);
         }
     }, 
+    /*detailUser: async function(id){
+        try{
+            let oneUser = await db.users.findByPk(id)
+            //console.log(oneUser)
+            return oneUser
+        }catch(error){
+            console.log(error)
+        }
+
+    },*/
     
-    
-    
-   
+    edit: async function (id, user) {
+        try{
+            await db.users.update({
+                name:user.name,
+                lastname:user.lastname,
+                email:user.email,
+                city:user.city,
+                image:user.image,
+            },{
+                where: {
+                    idusers: id
+                }
+            })
+        }catch(error){
+            console.log(error)
+        }
+    },
+ 
 
 
 }

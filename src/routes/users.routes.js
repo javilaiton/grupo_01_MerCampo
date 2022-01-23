@@ -28,6 +28,11 @@ router.post('/register', upload.single('image'),validationsRegister, userControl
 router.get("/login", userController.login)
 router.post("/login",validationsLogin, userController.loginProcess);
 router.get("/logout",userController.logout)
+//perfil
+router.get("/perfil", userController.details_users);
+router.get("/editperfil", userController.updateUser);
+router.put("/editperfil/:id", userController.editUser);
+//router.get('/perfil', userController.details);
 
 
 

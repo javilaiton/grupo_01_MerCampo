@@ -11,6 +11,12 @@ const { validationResult } = require('express-validator');
 
 const userController = {
     // lista de usuarios
+    details_users:(req,res)=>{
+        res.render("users/details_user")
+    },
+    edition_users:(req,res)=>{
+        res.render("users/edition_user")
+    },
     listUsers: async (req, res) => {
         try {
             let users = await usersModel.getUsers();
@@ -121,6 +127,36 @@ const userController = {
         } catch (error) {
             console.log(error)
         }
+    },
+
+    /*details: async (req, res) => {
+        try {
+          let data = await usersModel.detailUser(req.params.id);
+          //console.log(data)
+          res.render("users/details_user", { data });
+        } catch (error) {
+          console.log(error);
+        }
+       
+    },*/
+
+    updateUser: async (req, res) => {
+        try{
+            let user = await usersModel.findUser('idusers', req.params.id)
+            res.render('editUser', { user });
+        } catch (error) {
+            console.log(error);
+        }       
+    },
+    //Editar Usuario
+    editUser: async (req, res) => {
+        try{
+            await usersModel.edit(req.params.id, req.body)
+            res.redirect('/')
+        } catch (error) {
+            console.log(error);
+        }
+    
     },
     
 

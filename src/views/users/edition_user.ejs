@@ -15,10 +15,10 @@
     <main class="edition">
         <h1>Edición de Perfil</h1>
         <div class="container-product">
-            <form action="/productos/edit/?_method=PUT
+            <form action="/editperfil/<%=user.idusers%>?_method=PUT
             " method="POST" enctype="multipart/form-data" class="form-register" >
                 <div class="img-product">
-                    <img src="/img/agricultor.jpg" alt="">
+                    <img src="/img/<%=user.image%>" alt="">
                     <div class="control-formulario">
                         <label for="image">Cambiar Foto de Usuario:</label>
                         <div>
@@ -33,28 +33,28 @@
                             <div class="control-formulario">
                                 <label for="name"> Editar nombre del Usuario:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="" minlength="2">
+                                    <input type="text" name="name" id="title" class="barra" placeholder="<%=user.name%>" minlength="2">
                                 </div>
                             </div>
 
                             <div class="control-formulario">
                                 <label for="lastmane"> Editar apellido del Usuario:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="" minlength="2">
+                                    <input type="text" name="lastname" id="title" class="barra" placeholder="<%=user.lastname%>" minlength="2">
                                 </div>
                             </div>
 
                             <div class="control-formulario">
-                                <label for="lastmane"> Editar email del Usuario:</label>
+                                <label for="email"> Editar email del Usuario:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="" minlength="2">
+                                    <input type="text" name="email" id="title" class="barra" placeholder="<%=user.email%>" minlength="2">
                                 </div>
                             </div>
 
                             <div class="control-formulario">
-                                <label for="lastmane"> Editar ciudad del Usuario:</label>
+                                <label for="city"> Editar ciudad del Usuario:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="" minlength="2">
+                                    <input type="text" name="city" id="title" class="barra" placeholder="<%=user.city%>" minlength="2">
                                 </div>
                             </div>
                         </div>
