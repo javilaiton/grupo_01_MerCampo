@@ -23,10 +23,10 @@ const upload = multer({ storage })
 
 //users  
 router.get("/register",  userController.register)
-router.post('/register', upload.single('image'),validationsRegister, userController.create);
+router.post('/register', upload.single('image'),validationsRegister, userController.save);
 //login
 router.get("/login", userController.login)
-router.post('/login',validationsLogin, userController.loginProcess);
+router.post("/login",validationsLogin, userController.loginProcess);
 router.get("/logout",userController.logout)
 
 

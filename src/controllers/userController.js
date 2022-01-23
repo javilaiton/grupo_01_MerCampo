@@ -1,97 +1,138 @@
 const path = require('path')
 const fs = require('fs')
-const bcrypt = require('bcryptjs')
+const bcrypt = require('bcryptjs');
 const multer = require('multer')
-
+const usersModel = require("../model/usersModel");
+const roleModel = require("../model/roleModel");
 const { validationResult } = require('express-validator');
 
-const productsFilePath = path.resolve(__dirname, '../model/users.json');
-const getListUsers= function () {
-    let dbjson= JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-    return dbjson
-}
+
+
 
 const userController = {
-    login: function(req,res){
-        if(req.session.userlogged){
-            res.redirect("/")
-        }else{
-            res.render(path.resolve(__dirname, '../views/users/login'));
+    // lista de usuarios
+    listUsers: async (req, res) => {
+        try {
+            let users = await usersModel.getUsers();
+            //console.log(users)
+            res.render("products/adm_products", { users });
+        } catch (error) {
+            console.log(error);
         }
-        
     },
-    loginProcess: (req, res) => {
-        let UsersList = getListUsers();
-        let UserRegistered = UsersList.find(usuario => usuario.email === req.body.email);
-        
-        if(UserRegistered){
-            let validationPassword = bcrypt.compareSync(req.body.password, UserRegistered.password);
-			if (validationPassword) {
+    login: (req, res) => {
+        if (req.session.userlogged) {
+            res.redirect("/")
+        } else {
+            res.render("users/login");
+        }
 
-                req.session.userlogged=UserRegistered
-                
-                
-				return res.redirect('/');
-			}
-            return res.render('users/login', {
-                errors: {
-                    email: {
-                        msg: 'Las credenciales son inválidas'
+    },
+    loginProcess: async (req, res) => {
+        try {
+            const resultValidation = validationResult(req);
+            //console.log(resultValidation)
+            if (resultValidation.errors.length > 0) {
+                return res.render('./users/login', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                })
+            } else {
+                let { email, password } = req.body;
+                let UserRegistered = await usersModel.findUser(email);
+                if (UserRegistered) {
+                    let validationPassword = bcrypt.compareSync(req.body.password, UserRegistered.password);
+                    if (validationPassword) {
+
+                        req.session.userlogged = UserRegistered
+
+
+                        return res.redirect('/');
                     }
-                }})
-        }
-        return res.render('users/login', {
-            errors: {
-                email: {
-                    msg: 'Las credenciales son inválidas'
+                    
+                } else {
+                    return res.render('users/login', {
+                        errors: {
+                            email: {
+                                msg: 'Las credenciales son inválidas'
+                            }
+                        }
+                    })
+
                 }
-            }})
-	},
-    register: function(req,res){
-        if(req.session.userlogged){
-            res.redirect("/")
-        }else{
-            res.render(path.resolve(__dirname, '../views/users/register')); 
+                return res.render('users/login', {
+                    errors: {
+                        email: {
+                            msg: 'Las credenciales son inválidas'
+                        }
+                    }
+                })
+        
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    },
+
+
+
+    register: async (req, res) => {
+        try {
+            if (req.session.userlogged) {
+                res.redirect("/")
+            } else {
+                let roles = await roleModel.AllRole();
+                //res.json(roles)
+                res.render("users/register", { roles });
+            }
+
+        } catch (error) {
+            console.log(error);
+        }
+
+    },
+
+
+    save: async (req, res) => {
+        try {
+            const resultValidation = validationResult(req);
+            //console.log(resultValidation)
+            if (resultValidation.errors.length > 0) {
+                return res.render('./users/register', {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body
+                })
+            } else {
+
+                let imagen = req.file ? req.file.filename : "imagen_por_defec.png"
+                let user = {
+                    ...req.body,
+                    image: imagen,
+                    password: bcrypt.hashSync(req.body.password, 10),
+                }
+
+                usersModel.createUsers(user)
+                res.redirect('/login')
+            }
+
+
+        } catch (error) {
+            console.log(error)
         }
     },
-    create:(req, res) => {
-        let validation= validationResult(req)
-        if (validation.errors.length > 0) {
-			return res.render('./users/register', {
-				errors: validation.mapped(),
-				oldData: req.body
-			})
-		}else{
-        let users=getListUsers()
-        let lastUsers= users.pop()
-        users.push(lastUsers)
-        let imagen = req.file? req.file.filename : "imagen_por_defec.png"
-		let newUsers ={
-			id: lastUsers.id+1,
-			name: req.body.nombres,
-            lastname: req.body.apellidos,
-            email: req.body.email,
-            city: req.body.city,
-            image: imagen,
-            password:bcrypt.hashSync(req.body.password, 10)
-		}
-        //guardar
-		users.push(newUsers)
+    
 
-		let dbJson= JSON.stringify(users, null,4)
-		fs.writeFileSync(productsFilePath, dbJson)
-		res.redirect('/login')
-		
-        } 
-        
-	},
     logout: (req, res) => {
-        if(req.session.userlogged){
+        if (req.session.userlogged) {
             req.session.destroy()
             return res.redirect('/');
         }
-	}
-    
+    }
+
 }
 
 module.exports = userController;
+
+//userController.listUsers()

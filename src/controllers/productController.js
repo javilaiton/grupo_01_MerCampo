@@ -22,8 +22,6 @@ const productController = {
     } catch (error) {
       console.log(error);
     }
-    //let productos = getListProducts()
-    //res.render("products/adm_products", {productos})
   },
 
   // Create - Form to create
@@ -60,14 +58,7 @@ const productController = {
     } catch (error) {
       console.log(error);
     }
-    /*let productos = getListProducts()
-        let view;
-        productos.forEach(elem => {
-            if(elem.id == req.params.id){
-                view = elem;
-            }
-        });
-        res.render("products/product_details", {view})*/
+   
   },
   // Update - Method to update
   edit: async(req, res) => {

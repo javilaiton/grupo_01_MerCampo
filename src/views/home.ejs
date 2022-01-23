@@ -115,6 +115,8 @@
                     <section class="fruits" id="fruits">
                         <h3>Frutas</h3>
                         <div class="products">
+                            <% if (productos.categories && errors.confirmpassword) { %>
+                            
                             <article class="items">
                                 <% productos.forEach(producto => { %>
                                     <img src="/img/<%= producto.image %> " alt="moras">
@@ -130,62 +132,8 @@
                                 <% }) %>
                                 
                             </article>
-                            <article class="items">
-                                <img src="/img/granadilla.jpg" alt="granadillas">
-                                <div class="description">
-                                    <h5>Granadilla</h5>
-                                    <p>$1.500 x 500g</p>
-                                    <a href="/login">Ver detalle de producto</a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                            </article>
-                            <article class="items">
-                                <img src="/img/fresas.jpeg" alt="fresas">
-                                <div class="description">
-                                    <h5>Fresa</h5>
-                                    <p>$1.500 x 500g</p>
-                                    <a href="/login">Ver detalle de producto</a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                            </article>
-                            <article class="items">
-                                <img src="/img/uchuvas.jpeg" alt="uchuvas">
-                                <div class="description">
-                                    <h5>Uchuva</h5>
-                                    <p>$1.500 x 500g</p>
-                                    <a href="/login">Ver detalle de producto</a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                            </article>
-                            <article class="items">
-                                <img src="/img/brevas.jpeg" alt="brevas">
-                                <div class="description">
-                                    <h5>Breva</h5>
-                                    <p>$1.500 x 500g</p>
-                                    <a href="/login">Ver detalle de producto</a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                            </article>
-                            <article class="items">
-                                <img src="/img/bananitos.jpeg" alt="bananitos">
-                                <div class="description">
-                                    <h5>Bananito</h5>
-                                    <p>$1.500 x 500g</p>
-                                    <a href="/login">Ver detalle de producto</a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                            </article>
-    
+                            
+                            <% } %>
                         </div>
     
     

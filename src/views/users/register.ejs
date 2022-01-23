@@ -19,29 +19,29 @@
                 <form action="/register" class="form-register" method="POST" enctype="multipart/form-data">
                     <div class="columns">
                         <div class="control-formulario">
-                            <label for="nombres">Nombres:</label>
+                            <label for="name">Nombres:</label>
                             <div>
-                                <input type="text" name="nombres" id="nombres"
-                                    class="barra <%= locals.errors && errors.nombres ? 'is-invalid' : null %>"
-                                    value="<%= locals.oldData ? oldData.nombres : null %>"
+                                <input type="text" name="name" id="nombres"
+                                    class="barra <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.name : null %>"
                                     placeholder="Ingrese sus Nombres" minlength="2">
-                                <% if (locals.errors && errors.nombres) { %>
+                                <% if (locals.errors && errors.name) { %>
                                     <div class="text-danger">
-                                        <%= errors.nombres.msg %>
+                                        <%= errors.name.msg %>
                                     </div>
                                     <% } %>
                             </div>
                         </div>
                         <div class="control-formulario">
-                            <label for="apellidos">Apellidos:</label>
+                            <label for="lastname">Apellidos:</label>
                             <div>
-                                <input type="text" name="apellidos" id="apellidos"
-                                    class="barra <%= locals.errors && errors.apellidos ? 'is-invalid' : null %>"
-                                    value="<%= locals.oldData ? oldData.apellidos : null %>"
-                                    placeholder="Ingrese sus Apellidos" minlength="4">
-                                <% if (locals.errors && errors.apellidos) { %>
+                                <input type="text" name="lastname" id="apellidos"
+                                    class="barra <%= locals.errors && errors.lastname ? 'is-invalid' : null %>"
+                                    value="<%= locals.oldData ? oldData.lastname : null %>"
+                                    placeholder="Ingrese sus nombres" minlength="4">
+                                <% if (locals.errors && errors.lastname) { %>
                                     <div class="text-danger">
-                                        <%= errors.apellidos.msg %>
+                                        <%= errors.lastname.msg %>
                                     </div>
                                     <% } %>
                             </div>
@@ -77,16 +77,16 @@
                             </div>
                         </div>
                         <div class="control-formulario">
-                            <label for="rol">Rol:</label>
+                            <label for="roles_idroles">Rol:</label>
                             <div>
-                                <select name="rol" id="rol"
-                                    class="barra <%= locals.errors && errors.rol ? 'is-invalid' : null %>">
-                                    <option value="usuario <%= locals.oldData && oldData.rol == "usuario" ? 'selected' : null %>"name="rol" >Usuario</option>
-                                    <option value="admin <%= locals.oldData && oldData.rol== "admin" ? 'selected' : null %>"name="rol" >Administrador</option>
+                                <select name="roles_idroles" id="">
+                                    <% roles.forEach(role => { %>
+                                        <option value="<%= role.idroles %>"><%= role.name %> </option>
+                                    <% }) %>
                                 </select>
-                                <% if (locals.errors && errors.rol) { %>
+                                <% if (locals.errors && errors.roles_idroles) { %>
                                     <div class="text-danger">
-                                        <%= errors.rol.msg %>
+                                        <%= errors.roles_idroles.msg %>
                                     </div>
                                 <% } %>
                             </div>

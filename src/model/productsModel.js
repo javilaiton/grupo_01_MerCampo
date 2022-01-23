@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-// Para poder utilizar mis archivos .json
-const dataProducts = require('../model/products.json');
 const db = require("../database/models")
 
 const productsModel = {

@@ -2,13 +2,13 @@ const { body } = require('express-validator')
 const path = require('path')
 
 const validationsRegister = [
-    body('nombres').notEmpty().withMessage('El campo nombre no puede estar vacío'),
-    body('apellidos').notEmpty().withMessage('El campo apellido no puede estar vacío'),
+    body('name').notEmpty().withMessage('El campo nombre no puede estar vacío'),
+    body('lastname').notEmpty().withMessage('El campo apellido no puede estar vacío'),
     body('email')
       .notEmpty().withMessage('El campo email no puede estar vacío').bail()
       .isEmail().withMessage('Agregar un email válido'),
     body('city').notEmpty().withMessage('Debes agregar un municipio'),
-    body('rol').notEmpty().withMessage('Debes escoger un rol'),
+    body('roles_idroles').notEmpty().withMessage('Debes escoger un rol'),
     body('image').custom((value, { req }) => {
       let file = req.file;
       let acceptedExtensions = ['.jpg', '.png', '.gif'];
