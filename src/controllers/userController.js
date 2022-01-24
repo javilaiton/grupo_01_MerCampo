@@ -128,19 +128,7 @@ const userController = {
             console.log(error)
         }
     },
-
-    /*details: async (req, res) => {
-        try {
-          let data = await usersModel.detailUser(req.params.id);
-          //console.log(data)
-          res.render("users/details_user", { data });
-        } catch (error) {
-          console.log(error);
-        }
-       
-    },*/
-
-    updateUser: async (req, res) => {
+    /*updateUser: async (req, res) => {
         try{
             let user = await usersModel.findUser('idusers', req.params.id)
             res.render('editUser', { user });
@@ -157,7 +145,7 @@ const userController = {
             console.log(error);
         }
     
-    },
+    },*/
     
 
     logout: (req, res) => {
@@ -171,4 +159,4 @@ const userController = {
 
 module.exports = userController;
 
-//userController.listUsers()
+//userController.onePerfil(9)
