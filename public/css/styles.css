@@ -86,7 +86,7 @@ header .top-header-navbar .icons-navbar li div{
 }
 header .top-header-navbar .icons-navbar li img{
     width: 100%;
-    border-radius: 35%;
+    border-radius: 5px;
     margin: 0%;
     padding: 0%;
 }
@@ -293,6 +293,7 @@ main.main .content-products .section2 .fruits-vegetables .products .items .space
     color: black;
     border-radius: 5px;
     padding: 10px;
+    margin-top: 12px;
 }
 
 /* main register*/
@@ -329,6 +330,7 @@ main.register .form-register .columns .control-formulario, .contraseñas .contro
     margin: 5px;
     padding: 5px;
 }
+
 main.register .form-register .columns .control-formulario div .barra{
     width: 100%;
     text-align: center;
@@ -336,6 +338,7 @@ main.register .form-register .columns .control-formulario div .barra{
     height: 30px;
     margin-top: 5px;
 }
+
 main.register .form-register .columns .contraseñas .barra{
     width: 100%;
     text-align: center;
@@ -343,10 +346,12 @@ main.register .form-register .columns .contraseñas .barra{
     height: 30px;
     margin-top: 5px;
 }
+
 main.register .form-register .columns .content-buttons {
     width: 100%;
     text-align: center;
 }
+
 main.register .form-register .columns .content-buttons .buttons {
     border-radius: 5px;
     font-size: 20px;
@@ -356,6 +361,7 @@ main.register .form-register .columns .content-buttons .buttons {
     background-color: #E0C05A;
     border: none;
 }
+
 main.register .form-register .columns .content-buttons #submit.buttons:hover {
     background-color: #668F2E;
     color: white;
@@ -387,10 +393,12 @@ main.login .form-login .control-formulario{
     padding: 5px;
     
 }
+
 main.login i{
     font-size: 50px;
     margin: 20px;
 }
+
 main.login .form-login .control-formulario .barra{
     width: 100%;
     text-align: center;
@@ -398,10 +406,12 @@ main.login .form-login .control-formulario .barra{
     margin-top: 5px;
     
 }
+
 main.login .form-login .content-buttons{
     width: 100%;
     text-align: center;
 }
+
 main.login .form-login .content-buttons .buttons{
     padding: 10px;
     font-size: 20px;
@@ -411,16 +421,19 @@ main.login .form-login .content-buttons .buttons{
     background-color: #E0C05A;
     text-align: center;
 }
+
 main.login .form-login .content-buttons .buttons:hover{
     background-color: #668F2E;
     color: white;
     font-weight: bold;
     cursor:pointer;
 }
+
 main.login .form-login .control-formulario .login-options{
     display: flex;
     flex-wrap: wrap;
 }
+
 main.login .form-login .control-formulario .login-options div{
     width: 100%;
 }
@@ -494,14 +507,12 @@ main.login .form-login .control-formulario .login-options a{
     border-radius: 0.3rem;
     border:none;    
 }
-
 /* Product details*/
 main.product-details{
     text-align: center;
     background-color: white;
     width: 100vw;
     padding: 20px; 
-
 }
 main.product-details .container-product, main.edition .container-product, main.product-new .container-product{
     background-color: #FADEC5;
@@ -509,7 +520,6 @@ main.product-details .container-product, main.edition .container-product, main.p
     border-radius: 20px;
     border:none;
     box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
-
 }
 main.product-details .img-product{
     background-color: white;
@@ -546,7 +556,10 @@ main.product-details .section-1{
     padding: 10px;
     font-style: italic;
     width: 100%;
-    margin: 0px;
+    margin: 15px;
+    border: 1px solid black;
+    background-color: white;
+    border-radius: 5px;
 }
 .item-product .inf-product .bold{
     font-weight: bold ;
@@ -572,7 +585,7 @@ main.product-details .section-1{
     background-color:#E0C05A;
     border-radius: 5px;
     border:none;
-    width: 50%;
+    width: 100%;
     
 }
 main.product-details .section-2{

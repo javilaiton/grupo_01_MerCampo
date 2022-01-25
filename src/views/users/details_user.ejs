@@ -25,14 +25,19 @@
                 <article class="item-product">
                     <div class="inf-product">
                         <h1>Perfil</h1>
-                        <h3 class="bold"> Nombre:  </h3><p class="parrafo"><%= locals.session.name %></p>
-                        <h3 class="bold"> Apellido:  </h3><p class="parrafo"><%= locals.session.lastname %></p>
-                        <h3 class="bold"> Email:  </h3><p class="parrafo"><%= locals.session.email %></p>
-                        <h3 class="bold"> Ciudad:  </h3><p class="parrafo"><%= locals.session.city %></p>
-                        <h3 class="bold"> Rol:  </h3><p class="parrafo"><%= locals.session.roles_idroles %></p>
+                        <h3 class="bold"> Nombre:  </h3>
+                        <p class="parrafo"><%= locals.session.name %></p>
+                        <h3 class="bold"> Apellido:  </h3>
+                        <p class="parrafo"><%= locals.session.lastname %></p>
+                        <h3 class="bold"> Email:  </h3>
+                        <p class="parrafo"><%= locals.session.email %></p>
+                        <h3 class="bold"> Ciudad:  </h3>
+                        <p class="parrafo"><%= locals.session.city %></p>
+                        <h3 class="bold"> Rol:  </h3>
+                        <p class="parrafo"><%= locals.session.roles_idroles %></p>
                     </div>
                     <nav class="content-buttoms">                   
-                        <a href="/perfil/edit/<%= locals.session.idusers%>" ><button class="buttons"><i class="fas fa-heart"></i>Editar Perfil</button></a>
+                        <a href="/perfil/edit/<%= locals.session.idusers%>" ><button>  Editar Perfil  <i class="fas fa-user-circle"></i></button></a>
                     </nav>
                 </article>
             </section>
