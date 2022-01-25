@@ -113,30 +113,26 @@
                 </section> 
                 <section class="fruits-vegetables">
                     <section class="fruits" id="fruits">
-                        <h3>Frutas</h3>
+                        <h3>Frutas y Verduras</h3>
                         <div class="products">
-                            
-                            <article class="items">
-                                <% productos.forEach(producto => { %>
-                                    <img src="/img/<%= producto.image %> " alt="moras">
-                                <div class="description">
-                                    <h5><%= producto.name %></h5>
-                                    <p>$<%= producto.price %></p>
-                                    <a href="/login"> <p>Ver detalle de producto</p> </a>
-                                </div>
-                                <div class="space-add-button">
-                                    <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
-                                    <a href="/productos/detail/<%= producto.idproducts %> "><button>Detalle del Producto <i class="fas fa-cart-plus"></i></button></a>
-                                </div>
-                                <% }) %>
-                                
-                            </article>
-                            
-                        
-                        </div>
-    
-    
+                            <% productos.forEach(producto => { %>
+                                <article class="items">                                
+                                        <img src="/img/<%= producto.image %> " alt="moras">
+                                    <div class="description">
+                                        <h5><%= producto.name %></h5>
+                                        <p>$<%= producto.price %></p>
+                                        <!--<a href="/login"> <p>Ver detalle de producto</p> </a>-->
+                                    </div>
+                                    <div class="space-add-button">
+                                        <a href="/productos/detail/<%= producto.idproducts %> "><button>Detalle del Producto <i class="fas fa-info-circle"></i></button></a>
+                                        <div></div>
+                                        <a href="/shopping_cart"><button>Agregar al carrito <i class="fas fa-cart-plus"></i></button></a>
+                                    </div>
+                                </article>
+                            <% }) %> 
+                        </div>   
                     </section>
+                    <!--
                     <section class="vegetables" id="vegetables">
                         <h3>Verduras</h3>
                         <div class="products">
@@ -175,7 +171,7 @@
                             </article>
     
                         </div>
-                    </section>
+                    </section>-->
                 </section>
             </section>
         </section>
