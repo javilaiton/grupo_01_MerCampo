@@ -81,6 +81,15 @@ header .top-header-navbar .icons-navbar li{
     list-style: none;
     color:rgb(255, 255, 255) ;
 }
+header .top-header-navbar .icons-navbar li div{
+    width: 30px;
+}
+header .top-header-navbar .icons-navbar li img{
+    width: 100%;
+    border-radius: 35%;
+    margin: 0%;
+    padding: 0%;
+}
 header .burger-menu{
     display: flex;
     align-items: center;
@@ -173,8 +182,6 @@ main.main .content-farmers .farmers .farmer .description a button{
     border-radius: 5px;
     margin: 5%;
 }
-
-
 main.main .content-products{
     margin: 5px;
     /*border: black 1px solid;*/
@@ -252,9 +259,7 @@ main.main .content-products .section2 .fruits-vegetables .products .items{
     /*background-color: white;*/
     /*background-color: #BAE06C;*/
     background-color:white;
-    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
-
-    
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );    
 }
 main.main .content-products .section2 .fruits-vegetables .products .items img{
     width: 100%;
@@ -535,6 +540,13 @@ main.product-details .section-1{
     padding: 10px;
     font-style: italic;
     width: 100%;
+}
+.item-product .inf-product .parrafo{
+    text-align: center;
+    padding: 10px;
+    font-style: italic;
+    width: 100%;
+    margin: 0px;
 }
 .item-product .inf-product .bold{
     font-weight: bold ;
@@ -1062,11 +1074,7 @@ main.product-new .form-register .section-1 .item-product .content-buttons #reset
     .table_mobile img{  
         height: 290px;   
     }
-
-    
-
 }  
-    
 
 @media (min-width:769px){
     header .top-header{
@@ -1112,8 +1120,6 @@ main.product-new .form-register .section-1 .item-product .content-buttons #reset
         width: 100%;
         max-height: 180px;
     }
-
-
     /*main.main*/
     main.main .content-farmers .farmers .farmer{
         display: flex;
