@@ -15,10 +15,10 @@
     <main class="edition">
         <h1>Edición de Perfil</h1>
         <div class="container-product">
-            <form action="/edition_user"<%=user.idusers%>?_method=PUT
+            <form action="/perfil/edit/<%= user.idusers %>?_method=PUT"
             method="POST" enctype="multipart/form-data" class="form-register" >
                 <div class="img-product">
-                    <img src="/img/<%=user.image%>" alt="">
+                    <img src="/img/users/<%=user.image%>" alt="">
                     <div class="control-formulario">
                         <label for="image">Cambiar Foto de Usuario:</label>
                         <div>

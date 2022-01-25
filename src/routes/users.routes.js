@@ -33,8 +33,8 @@ router.get("/logout",userController.logout)
 router.get("/perfil", userController.details_users);
 
 //editar productor
-router.get("/perfil/edit", userController.edition_users);
-router.put("/edition_user/:id", userController.edition_users);
+router.get("/perfil/edit/:id", userController.editUser);
+router.put("/perfil/edit/:id",upload.single('image'), userController.update);
 
 
 
