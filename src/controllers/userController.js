@@ -128,26 +128,42 @@ const userController = {
             console.log(error)
         }
     },
-    /*updateUser: async (req, res) => {
+     //Editar Usuario
+     editUser: async (req, res) => {
         try{
-            let user = await usersModel.findUser('idusers', req.params.id)
-            res.render('editUser', { user });
-        } catch (error) {
-            console.log(error);
-        }       
-    },
-    //Editar Usuario
-    editUser: async (req, res) => {
-        try{
-            await usersModel.edit(req.params.id, req.body)
-            res.redirect('/')
+            
+            let user =await usersModel.oneUser(req.params.id, req.body)
+            res.render('users/edition_user',{user})
         } catch (error) {
             console.log(error);
         }
     
-    },*/
-    
+    },
+    update: async (req, res) => {
+        try {
+          const userEdit = {
+            /*name:name,
+            lastname:lastname,
+            email:email,
+            city:city,*/
+            ...req.body,
+            image:req.file.filename,
+            
+          };
+          await usersModel.UserEdit(req.params.id,userEdit)
 
+          let user =await usersModel.oneUser(req.params.id)
+          if ( req.session.userlogged) {
+
+            //req.session.destroy()
+            req.session.userlogged = user 
+          }
+          
+          res.redirect("/perfil");
+        } catch (error) {
+          console.log(error);
+        }
+      },
     logout: (req, res) => {
         if (req.session.userlogged) {
             req.session.destroy()

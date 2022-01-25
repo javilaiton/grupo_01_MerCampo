@@ -30,6 +30,14 @@ const usersModel = {
             console.log(error)
         }
     },
+    oneUser: async function(id){
+        try {
+            let user =await db.users.findByPk(id);
+            return user; 
+        } catch (error) {
+            console.log(error);
+        }        
+    },
    
     findUser: async function(email) {
         try {
@@ -45,7 +53,7 @@ const usersModel = {
             console.log(error);
         }
     }, 
-    /*edit: async function (id, user) {
+    UserEdit: async function (id,user) {
         try{
             await db.users.update({
                 name:user.name,
@@ -61,7 +69,7 @@ const usersModel = {
         }catch(error){
             console.log(error)
         }
-    },*/
+    },
  
 
 
