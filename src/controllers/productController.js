@@ -74,7 +74,7 @@ const productController = {
     try {
       //let imagen = req.file ? req.file.filename : productDb.image;
       const productEdited = {
-        image: req.file.filename,
+        image:req.file.filename,
         ...req.body,
       };
       await productsModel.editProduct(productEdited,req.params.id)
