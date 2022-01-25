@@ -25,15 +25,15 @@
                 <article class="item-product">
                     <div class="inf-product">
                         <h1>Detalle de producto</h1>
-                        <h2> <%=view.name%> 250 gr </h2>
-                        <p>
-                            <%=view.description%>
+                        <h2> <%=view.name%>  250 gr </h2>
+                        <p class="bold">
+                            Descripción: <%=view.description%>
                         </p>
                         <p class="bold">
-                            Categoría: <%=view.category%>
+                            Categoría: <%=view.categories_idcategories.name%>
                         </p>
                         <p class="bold">
-                            <label for="numero">Cantidad:</label>
+                            <label for="numero">Cantidad: 1</label>
                             <input type="number" name="numero" id="numero" max="100" min="0">
                         </p>
                     </div>

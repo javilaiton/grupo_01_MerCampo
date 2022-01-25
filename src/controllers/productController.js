@@ -72,9 +72,9 @@ const productController = {
   },
   update: async (req, res) => {
     try {
-      let imagen = req.file ? req.file.filename : productDb.image;
+      //let imagen = req.file ? req.file.filename : productDb.image;
       const productEdited = {
-        image: imagen,
+        image: req.file.filename,
         ...req.body,
       };
       await productsModel.editProduct(productEdited,req.params.id)
