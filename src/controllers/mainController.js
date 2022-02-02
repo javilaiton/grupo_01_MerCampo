@@ -18,6 +18,9 @@ const controller = {
     shopping_cart:(req,res)=>{
         res.render("products/shopping_cart")
     },
+    getError:(req,res)=>{
+        res.render("error")
+    },
 }
 
 module.exports = controller

@@ -12,6 +12,7 @@ const { body } = require('express-validator')
 router.get("/", controller.home)
 router.get("/product_details", controller.product_details)
 router.get("/shopping_cart", validaciones,controller.shopping_cart)
+router.get("/error",controller.getError)
 
 
 

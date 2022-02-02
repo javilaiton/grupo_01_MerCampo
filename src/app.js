@@ -3,6 +3,10 @@ const path = require('path')
 const app = express()
 const port = process.env.PORT || 3000
 const loggedMiddleware=require("../src/middlewares/loggedMiddleware")
+//const cookie = require('cookie-parser');
+
+
+
 
 const mainRutas = require("./routes/main.routes")
 const productsRutas= require("./routes/products.routes")
@@ -23,6 +27,8 @@ app.set('views', path.resolve(__dirname, './views'));
 //capturar información DE LOS FORMULARIOS 
 app.use(express.urlencoded({ extended: false }));
 app.use(session({secret: "top-secret", resave: false, saveUninitialized: false}));
+//app.use(cookie())//usamos la cookie de manera general
+//pp.use(userSession) //llamamos la funcion donde se procesa la cookie y se envia a la vista de EJS
 app.use(loggedMiddleware)
 app.use(express.json())
 

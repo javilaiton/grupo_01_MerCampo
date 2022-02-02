@@ -23,7 +23,8 @@ const userController = {
             //console.log(users)
             res.render("products/adm_products", { users });
         } catch (error) {
-            console.log(error);
+            res.render("error")
+            //console.log(error);
         }
     },
     login: (req, res) => {
@@ -77,7 +78,8 @@ const userController = {
             }
 
         } catch (error) {
-            console.log(error);
+            res.render("error")
+            //console.log(error);
         }
 
     },
@@ -95,7 +97,8 @@ const userController = {
             }
 
         } catch (error) {
-            console.log(error);
+            res.render("error")
+            //console.log(error);
         }
 
     },
@@ -125,7 +128,8 @@ const userController = {
 
 
         } catch (error) {
-            console.log(error)
+            res.render("error")
+            //console.log(error)
         }
     },
      //Editar Usuario
@@ -135,7 +139,8 @@ const userController = {
             let user =await usersModel.oneUser(req.params.id, req.body)
             res.render('users/edition_user',{user})
         } catch (error) {
-            console.log(error);
+            res.render("error")
+            //console.log(error);
         }
     
     },
@@ -161,7 +166,8 @@ const userController = {
           
           res.redirect("/perfil");
         } catch (error) {
-          console.log(error);
+            res.render("error")
+          //console.log(error);
         }
       },
     logout: (req, res) => {

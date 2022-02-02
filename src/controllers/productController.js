@@ -20,7 +20,8 @@ const productController = {
       //console.log(productos)
       res.render("products/adm_products", { productos });
     } catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
   },
 
@@ -30,7 +31,8 @@ const productController = {
       let categorias = await categoryModel.AllCategory();
       res.render("products/product_add", { categorias });
     } catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
   },
 
@@ -45,7 +47,8 @@ const productController = {
       await productsModel.createProduct(product);
       res.redirect("/productos");
     } catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
   },
 
@@ -56,7 +59,8 @@ const productController = {
       let view = await productsModel.detailProduct(req.params.id);
       res.render("products/product_details", { view });
     } catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
    
   },
@@ -67,7 +71,8 @@ const productController = {
           let categorias = await categoryModel.AllCategory()
           res.render("products/edition_product", { productEditar, categorias });
       }catch(error){
-        console.log(error)
+        res.render("error")
+        //console.log(error)
       }
   },
   update: async (req, res) => {
@@ -80,7 +85,8 @@ const productController = {
       await productsModel.editProduct(productEdited,req.params.id)
       res.redirect("/productos");
     } catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
   },
   // Delete - Delete one product from DB
@@ -90,7 +96,8 @@ const productController = {
       res.redirect("/productos");
 
     }catch (error) {
-      console.log(error);
+      res.render("error")
+      //console.log(error);
     }
     
   }
