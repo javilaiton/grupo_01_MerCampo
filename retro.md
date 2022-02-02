@@ -1,3 +1,36 @@
+# 🗓️Estrella de Mar SRPINT 6🗂️
+
+### Comenzar a hacer🌷
+
+- Definir horarios para las reuniones semanales.
+- Tener comunicación más frecuente.
+
+### Hacer más📋
+
+- Fijarnos en detalles.
+- Profundizar temas que no tengamos claros.
+
+### Continuar haciendo☕
+
+- Hacer reuniones
+- Seguir teniendo buena comunicación
+- Seguir apoyándonos como grupo
+- Seguir repartiendo temas equitativamente.
+- Reunión final para verificar el Sprint antes de la demo.
+- Realizar planificación en donde sea mas claro en las tareas y subtareas con tiempos y fechas especificas.
+- Realizar una reunión en el lanzamiento de cada Sprint para planificarlo en donde definiremos y asignaremos tareas.
+- Actualizar frecuentemente el estado de las tareas asignadas en el tablero de trabajo.
+- Trabajar poco pero constante.
+
+### Hacer menos🥕
+
+- Suponer cosas y no preguntar.
+- Dejar de mandar recados y no escribir en el grupo para que todos nos enteremos.
+
+### Dejar de hacer✏️
+
+- Complicarnos por cosas sin importancia.
+
 # 🗓️Estrella de Mar SRPINT 5🗂️
 
 ### Comenzar a hacer🌷
