@@ -4,9 +4,8 @@ const path = require('path')
 const userController = require('../controllers/userController')
 const validationsRegister = require('../middlewares/validationsRegister');
 const validationsLogin = require('../middlewares/validationsLogin');
-
+const validationsModUSer= require('../middlewares/validationsModUser');
 const bcrypt = require("bcryptjs");
-const fs = require("fs");
 const multer = require("multer");
 
 const storage = multer.diskStorage({
@@ -34,7 +33,7 @@ router.get("/perfil", userController.details_users);
 
 //editar productor
 router.get("/perfil/edit/:id", userController.editUser);
-router.put("/perfil/edit/:id",upload.single('image'), userController.update);
+router.put("/perfil/edit/:id",upload.single('image'),validationsModUSer, userController.update);
 
 
 

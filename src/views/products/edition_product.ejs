@@ -23,6 +23,11 @@
                         <label for="image">Cambiar Foto de Producto:</label>
                         <div>
                             <input type="file" name="image" id="foto" class="barra" accept=".jpg , .png , .jpeg">
+                            <% if (locals.errors && errors.image) { %>
+                                <div class="text-danger">
+                                    <%= errors.image.msg %>
+                                </div>
+                            <% } %>
                         </div>
                     </div>
                 </div>
@@ -33,20 +38,40 @@
                             <div class="control-formulario">
                                 <label for="name"> Editar nombre del producto:</label>
                                 <div>
-                                    <input type="text" name="name" id="title" class="barra" placeholder="<%=productEditar.name%>"
-                                        minlength="2">
+                                    <input type="text" name="name" id="title" 
+                                    class="barra <%= locals.errors && errors.name ? 'is-invalid' : null %>"
+                                    value="<%=productEditar.name%>" minlength="2">
+                                    <% if (locals.errors && errors.name) { %>
+                                        <div class="text-danger">
+                                            <%= errors.name.msg %>
+                                        </div>
+                                    <% } %>   
                                 </div>
                             </div>
     
                             <div class="control-formulario">
                                 <label for="description">Editar descripción del producto:</label>
-                                <textarea id="description" class="barra" name="description" rows="3" cols="20" placeholder="<%=productEditar.description%>"></textarea>
+                                <textarea id="description" 
+                                class="barra <%= locals.errors && errors.description ? 'is-invalid' : null %>"
+                                 name="description" rows="3" cols="20" 
+                                >"<%=productEditar.description%>"</textarea>
+                                 <% if (locals.errors && errors.description) { %>
+                                    <div class="text-danger">
+                                        <%= errors.description.msg %>
+                                    </div>
+                                <% } %>
                             </div>
                             <div class="control-formulario">
                                 <label for="price"> Editar precio del producto:</label>
                                 <div>
-                                    <input type="text" name="price" id="price" class="barra" placeholder="$ <%=productEditar.price%>"
-                                        minlength="3">
+                                    <input type="text" name="price" id="price" 
+                                    class="barra <%= locals.errors && errors.price ? 'is-invalid' : null %>"
+                                     value="$ <%=productEditar.price%>" minlength="3">
+                                     <% if (locals.errors && errors.price) { %>
+                                        <div class="text-danger">
+                                            <%= errors.price.msg %>
+                                        </div>
+                                    <% } %>
                                 </div>
                             </div>
                             <div class="control-formulario">

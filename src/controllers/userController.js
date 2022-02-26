@@ -1,5 +1,3 @@
-const path = require('path')
-const fs = require('fs')
 const bcrypt = require('bcryptjs');
 const multer = require('multer')
 const usersModel = require("../model/usersModel");
@@ -83,9 +81,6 @@ const userController = {
         }
 
     },
-
-
-
     register: async (req, res) => {
         try {
             if (req.session.userlogged) {
@@ -93,6 +88,7 @@ const userController = {
             } else {
                 let roles = await roleModel.AllRole();
                 //res.json(roles)
+                //console.log(roles)
                 res.render("users/register", { roles });
             }
 
@@ -103,15 +99,16 @@ const userController = {
 
     },
 
-
     save: async (req, res) => {
         try {
             const resultValidation = validationResult(req);
             //console.log(resultValidation)
             if (resultValidation.errors.length > 0) {
-                return res.render('./users/register', {
+                let roles = await roleModel.AllRole();
+                return res.render('./users/register',{
                     errors: resultValidation.mapped(),
-                    oldData: req.body
+                    oldData: req.body,
+                    roles
                 })
             } else {
 
@@ -146,27 +143,35 @@ const userController = {
     },
     update: async (req, res) => {
         try {
-          const userEdit = {
-            /*name:name,
-            lastname:lastname,
-            email:email,
-            city:city,*/
-            ...req.body,
-            image:req.file.filename,
-            
-          };
-          await usersModel.UserEdit(req.params.id,userEdit)
+          const resultValidation = validationResult(req);
+          let user =await usersModel.oneUser(req.params.id, req.body)
+          //let imagen = req.file ? req.file.filename : productDb.image;
+          if (resultValidation.errors.length > 0) {
+            return res.render("users/edition_user", {
+              errors: resultValidation.mapped(),
+              oldData: req.body,
+              user
+            })
+          } else {
+    
+            const userEdit = {
+                ...req.body,
+                image:req.file.filename,
+            }
+    
+            await usersModel.UserEdit(req.params.id,userEdit)
 
-          let user =await usersModel.oneUser(req.params.id)
-          if ( req.session.userlogged) {
+            let user =await usersModel.oneUser(req.params.id)
+            if ( req.session.userlogged) {
 
-            //req.session.destroy()
-            req.session.userlogged = user 
+                //req.session.destroy()
+                req.session.userlogged = user 
+              }
+              
+              res.redirect("/perfil",{user});
           }
-          
-          res.redirect("/perfil");
         } catch (error) {
-            res.render("error")
+          res.render("error")
           //console.log(error);
         }
       },
