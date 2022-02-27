@@ -24,7 +24,7 @@
                                 <input type="text" name="name" id="nombres"
                                     class="barra <%= locals.errors && errors.name ? 'is-invalid' : null %>"
                                     value="<%= locals.oldData ? oldData.name : null %>"
-                                    placeholder="Ingrese sus Nombres" minlength="2">
+                                    placeholder="Ingrese sus Nombres" >
                                 <% if (locals.errors && errors.name) { %>
                                     <div class="text-danger">
                                         <%= errors.name.msg %>
@@ -79,16 +79,18 @@
                         <div class="control-formulario">
                             <label for="roles_idroles">Rol:</label>
                             <div>
-                                <select name="roles_idroles" id="" class="barra">
-                                    <% roles.forEach(role => { %>
-                                        <option value="<%= role.idroles %>"><%= role.name %> </option>
-                                    <% }) %>
+                                <select name="roles_idroles" id="roles" class="barra">
+                                    <% roles.forEach(role=> { %>
+                                        <option value="<%= role.idroles %>">
+                                            <%= role.name %>
+                                        </option>
+                                        <% }) %>
                                 </select>
                                 <% if (locals.errors && errors.roles_idroles) { %>
                                     <div class="text-danger">
                                         <%= errors.roles_idroles.msg %>
                                     </div>
-                                <% } %>
+                                    <% } %>
                             </div>
 
                         </div>
@@ -96,7 +98,7 @@
                         <div class="control-formulario">
                             <label for="image">Imagen de perfil:</label>
                             <div>
-                                <input type="file" name="image" id="foto"
+                                <input type="file" name="image" id="image"
                                     class="barra <%= locals.errors && errors.image ? 'is-invalid' : null %>"
                                     value="<%= locals.oldData ? oldData.image : null %>" accept=".jpg , .png , .jpeg">
                                 <% if (locals.errors && errors.image) { %>
@@ -131,6 +133,11 @@
                                     <% } %>
                             </div>
                         </div>
+                        <div class="errors">
+                            <ul>
+                
+                            </ul>
+                        </div>
 
                         <div class="content-buttons">
                             <input type="reset" id="reset" class="buttons" value="Borrar">
@@ -143,7 +150,7 @@
             <!--footer-->
             <%- include("../partials/footer") %>
                 <!--footer-->
-
+         <!--<script src="/js/validationsRegister.js"></script>-->
 </body>
 
 </html>

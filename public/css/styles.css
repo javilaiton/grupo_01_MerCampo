@@ -20,6 +20,29 @@ body{
     font-size: 16px;
 }
 /*/root/*/
+/* validaciones*/
+div .errors{
+    color:#D61E23;
+    list-style: none;
+    
+    
+}
+div .errors-product{
+    color:#D61E23;
+    list-style: none;
+   
+    
+}
+main.login div.errors-login{
+    color:#D61E23;
+    list-style: none;
+    
+    
+}
+.text-danger{
+    color:#D61E23;
+
+}
 /* header*/
 header{
     background-color:#A5DB5B;
