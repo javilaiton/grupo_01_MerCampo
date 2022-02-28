@@ -6,7 +6,7 @@ const loggedMiddleware=require("../src/middlewares/loggedMiddleware")
 //const cookie = require('cookie-parser');
 
 
-
+const userApi=require("./routes/api/userApi.routes")
 
 const mainRutas = require("./routes/main.routes")
 const productsRutas= require("./routes/products.routes")
@@ -34,7 +34,7 @@ app.use(express.json())
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
 
-
+app.use("/api",userApi)
 
 app.use("/",mainRutas)
 app.use("/",productsRutas)
