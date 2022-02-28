@@ -4,6 +4,12 @@ const productApiController = {
     listProduct: async (req, res) => {
         try {
             let allProduct = await productsModel.getList()
+            let allFrutas = allProduct.filter(
+                (product) => product.categories_idcategories == 1
+            );
+            let allVerduras = allProduct.filter(
+                (product) => product.categories_idcategories == 2
+            );
             let products = allProduct.map((product) => {
                 return productsProp = {
                     idproducts: product.idproducts,
@@ -17,8 +23,11 @@ const productApiController = {
             })
             res.json({
                 count: allProduct.length,
-                countCategory:categories.total.length,
-                users: products,
+                countByCategory: {
+                    frutas: allFrutas.length,
+                    verduras: allVerduras.length,
+                },
+                products: products,
 
             })
 
