@@ -13,6 +13,19 @@ const productsModel = {
             console.log(error)
         }
     },
+    ssss: async function(){
+        try{
+            let products = await db.products.findAll()
+            let count= []
+            if (products.categories_idcategories == 1) {
+             count = products.categories_idcategories+1
+            }
+            console.log(count)
+
+        }catch(error){
+            console.log(error)
+        }
+    },
 
     detailProduct: async function(id){
         try{
@@ -33,6 +46,14 @@ const productsModel = {
             console.log(error)
         }
     }, 
+    oneProduct: async function(id){
+        try {
+            let product =await db.products.findByPk(id);
+            return product; 
+        } catch (error) {
+            console.log(error);
+        }        
+    },
 
     editProduct: async function (product,id) {
         try{

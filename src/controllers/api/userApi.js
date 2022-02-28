@@ -10,12 +10,9 @@ const userApiController = {
                     name: user.name,
                     lastname: user.lastname,
                     email: user.email,
-                    image: "",
-                    details:""
-                    
+                    image: user.image,
+                    details:"api/users",   
                 }
-                  
-                
             })
             res.json({
                 count: allUser.length,
@@ -35,11 +32,9 @@ const userApiController = {
                     name: oneUser.name,
                     lastname: oneUser.lastname,
                     email: oneUser.email,
-                    image: "",
-                    details:""
-                    
+                    image: oneUser.image,
+                    details:"api/users", 
                 }
-            
             res.json(users)
 
         }  catch (error) {
