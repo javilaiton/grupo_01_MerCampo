@@ -11,7 +11,7 @@ const userApiController = {
                     lastname: user.lastname,
                     email: user.email,
                     image: user.image,
-                    details:"api/users",   
+                    details:"api/users/${ id }",   
                 }
             })
             res.json({
@@ -33,7 +33,6 @@ const userApiController = {
                     lastname: oneUser.lastname,
                     email: oneUser.email,
                     image: oneUser.image,
-                    details:"api/users", 
                 }
             res.json(users)
 

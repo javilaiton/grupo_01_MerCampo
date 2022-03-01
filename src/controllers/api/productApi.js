@@ -18,7 +18,7 @@ const productApiController = {
                     description: product.description,
                     price: product.price,
                     category: product.categories_idcategories,
-                    details: "api/products",
+                    details: "api/products/${ id }",
                 }
             })
             res.json({
@@ -37,7 +37,7 @@ const productApiController = {
     },
     getOneProduct: async (req, res) => {
         try {
-            let oneProduct = await productsModel.oneProduct(req.params.id)
+            let oneProduct = await productsModel.oneProduct(req.params.id)      
             products = {
                 idproducts: oneProduct.idproducts,
                 image: oneProduct.image,
@@ -45,7 +45,6 @@ const productApiController = {
                 description: oneProduct.description,
                 price: oneProduct.price,
                 category: oneProduct.categories_idcategories,
-                details: "api/products",
             }
             res.json(products)
         } catch (error) {
