@@ -13,7 +13,6 @@ const productApiController = {
             let products = allProduct.map((product) => {
                 return productsProp = {
                     idproducts: product.idproducts,
-                    image: product.image,
                     name: product.name,
                     description: product.description,
                     price: product.price,
@@ -38,9 +37,11 @@ const productApiController = {
     getOneProduct: async (req, res) => {
         try {
             let oneProduct = await productsModel.oneProduct(req.params.id)      
+            let protocolo = req.protocol
+            let hostname= req.hostname
             products = {
                 idproducts: oneProduct.idproducts,
-                image: oneProduct.image,
+                image: protocolo +"://"+hostname+":3000" +"/img/"+ oneProduct.image,
                 name: oneProduct.name,
                 description: oneProduct.description,
                 price: oneProduct.price,
