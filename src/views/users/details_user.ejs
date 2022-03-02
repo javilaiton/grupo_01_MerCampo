@@ -19,25 +19,25 @@
     <main class="product-details">
         <div class="container-product">
             <div class="img-product">
-                <img src="/img/users/<%= locals.session.image %>" alt="">
+                <img src="/img/users/<%= locals.userSession.image %>" alt="">
             </div>
             <section class="section-1">
                 <article class="item-product">
                     <div class="inf-product">
                         <h1><i class="fas fa-user-circle"></i> Perfil</h1>
                         <h3 class="bold"> Nombre:  </h3>
-                        <p class="parrafo"><%= locals.session.name %></p>
+                        <p class="parrafo"><%= locals.userSession.name %></p>
                         <h3 class="bold"> Apellido:  </h3>
-                        <p class="parrafo"><%= locals.session.lastname %></p>
+                        <p class="parrafo"><%= locals.userSession.lastname %></p>
                         <h3 class="bold"> Email:  </h3>
-                        <p class="parrafo"><%= locals.session.email %></p>
+                        <p class="parrafo"><%= locals.userSession.email %></p>
                         <h3 class="bold"> Ciudad:  </h3>
-                        <p class="parrafo"><%= locals.session.city %></p>
+                        <p class="parrafo"><%= locals.userSession.city %></p>
                         <h3 class="bold"> Rol:  </h3>
-                        <p class="parrafo"><%= locals.session.roles_idroles %></p>
+                        <p class="parrafo"><%= locals.userSession.roles_idroles %></p>
                     </div>
                     <nav class="content-buttoms">                   
-                        <a href="/perfil/edit/<%= locals.session.idusers%>" ><button>  Editar Perfil  <i class="fas fa-user-circle"></i></button></a>
+                        <a href="/perfil/edit/<%= locals.userSession.idusers%>" ><button>  Editar Perfil  <i class="fas fa-user-circle"></i></button></a>
                     </nav>
                 </article>
             </section>

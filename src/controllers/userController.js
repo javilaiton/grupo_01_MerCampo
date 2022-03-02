@@ -9,10 +9,10 @@ const { validationResult } = require('express-validator');
 
 const userController = {
     // lista de usuarios
-    details_users:(req,res)=>{
+    details_users: (req, res) => {
         res.render("users/details_user")
     },
-    edition_users:(req,res)=>{
+    edition_users: (req, res) => {
         res.render("users/edition_user")
     },
     listUsers: async (req, res) => {
@@ -48,13 +48,17 @@ const userController = {
                 if (UserRegistered) {
                     let validationPassword = bcrypt.compareSync(req.body.password, UserRegistered.password);
                     if (validationPassword) {
-
                         req.session.userlogged = UserRegistered
+                        if (req.body.remember != undefined) {  //verificar que el checkbox este activado
+                            delete req.body.password //borramos el password de la cookie del usuario localmente para no ser leida en la cookie
+                            res.cookie('remember', req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 * 12 }) // creamos la cookie llamada remember y le asignamos el usuario
+                            //por medio del req.body.email maxAge = tiempo de 1 año
+                        }
 
 
                         return res.redirect('/');
                     }
-                    
+
                 } else {
                     return res.render('users/login', {
                         errors: {
@@ -72,7 +76,7 @@ const userController = {
                         }
                     }
                 })
-        
+
             }
 
         } catch (error) {
@@ -105,7 +109,7 @@ const userController = {
             //console.log(resultValidation)
             if (resultValidation.errors.length > 0) {
                 let roles = await roleModel.AllRole();
-                return res.render('./users/register',{
+                return res.render('./users/register', {
                     errors: resultValidation.mapped(),
                     oldData: req.body,
                     roles
@@ -129,57 +133,61 @@ const userController = {
             //console.log(error)
         }
     },
-     //Editar Usuario
-     editUser: async (req, res) => {
-        try{
-            
-            let user =await usersModel.oneUser(req.params.id, req.body)
-            res.render('users/edition_user',{user})
+    //Editar Usuario
+    editUser: async (req, res) => {
+        try {
+
+            let user = await usersModel.oneUser(req.params.id, req.body)
+            res.render('users/edition_user', { user })
         } catch (error) {
             res.render("error")
             //console.log(error);
         }
-    
+
     },
     update: async (req, res) => {
         try {
-          const resultValidation = validationResult(req);
-          let user =await usersModel.oneUser(req.params.id, req.body)
-          //let imagen = req.file ? req.file.filename : productDb.image;
-          if (resultValidation.errors.length > 0) {
-            return res.render("users/edition_user", {
-              errors: resultValidation.mapped(),
-              oldData: req.body,
-              user
-            })
-          } else {
-    
-            const userEdit = {
-                ...req.body,
-                image:req.file.filename,
+            const resultValidation = validationResult(req);
+            let user = await usersModel.oneUser(req.params.id, req.body)
+            //let imagen = req.file ? req.file.filename : productDb.image;
+            if (resultValidation.errors.length > 0) {
+                return res.render("users/edition_user", {
+                    errors: resultValidation.mapped(),
+                    oldData: req.body,
+                    user
+                })
+            } else  {
+
+                const userEdit = {
+                    ...req.body,
+                    image: req.file.filename,
+                }
+
+                await usersModel.UserEdit(req.params.id, userEdit)
+
+                let user = await usersModel.oneUser(req.params.id)
+                if (req.session.userlogged) {
+
+                    //req.session.destroy()
+                    req.session.userlogged = user
+                    if (req.body.remember != undefined) {  
+                        delete req.body.password 
+                        res.cookie('remember', req.body.email, { maxAge: 1000 * 60 * 60 * 24 * 30 * 12 }) 
+                    }
+
+                }
+
+                res.redirect("/perfil");
             }
-    
-            await usersModel.UserEdit(req.params.id,userEdit)
-
-            let user =await usersModel.oneUser(req.params.id)
-            if ( req.session.userlogged) {
-
-                //req.session.destroy()
-                req.session.userlogged = user 
-              }
-              
-              res.redirect("/perfil",{user});
-          }
         } catch (error) {
-          res.render("error")
-          //console.log(error);
+            res.render("error")
+            //console.log(error);
         }
-      },
+    },
     logout: (req, res) => {
-        if (req.session.userlogged) {
-            req.session.destroy()
-            return res.redirect('/');
-        }
+        res.clearCookie('remember') // borramos la cookie
+        req.session.destroy() // destruimos la sesion (eliminamos el usuario logeado)
+        res.redirect('/')
     }
 
 }
