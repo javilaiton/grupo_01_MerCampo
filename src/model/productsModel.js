@@ -23,6 +23,14 @@ const productsModel = {
         }
 
     },
+    oneProduct: async function(id){
+        try {
+            let product =await db.products.findByPk(id);
+            return product; 
+        } catch (error) {
+            console.log(error);
+        }        
+    },
 
     createProduct: async function (product) {
         try{

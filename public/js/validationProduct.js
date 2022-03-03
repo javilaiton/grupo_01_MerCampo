@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
 
         let description = document.querySelector(" textarea.barra#description");
         if (description.value == "") {
-            errors.push('Coloca la descripción de tu producto,no puede estar vacío y debe tenr mínimo 20 caracteres')
+            errors.push('Coloca la descripción de tu producto,no puede estar vacío y debe tener mínimo 20 caracteres')
 
         } else if (description.value.length < 2) {
             errors.push('Escribe una descripción de tu producto debe al menos tener 20 caracteres')

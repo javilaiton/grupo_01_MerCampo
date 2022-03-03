@@ -10,8 +10,7 @@ const userApiController = {
                     name: user.name,
                     lastname: user.lastname,
                     email: user.email,
-                    image: "",
-                    details:""
+                    details: "api/users/${ id }",
                     
                 }
                   
@@ -30,15 +29,16 @@ const userApiController = {
     getOneUser:async (req,res) =>{
         try {
             let oneUser = await usersModel.oneUser(req.params.id)
+            let protocolo = req.protocol
+            let hostname= req.hostname
             users = {
                     idusers: oneUser.idusers,
                     name: oneUser.name,
                     lastname: oneUser.lastname,
                     email: oneUser.email,
-                    image: "",
-                    details:""
+                    image: protocolo +"://"+hostname+":3000" +"/img/users/"+ oneUser.image,
                     
-                }
+            }
             
             res.json(users)
 
