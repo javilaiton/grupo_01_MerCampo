@@ -30,7 +30,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(session({secret: "top-secret", resave: false, saveUninitialized: false}));
 app.use(cookie())//usamos la cookie de manera general
 app.use(loggedMiddleware) //llamamos la funcion donde se procesa la cookie y se envia a la vista de EJS
-app.use(loggedMiddleware)
 app.use(express.json())
 
 app.use(methodOverride('_method')); // Pasar poder pisar el method="POST" en el formulario por PUT y DELETE
