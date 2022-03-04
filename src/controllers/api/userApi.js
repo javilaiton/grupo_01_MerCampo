@@ -18,6 +18,7 @@ const userApiController = {
             })
             res.json({
                 count: allUser.length,
+
                 users: users,
 
             })
@@ -47,28 +48,27 @@ const userApiController = {
         }
 
     },
-    getLastUser: async (req, res) => {
+   
+    getUserLast: async (req, res) => {
         try {
-            let  oneUser= await usersModel.lastUser()
-            console.log(oneUser)
+            let allUser = await usersModel.getUsers()
+            let lastUser = allUser[allUser.length-1]
             let protocolo = req.protocol
             let hostname = req.hostname
-            user = {
-                idusers: oneUser.idusers,
-                name: oneUser.name,
-                lastname: oneUser.lastname,
-                email: oneUser.email,
-                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + oneUser.image,
+            usersLast = {
+                idusers: lastUser.idusers,
+                name: lastUser.name,
+                lastname: lastUser.lastname,
+                email: lastUser.email,
+                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + lastUser.image,
             }
-
-            res.json(user)
-
+            res.json(usersLast)
         } catch (error) {
-            console.log(error);
             res.render("error")
         }
-
+               
     },
+    
 }
 
 module.exports = userApiController

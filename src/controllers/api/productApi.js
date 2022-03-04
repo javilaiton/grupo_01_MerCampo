@@ -1,6 +1,7 @@
 const productsModel = require("../../model/productsModel");
 
 const productApiController = {
+
     listProduct: async (req, res) => {
         try {
             let productAll = await productsModel.getList()
@@ -56,16 +57,17 @@ const productApiController = {
     },
     getLastProduct: async (req, res) => {
         try {
-            let product = await productsModel.lastProduct();
-            const hostname = req.hostname;
-            const protocolo = req.protocol;
-            product = {
-                idproducts: product.idproducts,
-                image: protocolo +"://"+hostname+":3000" +"/img/"+ product.image,
-                name: product.name,
-                description: product.description,
-                price: product.price,
-                category: product.categories_idcategories,
+            let allProduct = await productsModel.getList()
+            let lastProduct = allProduct[allProduct.length-1]
+            let protocolo = req.protocol
+            let hostname= req.hostname
+            let product = {
+                idproducts: lastProduct.idproducts,
+                image: protocolo +"://"+hostname+":3000" +"/img/"+ lastProduct.image,
+                name: lastProduct.name,
+                description: lastProduct.description,
+                price: lastProduct.price,
+                category: lastProduct.categories_idcategories,
             }
             res.json(product)
         } catch (err) {

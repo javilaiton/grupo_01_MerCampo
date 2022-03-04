@@ -52,16 +52,6 @@ const usersModel = {
         } catch (error) {
             console.log(error);
         }
-    }, 
-    lastUser: async function () {
-        try {
-            let allUsers = await db.users.getAll()
-            console.log(allUsers)
-            return allUsers[0]
-            
-        } catch (err) {
-            console.log(err);
-        }
     },
     UserEdit: async function (id,user) {
         try{
@@ -80,8 +70,6 @@ const usersModel = {
             console.log(error)
         }
     },
- 
-
 
 }
 module.exports = usersModel
