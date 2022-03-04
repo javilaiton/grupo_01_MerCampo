@@ -8,7 +8,7 @@ const usersModel = {
     getUsers:async function(){
         try{
             let users = await db.users.findAll()
-            //console.log(users)
+            //console.log(users.length)
             return users
 
         }catch(error){
@@ -53,6 +53,16 @@ const usersModel = {
             console.log(error);
         }
     }, 
+    lastUser: async function () {
+        try {
+            let allUsers = await db.users.json
+            console.log(allUsers)
+            return allUsers[0]
+            
+        } catch (err) {
+            console.log(err);
+        }
+    },
     UserEdit: async function (id,user) {
         try{
             await db.users.update({

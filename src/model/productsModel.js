@@ -55,6 +55,21 @@ const productsModel = {
             console.log(error)
         }
     },
+    lastProduct: async function () {
+        try {
+            let allProduct = await db.products.findAll();
+            let last = 0;
+            let lastproduct = allProduct.filter(product => {
+                if (product.idusers > last) {
+                    last = product.idusers;
+                }
+                return 
+            });
+            return lastproduct
+        } catch (err) {
+            console.log(err);
+        }
+    },
 
     list: function () {
         //return console.log( JSON.parse(fs.readFileSync(path.resolve(__dirname,"./products.json"),{encoding: "utf8"})));

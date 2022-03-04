@@ -53,6 +53,24 @@ const productApiController = {
             res.render("error")
         }
 
+    },
+    getLastProduct: async (req, res) => {
+        try {
+            let product = await productsModel.lastProduct();
+            const hostname = req.hostname;
+            const protocolo = req.protocol;
+            product = {
+                idproducts: product.idproducts,
+                image: protocolo +"://"+hostname+":3000" +"/img/"+ product.image,
+                name: product.name,
+                description: product.description,
+                price: product.price,
+                category: product.categories_idcategories,
+            }
+            res.json(product)
+        } catch (err) {
+            res.json({error: 'Error 404'})
+        }
     }
 
 }

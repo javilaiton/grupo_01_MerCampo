@@ -11,42 +11,63 @@ const userApiController = {
                     lastname: user.lastname,
                     email: user.email,
                     details: "api/users/${ id }",
-                    
+
                 }
-                  
-                
+
+
             })
             res.json({
                 count: allUser.length,
-                users:users,
-                
+                users: users,
+
             })
 
-        }  catch (error) {
+        } catch (error) {
             res.render("error")
-        }   
+        }
     },
-    getOneUser:async (req,res) =>{
+    getOneUser: async (req, res) => {
         try {
             let oneUser = await usersModel.oneUser(req.params.id)
             let protocolo = req.protocol
-            let hostname= req.hostname
+            let hostname = req.hostname
             users = {
-                    idusers: oneUser.idusers,
-                    name: oneUser.name,
-                    lastname: oneUser.lastname,
-                    email: oneUser.email,
-                    image: protocolo +"://"+hostname+":3000" +"/img/users/"+ oneUser.image,
-                    
+                idusers: oneUser.idusers,
+                name: oneUser.name,
+                lastname: oneUser.lastname,
+                email: oneUser.email,
+                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + oneUser.image,
+
             }
-            
+
             res.json(users)
 
-        }  catch (error) {
+        } catch (error) {
             res.render("error")
-        }  
+        }
 
-    }
+    },
+    getLastUser: async (req, res) => {
+        try {
+            let  oneUser= await usersModel.lastUser()
+            let protocolo = req.protocol
+            let hostname = req.hostname
+            users = {
+                idusers: oneUser.idusers,
+                name: oneUser.name,
+                lastname: oneUser.lastname,
+                email: oneUser.email,
+                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + oneUser.image,
+
+            }
+
+            res.json(users)
+
+        } catch (error) {
+            res.render("error")
+        }
+
+    },
 }
 
 module.exports = userApiController
