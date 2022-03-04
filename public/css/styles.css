@@ -39,6 +39,15 @@ main.login div.errors-login{
     
     
 }
+main.error {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;
+}
+main.error p, h2{
+    padding: 10px;
+}
 .text-danger{
     color:#D61E23;
 
