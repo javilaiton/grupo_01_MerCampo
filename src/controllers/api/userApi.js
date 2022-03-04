@@ -50,20 +50,21 @@ const userApiController = {
     getLastUser: async (req, res) => {
         try {
             let  oneUser= await usersModel.lastUser()
+            console.log(oneUser)
             let protocolo = req.protocol
             let hostname = req.hostname
-            users = {
+            user = {
                 idusers: oneUser.idusers,
                 name: oneUser.name,
                 lastname: oneUser.lastname,
                 email: oneUser.email,
                 image: protocolo + "://" + hostname + ":3000" + "/img/users/" + oneUser.image,
-
             }
 
-            res.json(users)
+            res.json(user)
 
         } catch (error) {
+            console.log(error);
             res.render("error")
         }
 

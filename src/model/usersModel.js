@@ -55,7 +55,7 @@ const usersModel = {
     }, 
     lastUser: async function () {
         try {
-            let allUsers = await db.users.json
+            let allUsers = await db.users.getAll()
             console.log(allUsers)
             return allUsers[0]
             
