@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentWrapper() {
+function ContentRowFruvers() {
   return (
     
 					<div className="copyright text-center my-auto">
-						<span>ContentWrapper</span>
+						<span>ContentRowFruvers</span>
 					</div>
 				
   )
 }
 
-export default ContentWrapper;
+export default ContentRowFruvers;

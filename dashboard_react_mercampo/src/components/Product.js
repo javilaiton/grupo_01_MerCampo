@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentWrapper() {
+function Product() {
   return (
     
 					<div className="copyright text-center my-auto">
-						<span>ContentWrapper</span>
+						<span>Product</span>
 					</div>
 				
   )
 }
 
-export default ContentWrapper;
+export default Product;

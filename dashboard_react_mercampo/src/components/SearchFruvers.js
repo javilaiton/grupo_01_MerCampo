@@ -1,13 +1,13 @@
 import React from "react";
 
-function ContentWrapper() {
+function SearchFruvers() {
   return (
     
 					<div className="copyright text-center my-auto">
-						<span>ContentWrapper</span>
+						<span>SearchFruvers</span>
 					</div>
 				
   )
 }
 
-export default ContentWrapper;
+export default SearchFruvers;
