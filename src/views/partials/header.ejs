@@ -12,7 +12,7 @@
                     <li class="icons-navbar_item"><a href="/login"><i class="fas fa-user-circle"></i></a></li>
                 </ul>
             </nav>
-            <% } else{%>
+            <% } else  if (locals.logged && locals.userSession.roles_idroles == 2) {%>
                 <nav class="top-header-navbar">
                     <ul class="icons-navbar">
                         <li class="icons-navbar_item"><a href="/productos"><i class="fas fa-user-cog"></i></a></li>
@@ -21,7 +21,16 @@
                         <li class="icons-navbar_item"><a href="/logout"><i class="fas fa-arrow-circle-right"></i></a></li>
                     </ul>
                 </nav>
-            <%}%>
+            <%} else{%>
+                <nav class="top-header-navbar">
+                    <ul class="icons-navbar">
+                    
+                        <li class="icons-navbar_item"><a href="/shopping_cart"><i class="fas fa-shopping-cart"></i></a></li>
+                        <li class="icons-navbar_item"><a href="/perfil"><div><img src ="/img/users/<%= locals.userSession.image %>"/></div></a></li>
+                        <li class="icons-navbar_item"><a href="/logout"><i class="fas fa-arrow-circle-right"></i></a></li>
+                    </ul>
+                </nav>
+            <%}%> 
         <div class="burger-menu">
             <a href="/" class="burger-bottom"><i class="fas fa-bars"></i></a>
         </div>
