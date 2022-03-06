@@ -1,33 +1,38 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import UserDetail from "./UserDetail";
+import User from "./User";
 
-function LastUser() {
-  const [user, setUsers] = useState([]);
+function UsersInDb() {
+  const [Users, setUsers] = useState([]);
 
   useEffect(async() => {
-    await getUser();
+    await getUsers();
   }, []);
 
-  const getUser = async () => {
-    const data = await fetch("https://artisanmarket.herokuapp.com/api/users/last");
+  const getUsers = async () => {
+    const data = await fetch("https://artisanmarket.herokuapp.com/api/users");
     const user = await data.json();
     setUsers(user);
   };
-  const content = (
-        <UserDetail
-          id={user.id}
+  const content =
+    Users.length == 0 ? (
+      <p>Cargando Usuarios</p>
+    ) : (
+      Users.list.map((user, index) => (
+        <User
+          key={index}
           name={user.nombre}
           lastname={user.apellido}
           picture={user.imagen}
           email={user.email}
-        ></UserDetail>
+        ></User>
+      ))
     );
   return (
     <div className="col-lg-6 mb-4">
         <div className="card-header py-3">
           <h5 className="m-0 font-weight-bold text-gray-800">
-            Último Usuario
+            Usuarios MerCampo
           </h5>
         </div>
         {content}
@@ -35,4 +40,4 @@ function LastUser() {
   );
 }
 
-export default LastUser;
+export default UsersInDb;

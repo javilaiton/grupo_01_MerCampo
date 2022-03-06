@@ -1,12 +1,13 @@
 import React from "react";
+import LastUser from './LastUser';
+import LastProduct from './LastProduct';
 
 function ContentRowCenter() {
   return (
-    
-					<div className="copyright text-center my-auto">
-						<span>ContentRowCenter</span>
-					</div>
-				
+    <div className="row">
+			 <LastProduct></LastProduct>
+			 <LastUser></LastUser>
+		</div>			
   )
 }
 

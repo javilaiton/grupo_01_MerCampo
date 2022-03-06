@@ -1,13 +1,13 @@
 import React from "react";
 
-function SearchFruvers() {
+function Error() {
   return (
     
 					<div className="copyright text-center my-auto">
-						<span>SearchFruvers</span>
+						<span>Error</span>
 					</div>
 				
   )
 }
 
-export default SearchFruvers;
+export default Error;

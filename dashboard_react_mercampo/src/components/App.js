@@ -1,15 +1,14 @@
-import logo from '../logo.svg';
-import '../assets/css/App.css';
-import Footer from './Footer';
+import React from "react";
+import "../assets/css/App.css";
+import SideBar from "./SideBar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Footer></Footer>
-      </header>
-    </div>
+    <React.Fragment>
+      <div id="wrapper">
+        <SideBar></SideBar>
+      </div>
+    </React.Fragment>
   );
 }
 
