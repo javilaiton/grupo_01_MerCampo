@@ -6,13 +6,19 @@ function UserDetail(props) {
       <br></br>
       <div className="card shadow mb-4">
         <div className="card-body">
-          <div className="text-center">Imagen</div>
+          <div className="text-center">
+            <img
+              className="img-fluid px-3 px-sm-4 mt-3 mb-4"
+              style={{ width: 60 + "rem" }}
+              src={props.image}
+            />
+          </div>
           <p>
-            Nombre:
+            Nombre: {props.name} {props.lastname}
             <br></br>
-            Id:
+            Id: {props.idusers}
             <br></br>
-            Email:
+            Email: {props.email}
           </p>
         </div>
       </div>
