@@ -9,7 +9,7 @@ function ContentRowFruvers() {
         }, []);
       
     const getProduct = async () => {
-      const data = await fetch("https://artisanmarket.herokuapp.com/api/products");
+      const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
       const product = await data.json();
       setProducts(product);
     };
@@ -22,7 +22,7 @@ function ContentRowFruvers() {
         }, []);
       
   	const getUser = async () => {
-      const data = await fetch("https://artisanmarket.herokuapp.com/api/users");
+      const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
       const user = await data.json();
       setUsers(user);
     };

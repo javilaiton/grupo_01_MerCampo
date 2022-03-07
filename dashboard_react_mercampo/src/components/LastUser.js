@@ -10,7 +10,7 @@ function LastUser() {
   }, []);
 
   const getUser = async () => {
-    const data = await fetch("https://artisanmarket.herokuapp.com/api/users/last");
+    const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users/last");
     const user = await data.json();
     setUsers(user);
   };
