@@ -18,82 +18,64 @@ function SideBar() {
         className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion"
         id="accordionSidebar"
       >
-        <Link
+        <a
           className="sidebar-brand d-flex align-items-center justify-content-center"
-          to="/"
+          href="/"
         >
           <div className="sidebar-brand-icon">
             <img className="w-100" src={logo} alt="MerCampo"></img>
           </div>
-        </Link>
+          <div className="side-brand-icon">
+            <span>MerCampo</span>
+          </div>
+        </a>
 
-        <hr className="sidebar-divider my-0"></hr>
+        <hr className="sidebar-divider my-0" />
 
         <li className="nav-item active">
           <Link className="nav-link" to="/">
-            <i className="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard - MerCampo</span>
+            <span>MerCampo</span>
           </Link>
         </li>
 
-        <hr className="sidebar-divider">
-          <div className="sidebar-heading">Opciones</div>
-        </hr>
+        <hr className="sidebar-divider" />
+
+        <div className="sidebar-heading">Información:</div>
 
         <li className="nav-item">
-          <Link className="nav-link collapsed" to="/">
-            <i className="fas fa-fw fa-folder"></i>
+          <Link className="nav-link" to="/UsersInDb">
             <span>Todos los Usuarios</span>
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/">
-            <i className="fas fa-fw fa-chart-area"></i>
+          <Link className="nav-link" to="/ProductsInDb">
             <span>Todos los Productos</span>
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/">
-            <i className="fas fa-fw fa-table"></i>
-            <span>Total de Frutas</span>
+          <Link className="nav-link" to="/ProductsInDb">
+            <span>Todas las Verduras</span>
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/">
-            <i className="fas fa-fw fa-table"></i>
-            <span>Total de Verduras</span>
+          <Link className="nav-link" to="/ProductsInDb">
+            <span>Todas las Frutas</span>
           </Link>
         </li>
 
-        <hr className="sidebar-divider d-none d-md-block"></hr>
+        <hr className="sidebar-divider d-none d-md-block" />
       </ul>
-      <Routes>
-        <Route exact path="/">
-          <ContentWrapper />
-        </Route>
-        <Route path="/UsersInDb">
-          <UsersInDb />
-        </Route>
-        <Route path="/ProductsInDb">
-          <ProductsInDb />
-        </Route>
-        <Route path="/ContentRowFruvers">
-          <ContentRowFruvers />
-        </Route>
-        <Route path="/LastProduct">
-          <LastProduct />
-        </Route>
-        <Route path="/LastUser">
-          <LastUser />
-        </Route>
-        <Route path="/FindProduct/:id">
-          <FindProduct />
-        </Route>
-        <Route component={Error} />
-      </Routes>
+      <ContentWrapper></ContentWrapper>
+      <UsersInDb></UsersInDb>
+      <ProductsInDb></ProductsInDb>
+      <ContentRowFruvers></ContentRowFruvers>
+      <FindProduct></FindProduct>
+      <LastProduct></LastProduct>
+      <LastUser></LastUser>
+      <Error></Error>
     </React.Fragment>
   );
 }

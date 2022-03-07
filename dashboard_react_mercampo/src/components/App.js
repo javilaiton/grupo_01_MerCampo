@@ -1,5 +1,4 @@
 import React from "react";
-import "../assets/css/App.css";
 import SideBar from "./SideBar";
 
 function App() {
