@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 function Product(props) {
-  let id = `/FindProduct/${props.id}`;
+  let id = `/FindProduct/${props.idproducts}`;
   return (
     <div className="col-lg-6 mb-4">
       <br></br>
@@ -12,7 +12,7 @@ function Product(props) {
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
               style={{ width: 20 + "rem" }}
-              src={props.picture}
+              src={props.image}
             />
           </div>
           <p>

@@ -3,31 +3,35 @@ import { useState, useEffect } from "react";
 import SmallCard from "./SmallCard";
 
 function ContentRowFruvers() {
-	const [Products, setProducts] = useState([]);
-      
-  	useEffect(async() => {await getProduct();
-        }, []);
-      
-    const getProduct = async () => {
-      const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
-      const product = await data.json();
-      setProducts(product);
-    };
+  const [Products, setProducts] = useState([]);
 
-    const count = Products.count
+  useEffect(async () => {
+    await getProduct();
+  }, []);
 
-  	const [Users, setUsers] = useState([]);
+  const getProduct = async () => {
+    const data = await fetch(
+      "https://mercampogrupo01.herokuapp.com/api/products"
+    );
+    const product = await data.json();
+    setProducts(product);
+  };
 
-    useEffect(async() => {await getUser();
-        }, []);
-      
-  	const getUser = async () => {
-      const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
-      const user = await data.json();
-      setUsers(user);
-    };
+  const count = Products.count;
 
-    const Usercount = Users.count
+  const [Users, setUsers] = useState([]);
+
+  useEffect(async () => {
+    await getUser();
+  }, []);
+
+  const getUser = async () => {
+    const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
+    const user = await data.json();
+    setUsers(user);
+  };
+
+  const Usercount = Users.count;
 
   let productsInDB = {
     title: "Total Productos",
@@ -50,8 +54,8 @@ function ContentRowFruvers() {
       {cartProps.map((movie, i) => {
         return <SmallCard {...movie} key={i} />;
       })}
-    </div>				
-  )
+    </div>
+  );
 }
 
 export default ContentRowFruvers;

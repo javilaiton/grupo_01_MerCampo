@@ -5,12 +5,14 @@ import Product from "./Product";
 function ProductsInDb() {
   const [Products, setProducts] = useState([]);
 
-  useEffect(async() => {
+  useEffect(async () => {
     await getProducts();
   }, []);
 
   const getProducts = async () => {
-    const data = await fetch("https://mercampogrupo01.herokuapp.com/api/products");
+    const data = await fetch(
+      "https://mercampogrupo01.herokuapp.com/api/products"
+    );
     const product = await data.json();
     setProducts(product);
   };
@@ -21,22 +23,25 @@ function ProductsInDb() {
       Products.products.map((product, index) => (
         <Product
           key={index}
-          id={product.id}
-          name={product.nombre}
-          picture={product.imagen}
+          idproducts={product.idproducts}
+          name={product.name}
+          description={product.description}
+          price={product.price}
+          category={product.category}
+          image={product.details}
         ></Product>
       ))
     );
 
   return (
     <div className="col-lg-6 mb-4">
-        <div className="card-header py-3">
-          <h5 className="m-0 font-weight-bold text-gray-800">
-            Productos MerCampo
-          </h5>
-        </div>
-        {content}
+      <div className="card-header py-3">
+        <h5 className="m-0 font-weight-bold text-gray-800">
+          Productos MerCampo
+        </h5>
       </div>
+      {content}
+    </div>
   );
 }
 

@@ -10,16 +10,17 @@ function User(props) {
             <img
               className="img-fluid px-3 px-sm-4 mt-3 mb-4"
               style={{ width: 20 + "rem" }}
-              src={props.picture}
+              src={props.image}
             />
           </div>
-                <p>
-                    Nombre: {props.name} {props.lastname}<br></br>
-                    Email: {props.email}
-                </p>
-                </div>
-                </div>
-              </div>
+          <p>
+            Nombre: {props.name} {props.lastname}
+            <br></br>
+            Email: {props.email}
+          </p>
+        </div>
+      </div>
+    </div>
   );
 }
 

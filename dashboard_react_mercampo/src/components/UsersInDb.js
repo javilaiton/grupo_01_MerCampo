@@ -5,12 +5,12 @@ import User from "./User";
 function UsersInDb() {
   const [Users, setUsers] = useState([]);
 
-  useEffect(async() => {
+  useEffect(async () => {
     await getUsers();
   }, []);
 
   const getUsers = async () => {
-    const data = await fetch("https://artisanmarket.herokuapp.com/api/users");
+    const data = await fetch("https://mercampogrupo01.herokuapp.com/api/users");
     const user = await data.json();
     setUsers(user);
   };
@@ -21,22 +21,23 @@ function UsersInDb() {
       Users.list.map((user, index) => (
         <User
           key={index}
-          name={user.nombre}
-          lastname={user.apellido}
-          picture={user.imagen}
+          idusers={user.idusers}
+          name={user.name}
+          lastname={user.lastname}
           email={user.email}
+          image={user.details}
         ></User>
       ))
     );
   return (
     <div className="col-lg-6 mb-4">
-        <div className="card-header py-3">
-          <h5 className="m-0 font-weight-bold text-gray-800">
-            Usuarios MerCampo
-          </h5>
-        </div>
-        {content}
+      <div className="card-header py-3">
+        <h5 className="m-0 font-weight-bold text-gray-800">
+          Usuarios MerCampo
+        </h5>
       </div>
+      {content}
+    </div>
   );
 }
 
