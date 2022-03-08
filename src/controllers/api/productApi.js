@@ -28,7 +28,7 @@ const productApiController = {
                     frutas: allFrutas.length,
                     verduras: allVerduras.length,
                 }},
-                [ products]
+                 products
                 
 
             ])
