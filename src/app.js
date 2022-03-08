@@ -4,8 +4,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 const loggedMiddleware = require("../src/middlewares/loggedMiddleware");
 const cookie = require("cookie-parser");
-const cors = require("cors");
-1
+const cors = require('cors');
+app.use(cors());
 
 const userApi = require("./routes/api/userApi.routes");
 const productApi = require("./routes/api/productApi.routes");
@@ -43,6 +43,6 @@ app.use("/", mainRutas);
 app.use("/", productsRutas);
 app.use("/", usersRutas);
 
-app.use(cors());
+
 
 app.listen(port, () => console.log(`Server in port ${port}`));
