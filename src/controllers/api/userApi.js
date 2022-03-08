@@ -37,7 +37,7 @@ const userApiController = {
                 name: oneUser.name,
                 lastname: oneUser.lastname,
                 email: oneUser.email,
-                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + oneUser.image,
+                image: protocolo + "://" + hostname  + "/img/users/" + oneUser.image,
 
             }
 
@@ -60,7 +60,7 @@ const userApiController = {
                 name: lastUser.name,
                 lastname: lastUser.lastname,
                 email: lastUser.email,
-                image: protocolo + "://" + hostname + ":3000" + "/img/users/" + lastUser.image,
+                image: protocolo + "://" + hostname + "/img/users/" + lastUser.image,
             }
             res.json(usersLast)
         } catch (error) {

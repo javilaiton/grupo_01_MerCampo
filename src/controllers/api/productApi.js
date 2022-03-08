@@ -43,7 +43,7 @@ const productApiController = {
             let hostname= req.hostname
             products = {
                 idproducts: oneProduct.idproducts,
-                image: protocolo +"://"+hostname+":3000" +"/img/"+ oneProduct.image,
+                image: protocolo +"://"+hostname+"/img/"+ oneProduct.image,
                 name: oneProduct.name,
                 description: oneProduct.description,
                 price: oneProduct.price,
@@ -63,7 +63,7 @@ const productApiController = {
             let hostname= req.hostname
             let product = {
                 idproducts: lastProduct.idproducts,
-                image: protocolo +"://"+hostname+":3000" +"/img/"+ lastProduct.image,
+                image: protocolo +"://"+hostname+"/img/"+ lastProduct.image,
                 name: lastProduct.name,
                 description: lastProduct.description,
                 price: lastProduct.price,
