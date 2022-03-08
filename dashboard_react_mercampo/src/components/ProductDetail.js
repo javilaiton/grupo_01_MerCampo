@@ -1,23 +1,40 @@
-import React from "react";
+import '../assets/css/ProductDetail.css'
+import { useState, useEffect } from 'react';
 
-function ProductDetail() {
-  return (
-    <div className="col-lg-6 mb-4">
-      <br></br>
-      <div className="card shadow mb-4">
-        <div className="card-body">
-          <div className="text-center">imagen</div>
-          <h4>name</h4>
-          <br></br>
-          pre
-          <br></br>
-          Precio
-          <br></br>
-          Categoria
-          <br></br>
+
+function ProductDeatil(props) {
+    const [isVisit, setIsVisit] = useState(false);
+
+    useEffect(async() => {
+        setTimeout(() => {
+            setIsVisit(true);
+        }, 2000)
+    }, [])
+
+    let view = isVisit ? (
+        <div className="oneProduct">
+            <div className='oneProduct__image'>
+                <img src={props.image} alt="Product" />
+            </div>
+            <h3 className="oneProduct__title">
+                {props.name}
+            </h3>
+            <p className="oneProduct__desc">
+                {props.description}
+            </p>            
+            <p className='oneProduct__price'>
+                $ {props.price}
+            </p>
+        </div>        
+    ) : (
+        "..."
+    )
+
+    return (
+        <div>
+            {view}
         </div>
-      </div>
-    </div>
-  );
+    )
 }
-export default ProductDetail;
+
+export default ProductDeatil;

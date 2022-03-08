@@ -1,29 +1,40 @@
-import React from "react";
+import '../assets/css/UserDetail.css'
+import { useState, useEffect } from 'react';
+
 
 function UserDetail(props) {
-  return (
-    <div className="col-lg-6 mb-4">
-      <br></br>
-      <div className="card shadow mb-4">
-        <div className="card-body">
-          <div className="text-center">
-            <img
-              className="img-fluid px-3 px-sm-4 mt-3 mb-4"
-              style={{ width: 60 + "rem" }}
-              src={props.image}
-            />
-          </div>
-          <p>
-            Nombre: {props.name} {props.lastname}
-            <br></br>
-            Id: {props.idusers}
-            <br></br>
-            Email: {props.email}
-          </p>
+    const [isVisit, setIsVisit] = useState(false);
+
+    useEffect(async() => {
+        setTimeout(() => {
+            setIsVisit(true);
+        }, 2000)
+    }, [])
+
+    let view = isVisit ? (
+        <div className="oneUser">
+            <div>
+            <div className="oneUser__image">
+                <img src={props.image} alt="User" />
+            </div>
+                <h3 className='oneUser__title'>
+                    {props.Name} {props.lastname}
+                </h3>
+                <h3 className='oneUser__title'>
+                    Email: {props.email}
+                </h3>
+            </div>
+            
         </div>
-      </div>
-    </div>
-  );
+    ) : (
+        "..."
+    )
+
+    return (
+        <div>
+            {view}
+        </div>
+    )
 }
 
 export default UserDetail;

@@ -1,13 +1,17 @@
-import React from "react";
-import SideBar from "./SideBar";
+import '../assets/css/App.css';
+import SideBar from './sideBar';
+import MainContent from './mainContent';
+
+
 
 function App() {
   return (
-    <React.Fragment>
-      <div id="wrapper">
-        <SideBar></SideBar>
-      </div>
-    </React.Fragment>
+    <div className='main'>
+     <div className='contenedor-main'>
+        <SideBar />
+        <MainContent />
+     </div >
+    </div>
   );
 }
 

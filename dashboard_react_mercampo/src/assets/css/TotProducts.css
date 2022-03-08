@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+.product__card {
+    background-color: #FADEC5;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+    font-family: 'merienda';
+    background-color: white;
+    box-shadow : 0px 0px 10px rgb( 100 , 100 , 100 );
+    margin: auto;
+    margin-bottom: 3%;
+    padding: 8px;
+}
+.product__card:hover{
+    transform: scale(1.07);
+    background-color: #E0C05A;
+}
+
+.product__file {
+    width: 100%;
+    height: 30%;
+    border-radius: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.product__message {
+    height: 30%;
+    text-align: center;
+    font-family: 'merienda';
+}
+
+.product__message h4{
+    margin: 0;
+    padding: 0;
+    color: #000000;
+}
+
+.product__message p{
+    font-weight: normal;
+    font-family: 'merienda';
+    color: #000000;
+    
+}
+
+.product__info {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: #FADEC5;
+}
+
+.usr {
+    background-color: #FADEC5;
+    
+}
+
+.product__info--total {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.total-products {
+    height: 50%;
+}
+
+.total-products_desc {
+    height: 50%;
+    text-align: center;
+}
+
+.total-products_desc p{
+    margin: 5%;
+    padding: 0;
+}
+
+.product__info--last {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left: solid 15px white;
+}
+
+.last-product {
+    height: 50%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.last-product h4 {
+    margin: 11%;
+}
+
+.last-product_desc {
+    height: 50%;
+    text-align: center;
+}
+
+.last-product_desc p {
+    margin: 5%;
+    font-size: 15px;
+}
+
+@media (min-width: 460px) {
+    .product__file {
+        height: 45%;
+    }
+
+    .product__card {
+        height: 100%;
+    }
+
+    .product__message {
+        font-size: 0.6em;
+    }
+
+    .product__info {
+        height: 25%;
+        font-size: 0.5em;
+    }
+}
+
+@media (min-width: 890px) {
+    .product__card {
+        width: 55%;
+    }
+
+    .product__message {
+        font-size: 0.9em;
+    }
+
+    .product__info {
+        font-size: 0.8em;
+    }
+}

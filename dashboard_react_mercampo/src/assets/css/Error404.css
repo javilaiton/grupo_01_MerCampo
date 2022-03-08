@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: 'merienda';
+}
+
+.Error404{
+    background-color: #FADEC5;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    padding: 5% ;
+}
+
+.Error404 h2{
+    color: black;
+    font-size: 9em;
+}
+
+.Error404 h3{
+    color: black;
+    font-size: 1.5em;
+}

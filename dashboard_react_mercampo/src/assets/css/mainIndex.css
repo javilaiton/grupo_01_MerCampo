@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+
+.infoImage {
+    width: 50vw;
+    height: 45vh;
+    margin: auto;
+    text-align: center;
+    font-family: 'merienda';
+    border-bottom: solid white 3px;
+    
+}
+.infoImage p{
+
+    align-items: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 25px;
+    
+}
+.image {
+    width: 30vw;
+    border-top: solid white 3px;
+    padding-top: 10px;
+    
+}
+
+
+.infoCards {
+    background-color: #FADEC5;
+    text-align: center;
+    align-items: center;
+    padding:30px ;
+    
+}
+
+ 

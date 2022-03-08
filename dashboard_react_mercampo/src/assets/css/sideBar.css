@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&display=swap');
+.side-bar{
+    width: 30vw;
+    height: 100vh;
+    background-color: #668F2E;
+    
+}
+
+.side-bar__link{
+    width: 20vw;
+    height: 20vw;
+    margin-left: 1vw
+}
+.title{
+    font-family: 'merienda';
+    border-top: 2px solid #ffffff;
+    padding-top: 10px;
+    margin-top: 5vh;
+    font-size: 25px;
+    list-style: none;
+    color: #ffffff;
+    text-align: center;
+
+}
+.side-bar__logo{
+    margin:10px;
+    width: 20vw;
+    padding:20px ;
+}
+.side-bar__list{
+    border-top: 2px solid white;
+    padding-top: 40px;
+    list-style: none;
+    color: #ffffff;
+}
+.side-bar-item{
+    margin-bottom: 5vh;
+}
+.side-barlink{
+    
+    font-family: 'merienda';
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+.side-barlink:hover{
+    color: #E0C05A;   
+}
+
+@media (max-width: 630px) {
+    .side-bar{
+        width: 25vw;
+    }
+    .side-bar__list{
+        font-size: 10px;
+        margin-left: -7vw;
+    }
+    .side-bar__link{
+        margin-left: 3vw
+    }
+    .side-bar__logo{
+        margin-top: 20px;
+        width: 17vw;
+    }
+
+}
