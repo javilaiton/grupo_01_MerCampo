@@ -5,6 +5,8 @@ const productApiController = {
     listProduct: async (req, res) => {
         try {
             let productAll = await productsModel.getList()
+            let protocolo = req.protocol
+            let hostname= req.hostname
             let allVerduras = productAll.filter(
                 (product) => product.categories_idcategories == 2
 
@@ -19,6 +21,7 @@ const productApiController = {
                     description: product.description,
                     price: product.price,
                     category: product.categories_idcategories,
+                    image: protocolo +"://"+hostname+"/img/"+ product.image,
                     details: "api/products/${ id }",
                 }
             })

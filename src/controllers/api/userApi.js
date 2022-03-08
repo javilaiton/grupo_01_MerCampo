@@ -4,12 +4,15 @@ const userApiController = {
     listUsers: async (req, res) => {
         try {
             let allUser = await usersModel.getUsers()
+            let protocolo = req.protocol
+            let hostname = req.hostname
             let users = allUser.map((user) => {
                 return usersProp = {
                     idusers: user.idusers,
                     name: user.name,
                     lastname: user.lastname,
                     email: user.email,
+                    image: protocolo + "://" + hostname  + "/img/users/" + user.image,
                     details: "api/users/${ id }",
 
                 }
@@ -18,10 +21,10 @@ const userApiController = {
             })
             res.json([{
                 count: allUser.length,
+            },
+                 users
 
-                users: users,
-
-            }])
+            ])
 
         } catch (error) {
             res.render("error")
