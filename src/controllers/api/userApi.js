@@ -16,12 +16,12 @@ const userApiController = {
 
 
             })
-            res.json({
+            res.json([{
                 count: allUser.length,
 
                 users: users,
 
-            })
+            }])
 
         } catch (error) {
             res.render("error")

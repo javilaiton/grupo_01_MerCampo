@@ -22,7 +22,7 @@ const productApiController = {
                     details: "api/products/${ id }",
                 }
             })
-            res.json({
+            res.json([{
                 count: productAll.length,
                 countByCategory: {
                     frutas: allFrutas.length,
@@ -30,7 +30,7 @@ const productApiController = {
                 },
                 products: products,
 
-            })
+            }])
 
         } catch (error) {
             res.render("error")
