@@ -5,6 +5,7 @@ const port = process.env.PORT || 3000;
 const loggedMiddleware = require("../src/middlewares/loggedMiddleware");
 const cookie = require("cookie-parser");
 const cors = require("cors");
+1
 
 const userApi = require("./routes/api/userApi.routes");
 const productApi = require("./routes/api/productApi.routes");
