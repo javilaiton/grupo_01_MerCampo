@@ -27,10 +27,11 @@ const productApiController = {
                 countByCategory: {
                     frutas: allFrutas.length,
                     verduras: allVerduras.length,
-                },
-                products: products,
+                }},
+                [ products]
+                
 
-            }])
+            ])
 
         } catch (error) {
             res.render("error")
