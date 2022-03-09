@@ -35,10 +35,14 @@ const productsModel = {
     createProduct: async function (product) {
         try{
             await db.products.create({
-                ...product
+                image:product.image,
+                name:product.name,
+                description:product.description,
+                price:product.price,
+                categories_idcategories: product.categories_idcategories,
             })
         }catch(error){
-            console.log(error)
+            new error 
         }
     }, 
 
