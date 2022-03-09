@@ -37,8 +37,9 @@ const productController = {
    // Create -  Method to store
   save: async (req, res) => {
     try {
+     
       const resultValidation = validationResult(req);
-      //console.log(resultValidation)
+      
       if (resultValidation.errors.length > 0) {
         let categorias = await categoryModel.AllCategory();
         return res.render("products/product_add", {
@@ -48,12 +49,18 @@ const productController = {
         })
       } else {
         let imagen = req.file ? req.file.filename : "agricultor.jpg";
-        let product = {
-          image: imagen,
-          ...req.body,
-        }
-        productsModel.createProduct(product);
+      let product = {
+        image: imagen,
+        name: req.body.name,
+        description: req.body.description,
+        price: req.body.price,
+        categories_idcategories: req.body.categories_idcategories
+      }
+
+      productsModel.createProduct(product);
         res.redirect("/productos");
+        
+      
         
       }
 
